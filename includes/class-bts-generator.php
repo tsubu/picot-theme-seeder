@@ -269,9 +269,83 @@ class BTS_Generator
         $style_content .= "        margin-inline-end: 0.667rem !important;\n";
         $style_content .= "    }\n";
         $style_content .= "}\n";
+        $style_content .= ".site-header .site-header-bar {\n";
+        $style_content .= "    min-width: 0;\n";
+        $style_content .= "    width: 100%;\n";
+        $style_content .= "}\n";
+        $style_content .= ".site-header .site-branding {\n";
+        $style_content .= "    min-width: 0;\n";
+        $style_content .= "    flex: 1 1 auto;\n";
+        $style_content .= "}\n";
         $style_content .= ".site-header .navbar-toggler {\n";
-        $style_content .= "    border: 0;\n";
-        $style_content .= "    padding: 0.111rem 0.222rem;\n";
+        $style_content .= "    flex-shrink: 0;\n";
+        $style_content .= "    border: 1px solid rgba(0, 0, 0, 0.1);\n";
+        $style_content .= "    padding: 0.25rem 0.5rem;\n";
+        $style_content .= "}\n";
+        $style_content .= ".site-header .navbar-toggler-icon {\n";
+        $style_content .= "    width: 1.25em;\n";
+        $style_content .= "    height: 1.25em;\n";
+        $style_content .= "    background-image: url(\"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%280, 0, 0, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e\");\n";
+        $style_content .= "    background-repeat: no-repeat;\n";
+        $style_content .= "    background-position: center;\n";
+        $style_content .= "    background-size: 100%;\n";
+        $style_content .= "}\n";
+        $style_content .= ".site-header .navbar-toggler:focus {\n";
+        $style_content .= "    box-shadow: 0 0 0 0.2rem rgba(0, 115, 170, 0.25);\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .offcanvas-body {\n";
+        $style_content .= "    min-width: 0;\n";
+        $style_content .= "    max-width: 100%;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search {\n";
+        $style_content .= "    max-width: 100%;\n";
+        $style_content .= "    min-width: 0;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search__label {\n";
+        $style_content .= "    display: none;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search__inside-wrapper {\n";
+        $style_content .= "    display: flex;\n";
+        $style_content .= "    flex-wrap: nowrap;\n";
+        $style_content .= "    align-items: stretch;\n";
+        $style_content .= "    gap: 0.5rem;\n";
+        $style_content .= "    width: 100%;\n";
+        $style_content .= "    max-width: 100%;\n";
+        $style_content .= "    min-width: 0;\n";
+        $style_content .= "    margin-left: 0;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search__input {\n";
+        $style_content .= "    min-width: 0 !important;\n";
+        $style_content .= "    flex: 1 1 0%;\n";
+        $style_content .= "    width: auto;\n";
+        $style_content .= "    border-radius: 0;\n";
+        $style_content .= "    box-sizing: border-box;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search__button {\n";
+        $style_content .= "    white-space: nowrap;\n";
+        $style_content .= "    flex: 0 0 auto;\n";
+        $style_content .= "    margin-left: 0;\n";
+        $style_content .= "    padding: 0.4rem 1rem;\n";
+        $style_content .= "    border: 1px solid var(--wp--preset--color--primary, #0073aa);\n";
+        $style_content .= "    background: var(--wp--preset--color--primary, #0073aa);\n";
+        $style_content .= "    color: #ffffff;\n";
+        $style_content .= "    cursor: pointer;\n";
+        $style_content .= "}\n";
+        $style_content .= "#pts-sidebar-offcanvas .wp-block-search__button:hover {\n";
+        $style_content .= "    background: #005a87;\n";
+        $style_content .= "    border-color: #005a87;\n";
+        $style_content .= "    color: #ffffff;\n";
+        $style_content .= "}\n";
+        $style_content .= ".mobile-navigation .wp-block-navigation-item__content,\n";
+        $style_content .= ".pts-sidebar-nav .wp-block-navigation-item__content {\n";
+        $style_content .= "    display: block;\n";
+        $style_content .= "    padding-block: 0.375rem;\n";
+        $style_content .= "    text-decoration: none;\n";
+        $style_content .= "    font-weight: 500;\n";
+        $style_content .= "}\n";
+        $style_content .= ".mobile-navigation .wp-block-navigation-item__content:hover,\n";
+        $style_content .= ".pts-sidebar-nav .wp-block-navigation-item__content:hover {\n";
+        $style_content .= "    color: #005a87;\n";
         $style_content .= "}\n";
         $style_content .= ".site-header .pts-header-nav.wp-block-navigation {\n";
         $style_content .= "    width: 100%;\n";
@@ -678,18 +752,28 @@ class BTS_Generator
     }
 
     /**
-     * Header with site title only (menu lives in the sidebar column).
+     * Header for 2-column layout: site title + offcanvas burger (desktop nav lives in sidebar).
      *
      * @return string
      */
     private function get_site_title_only_header_markup()
     {
+        return $this->get_two_column_header_shell_markup() . $this->get_sidebar_offcanvas_markup();
+    }
+
+    /**
+     * Compact header bar with branding and a mobile offcanvas toggler.
+     *
+     * @return string
+     */
+    private function get_two_column_header_shell_markup()
+    {
         return '<!-- wp:group {"className":"site-header border-bottom bg-white sticky-top","layout":{"type":"default"}} -->
 <div class="wp-block-group site-header border-bottom bg-white sticky-top">
     <!-- wp:group {"className":"container py-3","layout":{"type":"constrained"}} -->
     <div class="wp-block-group container py-3">
-        <!-- wp:group {"className":"site-header-bar d-flex align-items-start justify-content-between gap-3","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-        <div class="wp-block-group site-header-bar d-flex align-items-start justify-content-between gap-3">
+        <!-- wp:group {"className":"site-header-bar d-flex align-items-center justify-content-between gap-3 w-100","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+        <div class="wp-block-group site-header-bar d-flex align-items-center justify-content-between gap-3 w-100">
             <!-- wp:group {"className":"site-branding d-flex flex-column","layout":{"type":"constrained"}} -->
             <div class="wp-block-group site-branding d-flex flex-column">
                 <!-- wp:site-title {"className":"fw-bold fs-4 mb-0"} /-->
@@ -699,20 +783,56 @@ class BTS_Generator
             <!-- /wp:group -->
 
             <!-- wp:html -->
-<button class="navbar-toggler d-lg-none ms-auto flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#pts-primary-nav-mobile" aria-controls="pts-primary-nav-mobile" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<button class="navbar-toggler d-lg-none flex-shrink-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#pts-sidebar-offcanvas" aria-controls="pts-sidebar-offcanvas" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <!-- /wp:html -->
-        </div>
-        <!-- /wp:group -->
-
-        <!-- wp:group {"anchor":"pts-primary-nav-mobile","className":"collapse d-lg-none pt-3 border-top mt-3","layout":{"type":"constrained"}} -->
-        <div id="pts-primary-nav-mobile" class="wp-block-group collapse d-lg-none pt-3 border-top mt-3">
-            <!-- wp:navigation {"overlayMenu":"never","className":"pts-mobile-nav flex-column gap-1","layout":{"type":"flex","orientation":"vertical"}} /-->
         </div>
         <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 </div>
 <!-- /wp:group -->';
+    }
+
+    /**
+     * Mobile offcanvas panel (same interaction as classic themes).
+     *
+     * @return string
+     */
+    private function get_sidebar_offcanvas_markup()
+    {
+        return '<!-- wp:html -->
+<div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="pts-sidebar-offcanvas" aria-labelledby="pts-sidebar-offcanvas-label">
+<!-- /wp:html -->
+<!-- wp:group {"className":"offcanvas-header border-bottom","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="offcanvas-header border-bottom">
+    <!-- wp:site-title {"level":2,"className":"offcanvas-title h5 mb-0","fontSize":"medium"} /-->
+
+    <!-- wp:html -->
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- /wp:html -->
+</div>
+<!-- /wp:group -->
+<!-- wp:html -->
+<div class="offcanvas-body d-grid gap-4">
+<!-- /wp:html -->
+<!-- wp:group {"className":"mobile-navigation","layout":{"type":"constrained"}} -->
+<div class="wp-block-group mobile-navigation">
+    <!-- wp:navigation {"overlayMenu":"never","className":"pts-mobile-nav flex-column gap-1","layout":{"type":"flex","orientation":"vertical"}} /-->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"pts-offcanvas-widgets d-grid gap-4","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pts-offcanvas-widgets d-grid gap-4">
+    <!-- wp:heading {"level":2,"fontSize":"medium","className":"h5 mb-0"} -->
+    <h2 class="wp-block-heading h5 has-medium-font-size mb-0">Recent Posts</h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:latest-posts {"displayPostDate":true,"className":"small"} /-->
+</div>
+<!-- /wp:group -->
+<!-- wp:html -->
+</div>
+</div>
+<!-- /wp:html -->';
     }
 
     /**
@@ -2146,8 +2266,8 @@ JS;
 <!-- /wp:group -->';
 
             case 'sidebar.html':
-                return '<!-- wp:group {"className":"pts-bootstrap-sidebar card border-0 shadow-sm","layout":{"type":"constrained"}} -->
-<div class="wp-block-group pts-bootstrap-sidebar card border-0 shadow-sm">
+                return '<!-- wp:group {"className":"pts-bootstrap-sidebar card border-0 shadow-sm d-none d-lg-block","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pts-bootstrap-sidebar card border-0 shadow-sm d-none d-lg-block">
     <!-- wp:group {"className":"card-body d-grid gap-4","layout":{"type":"constrained"}} -->
     <div class="wp-block-group card-body d-grid gap-4">
         <!-- wp:group {"className":"d-none d-lg-block","layout":{"type":"constrained"}} -->
