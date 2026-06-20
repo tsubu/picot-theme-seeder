@@ -89,6 +89,19 @@ function pts_admin_notice_wp_version()
 }
 
 /**
+ * Load plugin translations (English source + bundled locales such as ja).
+ */
+function pts_load_textdomain()
+{
+    load_plugin_textdomain(
+        'picot-theme-seeder',
+        false,
+        dirname(plugin_basename(__FILE__)) . '/languages'
+    );
+}
+add_action('init', 'pts_load_textdomain', 0);
+
+/**
  * Initialize the plugin.
  */
 function pts_init()
@@ -97,8 +110,6 @@ function pts_init()
         add_action('admin_notices', 'pts_admin_notice_wp_version');
         return;
     }
-
-    load_plugin_textdomain('picot-theme-seeder', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
     $admin = new PTS_Admin();
     $admin->init();
