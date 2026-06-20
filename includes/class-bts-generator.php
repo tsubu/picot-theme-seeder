@@ -382,6 +382,13 @@ class BTS_Generator
         $style_content .= ".pts-bootstrap-shell.container {\n";
         $style_content .= "    padding-top: 0;\n";
         $style_content .= "}\n";
+        $style_content .= "@media (max-width: 991.98px) {\n";
+        $style_content .= "    .pts-bootstrap-shell .wp-block-columns.row > .wp-block-column.pts-main-column {\n";
+        $style_content .= "        flex-basis: 100% !important;\n";
+        $style_content .= "        width: 100% !important;\n";
+        $style_content .= "        max-width: 100%;\n";
+        $style_content .= "    }\n";
+        $style_content .= "}\n";
         $style_content .= "/* Section spacing below content blocks (header & footer excluded) */\n";
         $style_content .= ".wp-site-blocks > section.pts-hero-section,\n";
         $style_content .= ".pts-dynamic-page > * {\n";
@@ -742,12 +749,12 @@ class BTS_Generator
         return '    <!-- wp:columns {"align":"wide","className":"row g-4"} -->' . "\n"
             . '    <div class="wp-block-columns alignwide row g-4">' . "\n"
             . '        <!-- wp:column {"width":"66.66%"} -->' . "\n"
-            . '        <div class="wp-block-column col-lg-8" style="flex-basis:66.66%">' . "\n"
+            . '        <div class="wp-block-column col-12 col-lg-8 pts-main-column" style="flex-basis:66.66%">' . "\n"
             . $indented . "\n"
             . '        </div>' . "\n"
             . '        <!-- /wp:column -->' . "\n\n"
             . '        <!-- wp:column {"width":"33.33%"} -->' . "\n"
-            . '        <div class="wp-block-column col-lg-4" style="flex-basis:33.33%">' . "\n"
+            . '        <div class="wp-block-column col-12 col-lg-4 d-none d-lg-block pts-sidebar-column" style="flex-basis:33.33%">' . "\n"
             . '            <!-- wp:template-part {"slug":"sidebar","tagName":"aside","area":"sidebar"} /-->' . "\n"
             . '        </div>' . "\n"
             . '        <!-- /wp:column -->' . "\n"
