@@ -74,11 +74,8 @@ class BTS_Generator
             }
         }
 
-        // Sidebar is part of the default 2-column layout for generated templates.
-        if (! empty($selection['features.generateTemplates'])) {
-            $selection['parts.sidebar'] = 1;
-        }
-
+        // Block themes default to a single-column layout. Enable the sidebar part only
+        // when the user selects it or chooses a sidebar template variant.
         // Sidebar templates reference the sidebar part, so make sure it exists.
         if (! empty($selection['templates.singleWithSidebar']) || ! empty($selection['templates.pageWithSidebar'])) {
             $selection['parts.sidebar'] = 1;
@@ -1799,7 +1796,6 @@ JS;
             'parts.headerWithButton' => 'header-with-button.html',
             'parts.footer'           => 'footer.html',
             'parts.footerColumns'    => 'footer-columns.html',
-            'parts.sidebar'          => 'sidebar.html',
             'parts.comments'         => 'comments.html',
             'parts.postMeta'         => 'post-meta.html',
             'parts.postNavigation'   => 'post-navigation.html',

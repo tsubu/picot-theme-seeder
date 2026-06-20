@@ -72,13 +72,24 @@ window.ptsInitBlock = function () {
 
                 // Checking the set checks every part in its list; unchecking clears them.
                 $setCb.on('change', function () {
-                    $(set.list + ' input.bts-selection-cb').prop('checked', this.checked);
+                    const checked = this.checked;
+                    $(set.list + ' input.bts-selection-cb').each(function () {
+                        if (set.id === 'parts.basicSet' && $(this).data('basicSetMember') === 0) {
+                            return;
+                        }
+                        $(this).prop('checked', checked);
+                    });
                 });
 
                 // Keep the set checkbox in sync with the individual part checkboxes.
                 $form.on('change', set.list + ' input.bts-selection-cb', function () {
-                    const allChecked =
-                        $(set.list + ' input.bts-selection-cb:not(:checked)').length === 0;
+                    const $members =
+                        set.id === 'parts.basicSet'
+                            ? $(set.list + ' input.bts-selection-cb').filter(function () {
+                                  return $(this).data('basicSetMember') !== 0;
+                              })
+                            : $(set.list + ' input.bts-selection-cb');
+                    const allChecked = $members.filter(':not(:checked)').length === 0;
                     $setCb.prop('checked', allChecked);
                 });
             });
@@ -103,6 +114,9 @@ window.ptsInitBlock = function () {
                 const $input = $(
                     `<input type="checkbox" class="bts-selection-cb" name="selection[${item.id}]" value="1">`
                 );
+                if (item.basicSet === false) {
+                    $input.attr('data-basic-set-member', '0');
+                }
                 if (item.checked !== false) {
                     $input.prop('checked', true);
                 }

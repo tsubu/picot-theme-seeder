@@ -377,6 +377,8 @@ class PTS_Admin
                 'file'        => 'sidebar.html',
                 'name'        => __('Sidebar', 'picot-theme-seeder'),
                 'description' => __('Optional sidebar column for widgets or secondary content.', 'picot-theme-seeder'),
+                'checked'     => false,
+                'basicSet'    => false,
             ),
             array(
                 'id'          => 'parts.comments',
