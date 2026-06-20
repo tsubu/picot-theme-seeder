@@ -286,6 +286,7 @@ class PTS_Admin
                 'file'        => 'single-with-sidebar.html',
                 'name'        => __('Single (With Sidebar)', 'picot-theme-seeder'),
                 'description' => __('Two-column single post with the sidebar part on the right. Selectable per post as a custom template.', 'picot-theme-seeder'),
+                'checked'     => false,
             ),
             array(
                 'id'          => 'templates.page',
@@ -298,6 +299,7 @@ class PTS_Admin
                 'file'        => 'page-with-sidebar.html',
                 'name'        => __('Page (With Sidebar)', 'picot-theme-seeder'),
                 'description' => __('Two-column page with the sidebar part on the right. Selectable per page as a custom template.', 'picot-theme-seeder'),
+                'checked'     => false,
             ),
             array(
                 'id'          => 'templates.pageLp',
