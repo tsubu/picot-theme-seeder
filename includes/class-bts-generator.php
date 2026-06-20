@@ -275,7 +275,11 @@ class BTS_Generator
         $style_content .= "}\n";
         $style_content .= ".site-header .site-branding {\n";
         $style_content .= "    min-width: 0;\n";
-        $style_content .= "    flex: 1 1 auto;\n";
+        $style_content .= "    flex: 0 1 auto;\n";
+        $style_content .= "    text-align: left;\n";
+        $style_content .= "}\n";
+        $style_content .= ".site-header .site-branding .wp-block-site-title {\n";
+        $style_content .= "    text-align: left;\n";
         $style_content .= "}\n";
         $style_content .= ".site-header .navbar-toggler {\n";
         $style_content .= "    flex-shrink: 0;\n";
@@ -774,9 +778,9 @@ class BTS_Generator
     <div class="wp-block-group container py-3">
         <!-- wp:group {"className":"site-header-bar d-flex align-items-center justify-content-between gap-3 w-100","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group site-header-bar d-flex align-items-center justify-content-between gap-3 w-100">
-            <!-- wp:group {"className":"site-branding d-flex flex-column","layout":{"type":"constrained"}} -->
+            <!-- wp:group {"className":"site-branding d-flex flex-column","layout":{"type":"default"}} -->
             <div class="wp-block-group site-branding d-flex flex-column">
-                <!-- wp:site-title {"className":"fw-bold fs-4 mb-0"} /-->
+                <!-- wp:site-title {"textAlign":"left","className":"fw-bold fs-4 mb-0"} /-->
 
                 <!-- wp:site-tagline {"className":"text-body-secondary small"} /-->
             </div>
