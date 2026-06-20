@@ -1714,10 +1714,21 @@ class BTS_Generator
         $php .= "add_action('after_switch_theme', '{$func_prefix}_reset_grouped_header_navigation');\n";
         $php .= "add_action('after_setup_theme', '{$func_prefix}_setup_grouped_header_navigation', 20);\n\n";
 
+        $php .= "function {$func_prefix}_navigation_uses_theme_menu(\$class_name) {\n";
+        $php .= "    if (! is_string(\$class_name) || \$class_name === '') {\n";
+        $php .= "        return false;\n";
+        $php .= "    }\n\n";
+        $php .= "    foreach (array('pts-header-nav', 'pts-mobile-nav', 'pts-sidebar-nav') as \$token) {\n";
+        $php .= "        if (strpos(\$class_name, \$token) !== false) {\n";
+        $php .= "            return true;\n";
+        $php .= "        }\n";
+        $php .= "    }\n\n";
+        $php .= "    return false;\n";
+        $php .= "}\n\n";
         $php .= "function {$func_prefix}_apply_header_navigation_ref_to_blocks(array \$blocks, \$nav_id, &\$changed) {\n";
         $php .= "    foreach (\$blocks as &\$block) {\n";
         $php .= "        if ((\$block['blockName'] ?? '') === 'core/navigation'\n";
-        $php .= "            && strpos(\$block['attrs']['className'] ?? '', 'pts-header-nav') !== false) {\n";
+        $php .= "            && {$func_prefix}_navigation_uses_theme_menu(\$block['attrs']['className'] ?? '')) {\n";
         $php .= "            \$block['attrs']['ref'] = \$nav_id;\n";
         $php .= "            \$block['innerBlocks']  = array();\n";
         $php .= "            \$block['innerHTML']    = '';\n";
@@ -2149,15 +2160,23 @@ JS;
     }
 
     /**
-     * Bootstrap navbar toggler for the default header menu.
+     * Mobile offcanvas toggler (same interaction as classic themes).
      *
      * @return string
      */
-    private function get_header_navbar_toggler_markup()
+    private function get_header_offcanvas_toggler_markup()
     {
         return '<!-- wp:html -->
-<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#pts-primary-nav" aria-controls="pts-primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<button class="navbar-toggler d-lg-none ms-auto flex-shrink-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#pts-sidebar-offcanvas" aria-controls="pts-sidebar-offcanvas" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <!-- /wp:html -->';
+    }
+
+    /**
+     * @deprecated Use get_header_offcanvas_toggler_markup().
+     */
+    private function get_header_navbar_toggler_markup()
+    {
+        return $this->get_header_offcanvas_toggler_markup();
     }
 
     /**
@@ -2173,14 +2192,14 @@ JS;
     }
 
     /**
-     * Default header with a Bootstrap collapse menu.
+     * Default header: desktop navigation in the header bar, mobile menu in offcanvas.
      *
      * @param string $nav_markup Navigation block markup.
      * @return string
      */
     private function get_default_header_shell_markup($nav_markup)
     {
-        $toggler = $this->get_header_navbar_toggler_markup();
+        $toggler = $this->get_header_offcanvas_toggler_markup();
 
         return '<!-- wp:group {"className":"site-header bg-white sticky-top","layout":{"type":"default"}} -->
 <div class="wp-block-group site-header bg-white sticky-top">
@@ -2190,15 +2209,16 @@ JS;
 
         ' . $toggler . '
 
-        <!-- wp:group {"anchor":"pts-primary-nav","className":"collapse navbar-collapse justify-content-lg-end","layout":{"type":"default"}} -->
-        <div id="pts-primary-nav" class="wp-block-group collapse navbar-collapse justify-content-lg-end">
+        <!-- wp:group {"anchor":"pts-primary-nav","className":"navbar-collapse justify-content-lg-end d-none d-lg-flex flex-grow-1 w-auto","layout":{"type":"default"}} -->
+        <div id="pts-primary-nav" class="wp-block-group navbar-collapse justify-content-lg-end d-none d-lg-flex flex-grow-1 w-auto">
             ' . $nav_markup . '
         </div>
         <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 </div>
-<!-- /wp:group -->';
+<!-- /wp:group -->'
+            . $this->get_sidebar_offcanvas_markup();
     }
 
     /**
@@ -2220,7 +2240,7 @@ JS;
                 );
 
             case 'header-centered.html':
-                $toggler = $this->get_header_navbar_toggler_markup();
+                $toggler = $this->get_header_offcanvas_toggler_markup();
                 $nav     = $this->get_default_header_navigation_markup(
                     'pts-header-nav navbar-nav mx-lg-auto gap-lg-3 mb-2 mb-lg-0 is-content-justification-center',
                     'center'
@@ -2230,12 +2250,14 @@ JS;
 <div class="wp-block-group site-header bg-white sticky-top">
     <!-- wp:group {"className":"container navbar navbar-expand-lg navbar-light py-4 px-0","layout":{"type":"default"}} -->
     <div class="wp-block-group container navbar navbar-expand-lg navbar-light py-4 px-0">
+        <!-- wp:site-title {"className":"navbar-brand fw-bold mb-0 me-lg-4 d-lg-none"} /-->
+
         ' . $toggler . '
 
-        <!-- wp:group {"anchor":"pts-primary-nav","className":"collapse navbar-collapse","layout":{"type":"default"}} -->
-        <div id="pts-primary-nav" class="wp-block-group collapse navbar-collapse">
-            <!-- wp:group {"className":"d-grid gap-3 text-center mx-lg-auto","layout":{"type":"constrained"}} -->
-            <div class="wp-block-group d-grid gap-3 text-center mx-lg-auto">
+        <!-- wp:group {"anchor":"pts-primary-nav","className":"navbar-collapse d-none d-lg-flex w-100","layout":{"type":"default"}} -->
+        <div id="pts-primary-nav" class="wp-block-group navbar-collapse d-none d-lg-flex w-100">
+            <!-- wp:group {"className":"d-grid gap-3 text-center mx-lg-auto w-100","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group d-grid gap-3 text-center mx-lg-auto w-100">
                 <!-- wp:site-title {"textAlign":"center","className":"fw-bold mb-0"} /-->
 
                 ' . $nav . '
@@ -2246,13 +2268,14 @@ JS;
     </div>
     <!-- /wp:group -->
 </div>
-<!-- /wp:group -->';
+<!-- /wp:group -->'
+                    . $this->get_sidebar_offcanvas_markup();
 
             case 'header-with-button.html':
                 $nav = $this->get_default_header_navigation_markup(
                     'pts-header-nav navbar-nav ms-lg-auto gap-lg-3 mb-2 mb-lg-0'
                 );
-                $toggler = $this->get_header_navbar_toggler_markup();
+                $toggler = $this->get_header_offcanvas_toggler_markup();
 
                 return '<!-- wp:group {"className":"site-header bg-white sticky-top","layout":{"type":"default"}} -->
 <div class="wp-block-group site-header bg-white sticky-top">
@@ -2262,8 +2285,8 @@ JS;
 
         ' . $toggler . '
 
-        <!-- wp:group {"anchor":"pts-primary-nav","className":"collapse navbar-collapse justify-content-lg-end","layout":{"type":"default"}} -->
-        <div id="pts-primary-nav" class="wp-block-group collapse navbar-collapse justify-content-lg-end">
+        <!-- wp:group {"anchor":"pts-primary-nav","className":"navbar-collapse justify-content-lg-end d-none d-lg-flex flex-grow-1 w-auto","layout":{"type":"default"}} -->
+        <div id="pts-primary-nav" class="wp-block-group navbar-collapse justify-content-lg-end d-none d-lg-flex flex-grow-1 w-auto">
             <!-- wp:group {"className":"d-flex flex-column flex-lg-row align-items-lg-center gap-3 ms-lg-auto","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right"}} -->
             <div class="wp-block-group d-flex flex-column flex-lg-row align-items-lg-center gap-3 ms-lg-auto">
                 ' . $nav . '
@@ -2282,7 +2305,8 @@ JS;
     </div>
     <!-- /wp:group -->
 </div>
-<!-- /wp:group -->';
+<!-- /wp:group -->'
+                    . $this->get_sidebar_offcanvas_markup();
 
             case 'footer.html':
                 return '<!-- wp:group {"className":"pts-bootstrap-footer py-4","layout":{"type":"constrained"}} -->
