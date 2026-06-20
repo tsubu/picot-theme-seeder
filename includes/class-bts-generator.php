@@ -1904,6 +1904,18 @@ JS;
     }
 
     /**
+     * Optional sidebar part (not part of the basic template parts set).
+     *
+     * @return array<string, string>
+     */
+    private function get_sidebar_part_map()
+    {
+        return array(
+            'parts.sidebar' => 'sidebar.html',
+        );
+    }
+
+    /**
      * Selection key => part file name. Also defines the "Basic Template Parts Set".
      *
      * @return array<string, string>
@@ -2061,6 +2073,7 @@ JS;
     private function generate_parts($dir, $selection)
     {
         $map = array_merge(
+            $this->get_sidebar_part_map(),
             $this->get_parts_map(),
             $this->get_extended_parts_map(),
             $this->get_jp_lp_parts_map(),
