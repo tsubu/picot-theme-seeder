@@ -1,0 +1,207 @@
+{
+  "categories": [
+    { "id": "L1", "name": "Uses (L1)" }
+  ],
+  "presets": [
+    {
+      "id": "preset.l1.bare",
+      "category": "L1",
+      "name": "Bare Minimum",
+      "description": "Just the essentials: theme.json, a base template shell, and the required header/footer parts.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "templates.index": true,
+          "parts.header": true,
+          "parts.footer": true
+        }
+      }
+    },
+    {
+      "id": "preset.l1.blog_standard",
+      "category": "L1",
+      "name": "Editorial Blog",
+      "description": "A practical publishing setup with post templates, post metadata, comments, and latest-post patterns.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "features.generateStyleVariations": true,
+          "features.generateScss": true,
+          "templates.index": true,
+          "templates.home": true,
+          "templates.single": true,
+          "templates.page": true,
+          "templates.search": true,
+          "templates.archive": true,
+          "templates.404": true,
+          "parts.header": true,
+          "parts.footer": true,
+          "parts.sidebar": true,
+          "parts.comments": true,
+          "parts.postMeta": true,
+          "parts.postNavigation": true,
+          "parts.categoryFeaturedList": true,
+          "patterns.latestPosts": true
+        }
+      }
+    },
+    {
+      "id": "preset.l1.marketing",
+      "category": "L1",
+      "name": "Marketing / Landing",
+      "description": "A conversion-focused business site with landing-page templates, reusable sections, and style variations.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "features.generateScss": true,
+          "features.generateStyleVariations": true,
+          "templates.index": true,
+          "templates.frontPage": true,
+          "templates.page": true,
+          "templates.pageLp": true,
+          "templates.404": true,
+          "parts.header": true,
+          "parts.footer": true,
+          "parts.basicSet": true,
+          "parts.selectedPostPage": true,
+          "patterns.hero": true,
+          "patterns.features": true,
+          "patterns.testimonials": true,
+          "patterns.cta": true,
+          "patterns.contact": true,
+          "patterns.faq": true
+        }
+      }
+    },
+    {
+      "id": "preset.l1.business",
+      "category": "L1",
+      "name": "Business / Corporate",
+      "description": "A polished company-site starter with page templates, common layout parts, and trust-building patterns.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "features.generateScss": true,
+          "features.generateStyleVariations": true,
+          "templates.index": true,
+          "templates.frontPage": true,
+          "templates.page": true,
+          "templates.pageWithSidebar": true,
+          "templates.search": true,
+          "templates.404": true,
+          "parts.header": true,
+          "parts.footer": true,
+          "parts.basicSet": true,
+          "parts.extendedSet": true,
+          "parts.layoutKitSet": true,
+          "parts.categoryFeaturedList": true,
+          "parts.selectedPostPage": true,
+          "patterns.hero": true,
+          "patterns.features": true,
+          "patterns.about": true,
+          "patterns.textImage": true,
+          "patterns.team": true,
+          "patterns.stats": true,
+          "patterns.logos": true,
+          "patterns.contact": true
+        }
+      }
+    },
+    {
+      "id": "preset.l1.design_system",
+      "category": "L1",
+      "name": "Design System Starter",
+      "description": "A strong foundation for custom projects with theme.json, SCSS sources, layout kits, and multiple style directions.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "features.generateScss": true,
+          "features.generateStyleVariations": true,
+          "templates.index": true,
+          "templates.page": true,
+          "templates.single": true,
+          "templates.pageWithSidebar": true,
+          "templates.singleWithSidebar": true,
+          "parts.header": true,
+          "parts.footer": true,
+          "parts.basicSet": true,
+          "parts.extendedSet": true,
+          "parts.layoutKitSet": true,
+          "parts.categoryFeaturedList": true,
+          "parts.selectedPostPage": true,
+          "patterns.hero": true,
+          "patterns.features": true,
+          "patterns.about": true,
+          "patterns.textImage": true,
+          "patterns.gallery": true,
+          "patterns.contact": true
+        }
+      }
+    },
+    {
+      "id": "preset.l1.all",
+      "category": "L1",
+      "name": "All-in-One",
+      "description": "A kitchen-sink starter with nearly every template, part set, pattern, and optional source file enabled.",
+      "apply": {
+        "selection": {
+          "features.generateThemeJson": true,
+          "features.generateTemplates": true,
+          "features.generateParts": true,
+          "features.generateScss": true,
+          "features.generateStyleVariations": true,
+          "templates.index": true,
+          "templates.frontPage": true,
+          "templates.home": true,
+          "templates.single": true,
+          "templates.singleWithSidebar": true,
+          "templates.page": true,
+          "templates.pageWithSidebar": true,
+          "templates.pageLp": true,
+          "templates.singular": true,
+          "templates.archive": true,
+          "templates.search": true,
+          "templates.404": true,
+          "parts.header": true,
+          "parts.footer": true,
+          "parts.sidebar": true,
+          "parts.comments": true,
+          "parts.postMeta": true,
+          "parts.postNavigation": true,
+          "parts.categoryFeaturedList": true,
+          "parts.selectedPostPage": true,
+          "parts.basicSet": true,
+          "parts.extendedSet": true,
+          "parts.jpLpSet": true,
+          "parts.productLpSet": true,
+          "parts.layoutKitSet": true,
+          "patterns.hero": true,
+          "patterns.cta": true,
+          "patterns.pricing": true,
+          "patterns.features": true,
+          "patterns.about": true,
+          "patterns.textImage": true,
+          "patterns.testimonials": true,
+          "patterns.team": true,
+          "patterns.stats": true,
+          "patterns.logos": true,
+          "patterns.gallery": true,
+          "patterns.latestPosts": true,
+          "patterns.faq": true,
+          "patterns.contact": true,
+          "patterns.newsletter": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2661 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Picot Theme Seeder package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picot Theme Seeder 1.0.0\n"
+"Report-Msgid-Bugs-To: https://picot.tokyo/aio/\n"
+"POT-Creation-Date: 2026-06-20 22:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: PICOT <https://picot.tokyo/aio/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: xgettext (WordPress i18n)\n"
+
+#: admin/views/main.php:8 includes/class-pts-admin.php:68
+msgid "Picot Theme Seeder"
+msgstr ""
+
+#: admin/views/main.php:9
+msgid "Create a Block (FSE) or Classic theme skeleton in minutes."
+msgstr ""
+
+#: admin/views/main.php:12
+msgid "Choose Theme Type"
+msgstr ""
+
+#: admin/views/main.php:13
+msgid ""
+"Select the kind of theme you want to generate. You can change this later "
+"before generating files."
+msgstr ""
+
+#: admin/views/main.php:18 includes/class-pts-admin.php:122
+msgid "Block Theme (FSE)"
+msgstr ""
+
+#: admin/views/main.php:19
+msgid "theme.json, HTML templates, template parts, block patterns"
+msgstr ""
+
+#: admin/views/main.php:23 admin/views/main.php:47
+#: includes/class-pts-admin.php:124
+msgid "Classic Theme"
+msgstr ""
+
+#: admin/views/main.php:24
+msgid "PHP templates, functions.php, style.css, sidebars"
+msgstr ""
+
+#: admin/views/main.php:31 includes/class-pts-admin.php:127
+msgid "Continue"
+msgstr ""
+
+#: admin/views/main.php:38 admin/views/main.php:46
+#: includes/class-pts-admin.php:126
+msgid "Change theme type"
+msgstr ""
+
+#: admin/views/main.php:39
+msgid "Block Theme"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:10
+#: admin/views/partials/classic-wizard.php:10
+msgid "Basic Info"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:11
+#: admin/views/partials/classic-wizard.php:11
+msgid "Presets"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:12
+#: admin/views/partials/classic-wizard.php:13
+msgid "Features"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:13
+msgid "Theme JSON"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:14
+#: admin/views/partials/block-wizard.php:246
+#: admin/views/partials/classic-wizard.php:14
+#: admin/views/partials/classic-wizard.php:72
+msgid "Preview"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:15
+#: admin/views/partials/block-wizard.php:259
+#: admin/views/partials/classic-wizard.php:15
+#: admin/views/partials/classic-wizard.php:88
+msgid "Output"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:25
+#: admin/views/partials/classic-wizard.php:25
+msgid "Basic Information"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:31
+#: admin/views/partials/classic-wizard.php:32
+msgid "Next: Presets"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:36
+#: admin/views/partials/classic-wizard.php:37
+msgid "Select a Preset"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:39
+msgid "All"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:40 includes/class-pts-admin.php:176
+msgid "Uses (L1)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:47
+#: admin/views/partials/block-wizard.php:131
+#: admin/views/partials/block-wizard.php:239
+#: admin/views/partials/block-wizard.php:252
+#: admin/views/partials/block-wizard.php:267
+#: admin/views/partials/classic-wizard.php:42
+#: admin/views/partials/classic-wizard.php:53
+#: admin/views/partials/classic-wizard.php:65
+#: admin/views/partials/classic-wizard.php:81
+#: admin/views/partials/classic-wizard.php:95
+msgid "Back"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:48
+#: admin/views/partials/classic-wizard.php:54
+msgid "Next: Features"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:54
+msgid "Select Features"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:56
+msgid "Core Features"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:58
+msgid "Generate theme.json"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:59
+msgid "Generate Templates"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:60
+msgid "Generate Parts"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:61
+msgid "Generate SCSS sources (assets/scss + package.json)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:62
+msgid "Generate Style Variations (styles/ — Dark, Natural, Vivid)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:65
+#: admin/views/partials/classic-wizard.php:12
+msgid "Templates"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:66
+msgid ""
+"HTML templates in the templates/ folder. WordPress picks the most specific "
+"file for each view (template hierarchy)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:71
+msgid "Parts"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:72
+msgid ""
+"Reusable regions in the parts/ folder (header, footer, etc.). Referenced "
+"from templates with the template-part block."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:75
+#: admin/views/partials/block-wizard.php:76
+msgid "Basic Template Parts Set"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:78
+msgid ""
+"Select all recommended parts at once. Unchecking a part below turns the set "
+"off."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:85
+#: admin/views/partials/block-wizard.php:86
+msgid "Extended Layout Parts Set"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:88
+msgid ""
+"Common site layout variations: more headers and footers, sidebars, post "
+"grids, author box, and more."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:95
+#: admin/views/partials/block-wizard.php:96
+msgid "Japanese LP Parts Set"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:98
+msgid ""
+"Landing page sections common on Japanese sites: first view, problems "
+"checklist, reasons, customer voices, pricing, FAQ, conversion area, and more"
+" (Japanese placeholder text)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:105
+#: admin/views/partials/block-wizard.php:106
+msgid "Product LP Parts Set"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:108
+msgid ""
+"EC product page sections common on Japanese shopping sites such as Rakuten: "
+"sale banner, coupon, double pricing, reviews, specs, gift wrapping, "
+"shipping, and more (Japanese placeholder text)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:115
+#: admin/views/partials/block-wizard.php:116
+msgid "Common Layout Kit"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:118
+msgid ""
+"Everyday page layouts: text + image, card grids, gallery, timeline, team, "
+"stats, steps, table, accordion, and more (Japanese placeholder text and "
+"empty image placeholders)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:124
+msgid "Patterns"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:125
+msgid ""
+"Reusable block sections for the Site Editor or post editor. Selected files "
+"are copied into your theme’s patterns/ folder."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:132
+msgid "Next: Theme JSON"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:138
+msgid "Theme JSON Settings"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:139
+msgid "Configure basic settings for your theme.json."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:141
+msgid "Settings (theme.json v3)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:143
+msgid "Use Root Padding Aware Alignments"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:144
+#: includes/class-pts-classic-definitions.php:171
+msgid "Appearance Tools"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:145
+msgid "Background: Background Image"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:146
+msgid "Background: Size / Position / Repeat"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:147
+msgid "Border: Color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:148
+msgid "Border: Radius"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:149
+msgid "Border: Style"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:150
+msgid "Border: Width"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:151
+msgid "Dimensions: Aspect Ratio"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:152
+msgid "Dimensions: Height"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:153
+msgid "Dimensions: Min Height"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:154
+msgid "Dimensions: Width"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:155
+msgid "Position: Sticky"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:156
+msgid "Shadow: Default Presets"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:157
+msgid "Spacing: Block Gap"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:158
+msgid "Spacing: Margin"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:159
+msgid "Spacing: Padding"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:160
+msgid "Spacing: Custom Size"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:161
+msgid "Spacing: Default Presets"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:164
+msgid "Color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:166
+msgid "Background"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:167
+msgid "Text"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:168
+msgid "Link"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:169
+msgid "Heading"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:170
+msgid "Button"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:171
+msgid "Caption"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:172
+msgid "Custom Color Picker"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:173
+msgid "Custom Gradients"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:174
+msgid "Custom Duotone"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:175
+msgid "Default Palette (Core)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:176
+msgid "Default Gradients (Core)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:177
+msgid "Default Duotone (Core)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:180
+msgid "Typography"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:182
+msgid "Default Font Sizes"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:183
+msgid "Custom Font Size"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:184
+msgid "Font Style"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:185
+msgid "Font Weight"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:186
+msgid "Letter Spacing"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:187
+msgid "Line Height"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:188
+msgid "Text Align"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:189
+msgid "Text Decoration"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:190
+msgid "Text Transform"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:191
+msgid "Drop Cap"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:192
+msgid "Fluid Typography"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:195
+msgid "WordPress 7.0+ (theme.json)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:197
+msgid "Border radius presets (radiusSizes)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:198
+msgid "Predefined border radius values in the editor (WordPress 6.9+)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:199
+msgid "Form element styles (select & textInput)"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:200
+msgid ""
+"Default styles for select and text inputs via styles.elements (WordPress "
+"6.9+)."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:203
+msgid "Brand Colors"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:204
+msgid ""
+"Written to theme.json as the color palette. Buttons and links use these "
+"presets, so the whole theme recolors from the Styles panel later."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:207
+msgid "Primary color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:210
+msgid "Buttons and links. The main brand color."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:214
+msgid "Secondary color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:217
+msgid "Hover states and accents. Usually a darker shade of the primary color."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:221
+msgid "Background color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:224
+msgid "Site background color."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:228
+msgid "Text color"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:231
+msgid "Default body text color."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:240
+#: admin/views/partials/classic-wizard.php:66
+msgid "Next: Preview"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:248
+#: admin/views/partials/classic-wizard.php:74
+msgid "Summary of generated files:"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:253
+#: admin/views/partials/classic-wizard.php:82
+msgid "Next: Output"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:260
+msgid "Generate your starter theme."
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:262
+#: admin/views/partials/classic-wizard.php:91
+msgid "Write to themes directory"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:263
+#: admin/views/partials/classic-wizard.php:90
+msgid "Download ZIP"
+msgstr ""
+
+#: admin/views/partials/block-wizard.php:265
+#: admin/views/partials/classic-wizard.php:93 includes/class-pts-admin.php:224
+#: includes/class-pts-admin.php:1370
+msgid "Generate Theme"
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:43
+msgid "Next: Templates"
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:49
+msgid "Select Templates"
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:50
+msgid ""
+"PHP template files in your theme folder. WordPress uses the template "
+"hierarchy to pick the best match for each view."
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:61
+msgid "Theme Features (functions.php)"
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:62
+msgid ""
+"Optional code added to functions.php (theme support, menus, security, block "
+"editor, etc.)."
+msgstr ""
+
+#: admin/views/partials/classic-wizard.php:77
+msgid "Enabled Features:"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:10
+msgid "Root layout (:root)"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:11
+msgid ""
+"Width and spacing tokens written to :root CSS variables. Classic themes use "
+"them in style.css; block themes also map content/wide sizes to theme.json."
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:14
+msgid "Site max width"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:17
+msgid "Maximum width of the site shell (header, main, footer)."
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:21
+msgid "Content width"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:24
+msgid ""
+"Main column width. Block themes: theme.json settings.layout.contentSize."
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:28
+msgid "Wide width"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:31
+msgid ""
+"Wide alignment width. Block themes: theme.json settings.layout.wideSize."
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:35
+msgid "Root padding (inline)"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:38
+msgid "Horizontal padding applied to the site shell."
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:42
+msgid "Block / column gap"
+msgstr ""
+
+#: admin/views/partials/root-layout-fields.php:45
+msgid ""
+"Gap between main content and sidebar, and block spacing where supported."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-bts-generator.php:18 includes/class-cts-generator.php:20
+#, php-format
+msgid "Could not write file: %s"
+msgstr ""
+
+#: includes/class-bts-generator.php:84 includes/class-cts-generator.php:46
+msgid "Could not create temporary directory."
+msgstr ""
+
+#. translators: %s: theme slug
+#: includes/class-bts-generator.php:340
+#, php-format
+msgid "Theme directory already exists: %s"
+msgstr ""
+
+#: includes/class-bts-generator.php:354 includes/class-bts-generator.php:378
+#: includes/class-cts-generator.php:637 includes/class-cts-generator.php:651
+#: includes/class-pts-admin.php:225 includes/class-pts-admin.php:1366
+msgid "Theme generated successfully."
+msgstr ""
+
+#: includes/class-bts-generator.php:358 includes/class-cts-generator.php:640
+msgid "Could not move theme to the themes directory. Check permissions."
+msgstr ""
+
+#: includes/class-bts-zip.php:12 includes/class-cts-zip.php:12
+msgid "ZipArchive class is missing on this server."
+msgstr ""
+
+#: includes/class-bts-zip.php:17 includes/class-cts-zip.php:17
+msgid "Could not open ZIP file for writing."
+msgstr ""
+
+#: includes/class-cts-generator.php:627
+msgid "Theme directory already exists."
+msgstr ""
+
+#: includes/class-pts-admin.php:44
+msgid "Invalid theme type. Choose Block or Classic."
+msgstr ""
+
+#: includes/class-pts-admin.php:69
+msgid "Theme Seeder"
+msgstr ""
+
+#: includes/class-pts-admin.php:121
+msgid "Please choose a theme type to continue."
+msgstr ""
+
+#: includes/class-pts-admin.php:123
+msgid ""
+"Full Site Editing theme with theme.json, HTML templates, template parts, and"
+" block patterns."
+msgstr ""
+
+#: includes/class-pts-admin.php:125
+msgid "PHP templates, functions.php, style.css, and optional theme features."
+msgstr ""
+
+#: includes/class-pts-admin.php:142
+msgid "Bare Minimum"
+msgstr ""
+
+#: includes/class-pts-admin.php:143
+msgid ""
+"Just the essentials: theme.json, a base template shell, and the required "
+"header/footer parts."
+msgstr ""
+
+#: includes/class-pts-admin.php:146
+msgid "Editorial Blog"
+msgstr ""
+
+#: includes/class-pts-admin.php:147
+msgid ""
+"A practical publishing setup with post templates, post metadata, comments, "
+"and latest-post patterns."
+msgstr ""
+
+#: includes/class-pts-admin.php:150
+msgid "Marketing / Landing"
+msgstr ""
+
+#: includes/class-pts-admin.php:151
+msgid ""
+"A conversion-focused business site with landing-page templates, reusable "
+"sections, and style variations."
+msgstr ""
+
+#: includes/class-pts-admin.php:154 includes/class-pts-admin.php:1230
+msgid "Business / Corporate"
+msgstr ""
+
+#: includes/class-pts-admin.php:155
+msgid ""
+"A polished company-site starter with page templates, common layout parts, "
+"and trust-building patterns."
+msgstr ""
+
+#: includes/class-pts-admin.php:158
+msgid "Design System Starter"
+msgstr ""
+
+#: includes/class-pts-admin.php:159
+msgid ""
+"A strong foundation for custom projects with theme.json, SCSS sources, "
+"layout kits, and multiple style directions."
+msgstr ""
+
+#: includes/class-pts-admin.php:162
+msgid "All-in-One"
+msgstr ""
+
+#: includes/class-pts-admin.php:163
+msgid ""
+"A kitchen-sink starter with nearly every template, part set, pattern, and "
+"optional source file enabled."
+msgstr ""
+
+#: includes/class-pts-admin.php:221
+msgid "No presets found for this category."
+msgstr ""
+
+#: includes/class-pts-admin.php:222 includes/class-pts-admin.php:1365
+msgid "Please fill in Theme Name and Slug."
+msgstr ""
+
+#: includes/class-pts-admin.php:223 includes/class-pts-admin.php:1369
+msgid "Generating..."
+msgstr ""
+
+#: includes/class-pts-admin.php:226 includes/class-pts-admin.php:1367
+msgid "Error: "
+msgstr ""
+
+#: includes/class-pts-admin.php:227 includes/class-pts-admin.php:1368
+msgid "Unknown error"
+msgstr ""
+
+#: includes/class-pts-admin.php:261
+msgid "Index"
+msgstr ""
+
+#: includes/class-pts-admin.php:262
+#: includes/class-pts-classic-definitions.php:263
+msgid "required"
+msgstr ""
+
+#: includes/class-pts-admin.php:263
+msgid "Fallback template for all views when no more specific template exists."
+msgstr ""
+
+#: includes/class-pts-admin.php:268
+msgid "Front Page"
+msgstr ""
+
+#: includes/class-pts-admin.php:269
+msgid ""
+"Site front landing page (hero, features, latest posts, CTA). Always wins on "
+"the front page, regardless of Reading settings."
+msgstr ""
+
+#: includes/class-pts-admin.php:274
+msgid "Home"
+msgstr ""
+
+#: includes/class-pts-admin.php:275
+msgid "Blog posts index when the front page shows latest posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:281
+msgid "Single"
+msgstr ""
+
+#: includes/class-pts-admin.php:282
+msgid "Layout for a single blog post."
+msgstr ""
+
+#: includes/class-pts-admin.php:287
+msgid "Single (With Sidebar)"
+msgstr ""
+
+#: includes/class-pts-admin.php:288
+msgid ""
+"Two-column single post with the sidebar part on the right. Selectable per "
+"post as a custom template."
+msgstr ""
+
+#: includes/class-pts-admin.php:293
+msgid "Page"
+msgstr ""
+
+#: includes/class-pts-admin.php:294
+msgid "Layout for static pages."
+msgstr ""
+
+#: includes/class-pts-admin.php:299
+msgid "Page (With Sidebar)"
+msgstr ""
+
+#: includes/class-pts-admin.php:300
+msgid ""
+"Two-column page with the sidebar part on the right. Selectable per page as a"
+" custom template."
+msgstr ""
+
+#: includes/class-pts-admin.php:305
+msgid "LP Page (Blank Canvas)"
+msgstr ""
+
+#: includes/class-pts-admin.php:306
+msgid ""
+"No header or footer — a full canvas for landing pages built from the LP "
+"parts. Selectable per page as a custom template."
+msgstr ""
+
+#: includes/class-pts-admin.php:311
+msgid "Singular"
+msgstr ""
+
+#: includes/class-pts-admin.php:312
+msgid "Fallback for single posts, pages, and custom post types."
+msgstr ""
+
+#: includes/class-pts-admin.php:317
+msgid "Archive"
+msgstr ""
+
+#: includes/class-pts-admin.php:318
+msgid "Category, tag, author, and date archive listings."
+msgstr ""
+
+#: includes/class-pts-admin.php:323
+msgid "Search"
+msgstr ""
+
+#: includes/class-pts-admin.php:324
+msgid "Search results page."
+msgstr ""
+
+#: includes/class-pts-admin.php:329
+msgid "404"
+msgstr ""
+
+#: includes/class-pts-admin.php:330
+msgid "Page shown when the requested URL is not found."
+msgstr ""
+
+#: includes/class-pts-admin.php:348
+msgid "Header"
+msgstr ""
+
+#: includes/class-pts-admin.php:349
+msgid "Site title and navigation; included via template-part in templates."
+msgstr ""
+
+#: includes/class-pts-admin.php:354
+msgid "Header (Centered)"
+msgstr ""
+
+#: includes/class-pts-admin.php:355
+msgid ""
+"Alternative header with centered title and menu. Swap via the Replace menu "
+"in the Site Editor."
+msgstr ""
+
+#: includes/class-pts-admin.php:360
+msgid "Header (With Button)"
+msgstr ""
+
+#: includes/class-pts-admin.php:361
+msgid ""
+"Alternative header with navigation and a call-to-action button. Swap via the"
+" Replace menu in the Site Editor."
+msgstr ""
+
+#: includes/class-pts-admin.php:366
+msgid "Footer"
+msgstr ""
+
+#: includes/class-pts-admin.php:367
+msgid "Site footer area, typically copyright and links."
+msgstr ""
+
+#: includes/class-pts-admin.php:372
+msgid "Footer (Columns)"
+msgstr ""
+
+#: includes/class-pts-admin.php:373
+msgid ""
+"Alternative three-column footer with links and contact info. Swap via the "
+"Replace menu in the Site Editor."
+msgstr ""
+
+#: includes/class-pts-admin.php:378
+msgid "Sidebar"
+msgstr ""
+
+#: includes/class-pts-admin.php:379
+msgid "Optional sidebar column for widgets or secondary content."
+msgstr ""
+
+#: includes/class-pts-admin.php:384
+msgid "Comments"
+msgstr ""
+
+#: includes/class-pts-admin.php:385
+msgid "Comment list and reply form for single posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:390
+msgid "Post Meta"
+msgstr ""
+
+#: includes/class-pts-admin.php:391
+msgid "Post date, author, categories, and similar metadata."
+msgstr ""
+
+#: includes/class-pts-admin.php:396
+msgid "Post Navigation"
+msgstr ""
+
+#: includes/class-pts-admin.php:397
+msgid "Previous / next post links shown below single posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:402
+msgid "Post Loop"
+msgstr ""
+
+#: includes/class-pts-admin.php:403
+msgid "Reusable post list with pagination, for custom templates and pages."
+msgstr ""
+
+#: includes/class-pts-admin.php:408 includes/class-pts-admin.php:1030
+msgid "Call to Action"
+msgstr ""
+
+#: includes/class-pts-admin.php:409
+msgid "Reusable call-to-action band with heading, text, and a button."
+msgstr ""
+
+#: includes/class-pts-admin.php:414
+msgid "Hero (Full-width Background)"
+msgstr ""
+
+#: includes/class-pts-admin.php:415
+msgid "Hero section with a full-width background and content kept at the readable content width."
+msgstr ""
+
+#: includes/class-pts-admin.php:420
+msgid "Hero (Edge to Edge)"
+msgstr ""
+
+#: includes/class-pts-admin.php:421
+msgid "Hero section that spans the full viewport width, including background and wide content."
+msgstr ""
+
+#: includes/class-pts-admin.php:426
+msgid "Hero (Crossfade Background)"
+msgstr ""
+
+#: includes/class-pts-admin.php:427
+msgid ""
+"Hero with multiple background images that crossfade smoothly using an ease-"
+"in-out transition. Add or remove images in the slides group."
+msgstr ""
+
+#: includes/class-pts-admin.php:432
+msgid "Category Featured + 3 Links"
+msgstr ""
+
+#: includes/class-pts-admin.php:415
+msgid ""
+"Shows one featured latest post from a chosen category, followed by three "
+"compact latest-post links from the same category."
+msgstr ""
+
+#: includes/class-pts-admin.php:420
+msgid "Selected Post + Page"
+msgstr ""
+
+#: includes/class-pts-admin.php:421
+msgid ""
+"A two-card section for highlighting one chosen blog post and one chosen "
+"static page with editable links."
+msgstr ""
+
+#: includes/class-pts-admin.php:440
+msgid "Header (Minimal)"
+msgstr ""
+
+#: includes/class-pts-admin.php:441
+msgid "Slim header with the centered site title only."
+msgstr ""
+
+#: includes/class-pts-admin.php:446
+msgid "Header (With Search)"
+msgstr ""
+
+#: includes/class-pts-admin.php:447
+msgid "Header with navigation and a search box."
+msgstr ""
+
+#: includes/class-pts-admin.php:452
+msgid "Header (With Social)"
+msgstr ""
+
+#: includes/class-pts-admin.php:453
+msgid "Header with navigation and social media icons."
+msgstr ""
+
+#: includes/class-pts-admin.php:458
+msgid "Header (With Tagline)"
+msgstr ""
+
+#: includes/class-pts-admin.php:459
+msgid "Header showing the site title with tagline next to the navigation."
+msgstr ""
+
+#: includes/class-pts-admin.php:464
+msgid "Header (Split)"
+msgstr ""
+
+#: includes/class-pts-admin.php:465
+msgid "Three-zone header: navigation, centered site title, and a button."
+msgstr ""
+
+#: includes/class-pts-admin.php:470
+msgid "Footer (Minimal)"
+msgstr ""
+
+#: includes/class-pts-admin.php:471
+msgid "Single centered copyright line."
+msgstr ""
+
+#: includes/class-pts-admin.php:476
+msgid "Footer (With Menu)"
+msgstr ""
+
+#: includes/class-pts-admin.php:477
+msgid "Footer with site title, navigation, and copyright."
+msgstr ""
+
+#: includes/class-pts-admin.php:482
+msgid "Footer (Social)"
+msgstr ""
+
+#: includes/class-pts-admin.php:483
+msgid "Centered social media icons above the copyright line."
+msgstr ""
+
+#: includes/class-pts-admin.php:488
+msgid "Footer (Mega)"
+msgstr ""
+
+#: includes/class-pts-admin.php:489
+msgid "Four-column footer with links, resources, contact, and a bottom bar."
+msgstr ""
+
+#: includes/class-pts-admin.php:494
+msgid "Footer (CTA)"
+msgstr ""
+
+#: includes/class-pts-admin.php:495
+msgid "Footer leading with a call-to-action, then the copyright line."
+msgstr ""
+
+#: includes/class-pts-admin.php:500
+msgid "Sidebar (Blog)"
+msgstr ""
+
+#: includes/class-pts-admin.php:501
+msgid "Blog sidebar with search, recent posts, categories, and archives."
+msgstr ""
+
+#: includes/class-pts-admin.php:506
+msgid "Sidebar (CTA)"
+msgstr ""
+
+#: includes/class-pts-admin.php:507
+msgid "Sidebar box with a short message and a button."
+msgstr ""
+
+#: includes/class-pts-admin.php:512
+msgid "Post Loop (Grid)"
+msgstr ""
+
+#: includes/class-pts-admin.php:513
+msgid "Three-column post grid with featured images and pagination."
+msgstr ""
+
+#: includes/class-pts-admin.php:518
+msgid "Post Loop (Compact)"
+msgstr ""
+
+#: includes/class-pts-admin.php:519
+msgid "Compact date and title list, ideal for news updates."
+msgstr ""
+
+#: includes/class-pts-admin.php:524
+msgid "Archive Header"
+msgstr ""
+
+#: includes/class-pts-admin.php:525
+msgid "Archive title band with the term description."
+msgstr ""
+
+#: includes/class-pts-admin.php:530
+msgid "Page Header"
+msgstr ""
+
+#: includes/class-pts-admin.php:531
+msgid "Centered page title band for posts and pages."
+msgstr ""
+
+#: includes/class-pts-admin.php:536
+msgid "Author Box"
+msgstr ""
+
+#: includes/class-pts-admin.php:537
+msgid "Author avatar, name, and biography for single posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:542
+msgid "Related Posts"
+msgstr ""
+
+#: includes/class-pts-admin.php:543
+msgid "Heading with a three-column grid of recent posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:548
+msgid "Social Links"
+msgstr ""
+
+#: includes/class-pts-admin.php:549
+msgid "Centered row of social media icons, usable anywhere."
+msgstr ""
+
+#: includes/class-pts-admin.php:573
+msgid "LP First View"
+msgstr ""
+
+#: includes/class-pts-admin.php:574
+msgid ""
+"Catch copy, sub copy, and two CTA buttons for the top of a landing page."
+msgstr ""
+
+#: includes/class-pts-admin.php:579
+msgid "LP Problems Checklist"
+msgstr ""
+
+#: includes/class-pts-admin.php:580
+msgid "\"Do you have these problems?\" heading with a checklist."
+msgstr ""
+
+#: includes/class-pts-admin.php:585
+msgid "LP Empathy"
+msgstr ""
+
+#: includes/class-pts-admin.php:586
+msgid "Empathy section warning about leaving problems unresolved."
+msgstr ""
+
+#: includes/class-pts-admin.php:591
+msgid "LP Solution"
+msgstr ""
+
+#: includes/class-pts-admin.php:592
+msgid "\"Our service solves it all\" section introducing the product."
+msgstr ""
+
+#: includes/class-pts-admin.php:597
+msgid "LP Three Reasons"
+msgstr ""
+
+#: includes/class-pts-admin.php:598
+msgid "\"Three reasons we are chosen\" in three columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:603
+msgid "LP Achievements"
+msgstr ""
+
+#: includes/class-pts-admin.php:604
+msgid "Big numbers band: track record, satisfaction, retention."
+msgstr ""
+
+#: includes/class-pts-admin.php:609
+msgid "LP Customer Voices"
+msgstr ""
+
+#: includes/class-pts-admin.php:610
+msgid "Three customer testimonials with attributes."
+msgstr ""
+
+#: includes/class-pts-admin.php:615
+msgid "LP Before / After"
+msgstr ""
+
+#: includes/class-pts-admin.php:616
+msgid "Two-column comparison of before and after adopting the service."
+msgstr ""
+
+#: includes/class-pts-admin.php:621
+msgid "LP Pricing Plans"
+msgstr ""
+
+#: includes/class-pts-admin.php:622
+msgid "Three pricing plans with features and buttons."
+msgstr ""
+
+#: includes/class-pts-admin.php:627
+msgid "LP Comparison Table"
+msgstr ""
+
+#: includes/class-pts-admin.php:628
+msgid "Comparison table against competitor services."
+msgstr ""
+
+#: includes/class-pts-admin.php:633
+msgid "LP Service Flow"
+msgstr ""
+
+#: includes/class-pts-admin.php:634
+msgid "Four-step flow from inquiry to start."
+msgstr ""
+
+#: includes/class-pts-admin.php:639
+msgid "LP FAQ"
+msgstr ""
+
+#: includes/class-pts-admin.php:640
+msgid "Frequently asked questions with expandable answers."
+msgstr ""
+
+#: includes/class-pts-admin.php:645
+msgid "LP Campaign Banner"
+msgstr ""
+
+#: includes/class-pts-admin.php:646
+msgid "Limited-time campaign banner with deadline and button."
+msgstr ""
+
+#: includes/class-pts-admin.php:651
+msgid "LP Benefits"
+msgstr ""
+
+#: includes/class-pts-admin.php:652
+msgid "Three limited-time bonuses in columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:657
+msgid "LP Guarantee"
+msgstr ""
+
+#: includes/class-pts-admin.php:658
+msgid "Money-back guarantee section to remove purchase anxiety."
+msgstr ""
+
+#: includes/class-pts-admin.php:663
+msgid "LP Owner Message"
+msgstr ""
+
+#: includes/class-pts-admin.php:664
+msgid "Message from the company representative with signature."
+msgstr ""
+
+#: includes/class-pts-admin.php:669
+msgid "LP Company Profile"
+msgstr ""
+
+#: includes/class-pts-admin.php:670
+msgid "Company overview table: name, address, founding, business."
+msgstr ""
+
+#: includes/class-pts-admin.php:675
+msgid "LP Access"
+msgstr ""
+
+#: includes/class-pts-admin.php:676
+msgid "Address, station access, business hours, and a map placeholder."
+msgstr ""
+
+#: includes/class-pts-admin.php:681
+msgid "LP News"
+msgstr ""
+
+#: includes/class-pts-admin.php:682
+msgid "Date and title list of the latest posts as announcements."
+msgstr ""
+
+#: includes/class-pts-admin.php:687
+msgid "LP Conversion Area"
+msgstr ""
+
+#: includes/class-pts-admin.php:688
+msgid "Closing conversion area with phone number, hours, and buttons."
+msgstr ""
+
+#: includes/class-pts-admin.php:712
+msgid "Product Hero"
+msgstr ""
+
+#: includes/class-pts-admin.php:713
+msgid "Ranking badge, product name, price, and an add-to-cart button."
+msgstr ""
+
+#: includes/class-pts-admin.php:718
+msgid "Product Trust Badges"
+msgstr ""
+
+#: includes/class-pts-admin.php:719
+msgid "Free shipping, next-day delivery, domestic production, gift wrapping."
+msgstr ""
+
+#: includes/class-pts-admin.php:724
+msgid "Product Ranking Awards"
+msgstr ""
+
+#: includes/class-pts-admin.php:725
+msgid "List of ranking awards with period disclaimers."
+msgstr ""
+
+#: includes/class-pts-admin.php:730
+msgid "Product Media Mentions"
+msgstr ""
+
+#: includes/class-pts-admin.php:731
+msgid "\"Featured in media and SNS\" section with a logo placeholder."
+msgstr ""
+
+#: includes/class-pts-admin.php:736
+msgid "Product Time Sale"
+msgstr ""
+
+#: includes/class-pts-admin.php:737
+msgid "Limited-time sale banner with deadline and buy button."
+msgstr ""
+
+#: includes/class-pts-admin.php:742
+msgid "Product Coupon"
+msgstr ""
+
+#: includes/class-pts-admin.php:743
+msgid "Page-limited coupon banner with a claim button."
+msgstr ""
+
+#: includes/class-pts-admin.php:748
+msgid "Product Price Appeal"
+msgstr ""
+
+#: includes/class-pts-admin.php:749
+msgid "Regular price with strikethrough, special price, discount and points."
+msgstr ""
+
+#: includes/class-pts-admin.php:754
+msgid "Product Selling Points"
+msgstr ""
+
+#: includes/class-pts-admin.php:755
+msgid "POINT 01-03 sections highlighting product quality."
+msgstr ""
+
+#: includes/class-pts-admin.php:760
+msgid "Product Usage Steps"
+msgstr ""
+
+#: includes/class-pts-admin.php:761
+msgid "Easy three-step usage guide in columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:766
+msgid "Product Recommended For"
+msgstr ""
+
+#: includes/class-pts-admin.php:767
+msgid "Checklist of recommended users and gift occasions."
+msgstr ""
+
+#: includes/class-pts-admin.php:772
+msgid "Product Variations"
+msgstr ""
+
+#: includes/class-pts-admin.php:773
+msgid "Color and size variation table."
+msgstr ""
+
+#: includes/class-pts-admin.php:778
+msgid "Product Set Contents"
+msgstr ""
+
+#: includes/class-pts-admin.php:779
+msgid "List of everything included in the package."
+msgstr ""
+
+#: includes/class-pts-admin.php:784
+msgid "Product Specs Table"
+msgstr ""
+
+#: includes/class-pts-admin.php:785
+msgid "Specification table: name, size, material, country of origin."
+msgstr ""
+
+#: includes/class-pts-admin.php:790
+msgid "Product Reviews"
+msgstr ""
+
+#: includes/class-pts-admin.php:791
+msgid "Star rating, review count, and three customer reviews."
+msgstr ""
+
+#: includes/class-pts-admin.php:796
+msgid "Product Story"
+msgstr ""
+
+#: includes/class-pts-admin.php:797
+msgid "Development story building trust and attachment."
+msgstr ""
+
+#: includes/class-pts-admin.php:802
+msgid "Product Gift Wrapping"
+msgstr ""
+
+#: includes/class-pts-admin.php:803
+msgid "Wrapping, noshi, and message card support details."
+msgstr ""
+
+#: includes/class-pts-admin.php:808
+msgid "Product Shipping Info"
+msgstr ""
+
+#: includes/class-pts-admin.php:809
+msgid "Shipping fee, carriers, delivery time, and same-day options table."
+msgstr ""
+
+#: includes/class-pts-admin.php:814
+msgid "Product Returns Policy"
+msgstr ""
+
+#: includes/class-pts-admin.php:815
+msgid "Conditions for returns and exchanges."
+msgstr ""
+
+#: includes/class-pts-admin.php:820
+msgid "Product Purchase Notes"
+msgstr ""
+
+#: includes/class-pts-admin.php:821
+msgid "Pre-purchase notes such as color differences on monitors."
+msgstr ""
+
+#: includes/class-pts-admin.php:826
+msgid "Product Cart Area"
+msgstr ""
+
+#: includes/class-pts-admin.php:827
+msgid "Closing purchase area with price, perks, and cart buttons."
+msgstr ""
+
+#: includes/class-pts-admin.php:851
+msgid "Layout: Section Header"
+msgstr ""
+
+#: includes/class-pts-admin.php:852
+msgid "Centered section heading with a lead paragraph."
+msgstr ""
+
+#: includes/class-pts-admin.php:857
+msgid "Layout: Text + Image"
+msgstr ""
+
+#: includes/class-pts-admin.php:858
+msgid "Text on the left, image placeholder on the right."
+msgstr ""
+
+#: includes/class-pts-admin.php:863
+msgid "Layout: Image + Text"
+msgstr ""
+
+#: includes/class-pts-admin.php:864
+msgid "Image placeholder on the left, text on the right."
+msgstr ""
+
+#: includes/class-pts-admin.php:869
+msgid "Layout: Two Column Text"
+msgstr ""
+
+#: includes/class-pts-admin.php:870
+msgid "Two headed text columns side by side."
+msgstr ""
+
+#: includes/class-pts-admin.php:875
+msgid "Layout: Three Cards"
+msgstr ""
+
+#: includes/class-pts-admin.php:876
+msgid "Three cards with image, heading, and text."
+msgstr ""
+
+#: includes/class-pts-admin.php:881
+msgid "Layout: Four Cards"
+msgstr ""
+
+#: includes/class-pts-admin.php:882
+msgid "Four compact heading and text columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:887
+msgid "Layout: Feature List"
+msgstr ""
+
+#: includes/class-pts-admin.php:888
+msgid "Two-column checklist of features or benefits."
+msgstr ""
+
+#: includes/class-pts-admin.php:893
+msgid "Layout: Gallery"
+msgstr ""
+
+#: includes/class-pts-admin.php:894
+msgid "Six image placeholders in a three-column grid."
+msgstr ""
+
+#: includes/class-pts-admin.php:899
+msgid "Layout: Full-width Image"
+msgstr ""
+
+#: includes/class-pts-admin.php:900
+msgid "Single full-width image placeholder."
+msgstr ""
+
+#: includes/class-pts-admin.php:905
+msgid "Layout: Timeline"
+msgstr ""
+
+#: includes/class-pts-admin.php:906
+msgid "Company history table with years and events."
+msgstr ""
+
+#: includes/class-pts-admin.php:911
+msgid "Layout: Team"
+msgstr ""
+
+#: includes/class-pts-admin.php:912
+msgid "Three member profiles with photo, name, and role."
+msgstr ""
+
+#: includes/class-pts-admin.php:917
+msgid "Layout: Logos"
+msgstr ""
+
+#: includes/class-pts-admin.php:918
+msgid "Row of client or partner logo placeholders."
+msgstr ""
+
+#: includes/class-pts-admin.php:923
+msgid "Layout: Stats"
+msgstr ""
+
+#: includes/class-pts-admin.php:924
+msgid "Four big numbers with captions."
+msgstr ""
+
+#: includes/class-pts-admin.php:929
+msgid "Layout: Quote"
+msgstr ""
+
+#: includes/class-pts-admin.php:930
+msgid "Large pull quote with attribution."
+msgstr ""
+
+#: includes/class-pts-admin.php:935
+msgid "Layout: Banner CTA"
+msgstr ""
+
+#: includes/class-pts-admin.php:936
+msgid "Slim banner with a heading and a button side by side."
+msgstr ""
+
+#: includes/class-pts-admin.php:941
+msgid "Layout: Contact Info"
+msgstr ""
+
+#: includes/class-pts-admin.php:942
+msgid "Phone and form contact options in two columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:947
+msgid "Layout: Steps"
+msgstr ""
+
+#: includes/class-pts-admin.php:948
+msgid "Numbered step-by-step list."
+msgstr ""
+
+#: includes/class-pts-admin.php:953
+msgid "Layout: Table"
+msgstr ""
+
+#: includes/class-pts-admin.php:954
+msgid "Generic two-column item and description table."
+msgstr ""
+
+#: includes/class-pts-admin.php:959
+msgid "Layout: Accordion"
+msgstr ""
+
+#: includes/class-pts-admin.php:960
+msgid "Three expandable details sections."
+msgstr ""
+
+#: includes/class-pts-admin.php:965
+msgid "Layout: Main + Aside"
+msgstr ""
+
+#: includes/class-pts-admin.php:966
+msgid "Wide main text column with a narrow side note."
+msgstr ""
+
+#. translators: 1: label, 2: filename, 3: note (e.g. required)
+#: includes/class-pts-admin.php:993
+#, php-format
+msgid "%1$s (%2$s) — %3$s"
+msgstr ""
+
+#. translators: 1: label, 2: filename
+#. translators: 1: pattern title, 2: pattern filename
+#: includes/class-pts-admin.php:1001 includes/class-pts-admin.php:1116
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: includes/class-pts-admin.php:1024
+msgid "Hero Section"
+msgstr ""
+
+#: includes/class-pts-admin.php:1025
+msgid "Large top banner with headline, intro text, and a primary button."
+msgstr ""
+
+#: includes/class-pts-admin.php:1031
+msgid "Encourage visitors to contact you or take the next step."
+msgstr ""
+
+#: includes/class-pts-admin.php:1036
+msgid "Pricing Table"
+msgstr ""
+
+#: includes/class-pts-admin.php:1037
+msgid "Two-column plan comparison (e.g. Basic / Pro)."
+msgstr ""
+
+#: includes/class-pts-admin.php:1042
+msgid "Features List"
+msgstr ""
+
+#: includes/class-pts-admin.php:1043
+msgid "Three columns highlighting product or service features."
+msgstr ""
+
+#: includes/class-pts-admin.php:1048
+msgid "About Section"
+msgstr ""
+
+#: includes/class-pts-admin.php:1049
+msgid "Company or personal introduction in two columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:1054
+msgid "Text with Image"
+msgstr ""
+
+#: includes/class-pts-admin.php:1055
+msgid "Headline and copy beside an image block."
+msgstr ""
+
+#: includes/class-pts-admin.php:1060
+msgid "Testimonials"
+msgstr ""
+
+#: includes/class-pts-admin.php:1061
+msgid "Customer quotes in a two-column layout."
+msgstr ""
+
+#: includes/class-pts-admin.php:1066
+msgid "Team"
+msgstr ""
+
+#: includes/class-pts-admin.php:1067
+msgid "Team member names and roles in three columns."
+msgstr ""
+
+#: includes/class-pts-admin.php:1072
+msgid "Stats"
+msgstr ""
+
+#: includes/class-pts-admin.php:1073
+msgid "Key numbers (clients, support, experience, etc.)."
+msgstr ""
+
+#: includes/class-pts-admin.php:1078
+msgid "Logo Cloud"
+msgstr ""
+
+#: includes/class-pts-admin.php:1079
+msgid "“Trusted by” row for client or partner logos."
+msgstr ""
+
+#: includes/class-pts-admin.php:1084
+msgid "Image Gallery"
+msgstr ""
+
+#: includes/class-pts-admin.php:1085
+msgid "Empty gallery block ready for your photos."
+msgstr ""
+
+#: includes/class-pts-admin.php:1090
+msgid "Latest Posts"
+msgstr ""
+
+#: includes/class-pts-admin.php:1091
+msgid "Grid of the three most recent blog posts."
+msgstr ""
+
+#: includes/class-pts-admin.php:1096
+msgid "FAQ"
+msgstr ""
+
+#: includes/class-pts-admin.php:1097
+msgid "Question and answer pairs you can duplicate."
+msgstr ""
+
+#: includes/class-pts-admin.php:1102
+msgid "Contact"
+msgstr ""
+
+#: includes/class-pts-admin.php:1103
+msgid "Address, email, and space for a contact form."
+msgstr ""
+
+#: includes/class-pts-admin.php:1108
+msgid "Newsletter"
+msgstr ""
+
+#: includes/class-pts-admin.php:1109
+msgid "Email signup call-to-action with subscribe button."
+msgstr ""
+
+#: includes/class-pts-admin.php:1132
+msgid "Full Features"
+msgstr ""
+
+#: includes/class-pts-admin.php:1133
+msgid "Select all available templates and features for a complete theme."
+msgstr ""
+
+#: includes/class-pts-admin.php:1141
+msgid "Starter Classic"
+msgstr ""
+
+#: includes/class-pts-admin.php:1142
+msgid ""
+"A clean baseline with the key structural files, menus, widgets, and modern "
+"HTML support."
+msgstr ""
+
+#: includes/class-pts-admin.php:1160
+msgid "Professional Blog"
+msgstr ""
+
+#: includes/class-pts-admin.php:1161
+msgid ""
+"A publishing-focused setup with search, comments, archives, pagination, and "
+"content template parts."
+msgstr ""
+
+#: includes/class-pts-admin.php:1204
+msgid "Core Performance & Security"
+msgstr ""
+
+#: includes/class-pts-admin.php:1205
+msgid ""
+"A lean output preset focused on cleanup, lighter front-end assets, and safe "
+"media defaults."
+msgstr ""
+
+#: includes/class-pts-admin.php:1231
+msgid ""
+"A company-site preset with front-page support, flexible page templates, "
+"branding, and client-friendly admin touches."
+msgstr ""
+
+#: includes/class-pts-admin.php:1261
+msgid "Modern Block Friendly"
+msgstr ""
+
+#: includes/class-pts-admin.php:1262
+msgid ""
+"A classic theme tuned for the block editor with richer design controls, "
+"presets, and editor styling."
+msgstr ""
+
+#: includes/class-pts-admin.php:1297
+msgid "Portfolio / Agency"
+msgstr ""
+
+#: includes/class-pts-admin.php:1298
+msgid ""
+"A presentation-oriented preset for studios and freelancers with page "
+"templates, galleries, and branded polish."
+msgstr ""
+
+#: includes/class-pts-admin.php:1332
+msgid "E-Commerce Ready"
+msgstr ""
+
+#: includes/class-pts-admin.php:1333
+msgid ""
+"A practical WooCommerce starter with sidebar support, menus, widget areas, "
+"and conservative security defaults."
+msgstr ""
+
+#: includes/class-pts-admin.php:1360
+msgid "Classic"
+msgstr ""
+
+#: includes/class-pts-admin.php:1364
+msgid "No presets found."
+msgstr ""
+
+#: includes/class-pts-admin.php:1371
+msgid "Select"
+msgstr ""
+
+#: includes/class-pts-admin.php:1391
+msgid "Generated ZIP file was not found."
+msgstr ""
+
+#: includes/class-pts-admin.php:1415
+msgid "You are not allowed to download this file."
+msgstr ""
+
+#: includes/class-pts-admin.php:1424
+msgid "Missing download token."
+msgstr ""
+
+#: includes/class-pts-admin.php:1431
+msgid "This download link has expired."
+msgstr ""
+
+#: includes/class-pts-admin.php:1440
+msgid "The generated ZIP file is no longer available."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:25
+msgid "Theme Name"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:29
+msgid ""
+"The display name in Appearance → Themes. Use your project or brand name."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:32
+msgid "Theme Slug"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:36
+msgid ""
+"Folder name under wp-content/themes/ (lowercase letters, numbers, hyphens "
+"only). Cannot be changed easily later."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:39
+msgid "Author"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:42
+msgid "Written into style.css theme metadata. Your name or company name."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:43
+msgid "Written into style.css. Your name or company name."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:46
+msgid "Author URI"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:49
+msgid "Optional link to your website, shown in the theme header metadata."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:52
+msgid "Description"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:56
+msgid ""
+"Short summary for the theme list and style.css. Shown in Site Editor theme "
+"details."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:57
+msgid "Short summary of the theme for the theme list and style.css header."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:71
+msgid "Basic Parts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:73
+msgid "The main template file (Required)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:74
+msgid "Document head and navigation area"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:75
+msgid "Site footer and script loading"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:76
+msgid "Widget area for the sidebar"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:77
+msgid "Template for displaying comments"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:78
+msgid "Custom search form template"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:79
+msgid "Custom display for embedded posts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:83
+msgid "Singular Templates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:85
+msgid "Template for single blog posts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:86
+msgid "Template for static pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:87
+msgid "Fallback for both single posts and pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:88
+msgid "Template for media attachment pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:89
+msgid "Specialized template for image attachments"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:90
+msgid "Specialized template for video attachments"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:91
+msgid "Specialized template for audio attachments"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:92
+msgid "Template for the privacy policy page"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:96
+msgid "Custom Page Templates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:98
+msgid "Full-width layout without sidebars"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:99
+msgid "Content-only layout without sidebars"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:103
+msgid "Archive Templates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:105
+msgid "General archive (categories, tags, dates)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:106
+msgid "Template for category archives"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:107
+msgid "Template for tag archives"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:108
+msgid "Template for custom taxonomy archives"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:109
+msgid "Template for author-specific posts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:110
+msgid "Template for date-based archives"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:111
+msgid "Template for paginated archive results"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:115
+msgid "Template Parts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:117
+msgid "The primary loop content template"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:118
+msgid "Content template for single posts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:119
+msgid "Content template for pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:120
+msgid "Content template for search results"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:121
+msgid "Template for when no results are found"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:125
+msgid "Other Templates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:127
+msgid "The site's front page"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:128
+msgid "The blog posts index page"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:129
+msgid "Template for search results"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:130
+msgid "Template for 404 Error pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:145
+msgid "Core Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:147
+msgid "Optimized title management for better SEO"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:147
+msgid "Title Tag (Required for modern SEO)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:148
+msgid "Enable post thumbnail support for posts and pages"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:148
+msgid "Featured Images (Post Thumbnails)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:149
+msgid "HTML5 Support (Search form, Comment form, etc.)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:149
+msgid "Output semantic HTML5 for forms and lists"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:150
+msgid "Add RSS feed links to the document head"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:150
+msgid "Automatic Feed Links"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:151
+msgid "Allow logo uploads via the customizer"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:151
+msgid "Custom Logo"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:152
+msgid "Custom Header"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:152
+msgid "Enable custom header image management"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:153
+msgid "Custom Background"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:153
+msgid "Support for custom background colors/images"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:154
+msgid "Enable support for various post types like video, gallery, etc."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:154
+msgid "Post Formats"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:155
+msgid "Setup default content for new installations"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:155
+msgid "Starter Content"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:156
+msgid "Basic compatibility for the WooCommerce plugin"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:156
+msgid "WooCommerce Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:157
+msgid "Enable faster widget updating in customizer"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:157
+msgid "Selective Refresh Widgets"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:161
+msgid "Navigation & Menus"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:163
+msgid "Navigation Menus"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:163
+msgid "Support for custom menus via the dashboard"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:164
+msgid "Multiple Menu Locations"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:164
+msgid "Register Primary, Footer, Mobile, and Social menus"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:165
+msgid "Enable widget-ready sidebar areas"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:165
+msgid "Widgets / Sidebar"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:169
+msgid "Block Editor (Gutenberg) Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:171
+msgid "Enable comprehensive design controls like link color and borders"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:172
+msgid "Enable wide and full-width block alignments"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:172
+msgid "Wide Alignment Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:173
+msgid "Core Block Styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:173
+msgid "Include standard WordPress block styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:174
+msgid "Ensure embedded content scales correctly"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:174
+msgid "Responsive Embeds"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:175
+msgid "Editor Styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:175
+msgid "Reflect theme styles within the block editor"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:176
+msgid "Custom Color Palette"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:176
+msgid "Define a specific set of colors for the block editor"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:177
+msgid "Disable Custom Colors"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:177
+msgid "Restrict colors to theme presets only"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:178
+msgid "Define custom gradients for blocks"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:178
+msgid "Editor Gradient Presets"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:179
+msgid "Disable Custom Gradients"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:179
+msgid "Restrict gradients to theme presets only"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:180
+msgid "Custom Font Sizes"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:180
+msgid "Register specific font sizes for text-based blocks"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:181
+msgid "Disable Custom Font Sizes"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:181
+msgid "Restrict font sizes to theme presets only"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:182
+msgid "Custom Line Height"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:182
+msgid "Enable line height control in the editor"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:183
+msgid "Custom Spacing Controls"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:183
+msgid "Enable margin and padding controls for blocks"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:184
+msgid "Custom Units"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:184
+msgid "Register specific CSS units for block sizes"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:185
+msgid "Enable link color settings in the block editor (WordPress 6.3+)."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:185
+msgid "Link Color Control"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:186
+msgid "Border Controls"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:186
+msgid ""
+"Enable border design tools for blocks in classic themes (WordPress 6.3+)."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:187
+msgid "Editor Spacing Presets"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:187
+msgid "Register spacing size presets for the block editor (WordPress 6.6+)."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:188
+msgid "Disable Default Layout Styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:188
+msgid "Turn off WordPress default layout block styles (WordPress 6.1+)."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:189
+msgid "Block Widget Editor"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:189
+msgid ""
+"Use the blocks-based widget screen instead of the legacy widgets UI "
+"(WordPress 5.8+)."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:190
+msgid "Remove Global Styles (Inline CSS)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:190
+msgid "Remove the default bloat of block-based inline CSS"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:194
+msgid "Cleanup & Optimization"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:196
+msgid "Header Cleanup (Security/Bloat)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:196
+msgid "Remove RSD, WLW, and shortlinks from the head"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:197
+msgid "Hide version information for better security"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:197
+msgid "Remove WordPress Version (Security)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:198
+msgid "Allow SVG uploads only for administrators and reject unsafe markup."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:198
+msgid "Enable Admin-only SVG Uploads"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:199
+msgid "Adjust post excerpt length to 50 words"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:199
+msgid "Custom Excerpt Length (50 words)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:200
+msgid "Disable Emojis (Speed)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:200
+msgid "Remove unnecessary emoji script and styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:201
+msgid "Load Block CSS On Demand"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:201
+msgid ""
+"Load only styles for blocks used on the page (WordPress 6.8+). Improves "
+"performance in classic themes."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:202
+msgid "Disable Block Library CSS"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:202
+msgid "Option to remove the default block styles"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:203
+msgid "Remove jQuery Migrate"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:203
+msgid "Stop loading the legacy migration script"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:204
+msgid "Disable Heartbeat API"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:204
+msgid "Reduce server load by limiting background pulses"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:205
+msgid "Lazy Load Settings"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:205
+msgid "Optimization settings for native image lazy loading"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:206
+msgid "Allow WebP image uploads and automatic quality adjustment"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:206
+msgid "Enable WebP Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:207
+msgid "Allow WebM video uploads to the media library"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:207
+msgid "Enable WebM Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:208
+msgid "Limit Post Revisions"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:208
+msgid "Restrict the number of revisions to keep for each post"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:209
+msgid "Define a standard maximum width for embedded content"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:209
+msgid "Global Content Width"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:213
+msgid "Advanced Functions"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:215
+msgid "Add a numeric pagination function for archives"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:215
+msgid "Custom Numeric Pagination"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:216
+msgid "Breadcrumbs Template"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:216
+msgid "Include a foundation for breadcrumb navigation"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:217
+msgid "Automatically load scripts for reply-to functionality"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:217
+msgid "Threaded Comments Support"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:218
+msgid ""
+"Editable SCSS partials mirroring style.css, plus a package.json with sass "
+"build scripts"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:218
+msgid "SCSS Sources (assets/scss)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:222
+msgid "Automatic Updates & Security"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:224
+msgid "Automatically apply minor security releases"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:224
+msgid "Enable Minor Core Auto-updates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:225
+msgid "Enable Major Core Auto-updates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:225
+msgid "Opt-in for major version auto-updates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:226
+msgid "Enable Plugin Auto-updates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:226
+msgid "Keep all plugins updated automatically"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:227
+msgid "Enable Theme Auto-updates"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:227
+msgid "Keep all themes updated automatically"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:228
+msgid "Disable XML-RPC (Security)"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:228
+msgid "Disable XML-RPC to prevent brute force attacks"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:229
+msgid "Hide public user-list endpoints without blocking the broader REST API."
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:229
+msgid "Limit public REST user endpoints"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:230
+msgid "Disable Theme/Plugin File Editor"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:230
+msgid "Disable the dashboard file editor for security"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:234
+msgid "Admin Customization"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:236
+msgid "Custom Login Page Credits"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:236
+msgid "Link the login logo to your site and change its title"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:237
+msgid "Disable the admin bar for non-administrator users"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:237
+msgid "Hide Admin Bar for Customers"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:238
+msgid "Add your custom brand text to the admin footer area"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:238
+msgid "Admin Footer Branding"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:239
+msgid "Branding for the WordPress login screen"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:239
+msgid "Custom Login Style"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:240
+msgid "Dashboard Cleanup"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:240
+msgid "Remove unused dashboard widgets for a cleaner UI"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:241
+msgid "Control the number of results per search page"
+msgstr ""
+
+#: includes/class-pts-classic-definitions.php:241
+msgid "Search Results Limit"
+msgstr ""
+
+#. translators: 1: filename, 2: required note
+#: includes/class-pts-classic-definitions.php:261
+#, php-format
+msgid "%1$s — %2$s"
+msgstr ""
+
+#. translators: 1: minimum WordPress version, 2: detected version string
+#: picot-theme-seeder.php:82
+#, php-format
+msgid ""
+"Picot Theme Seeder requires WordPress %1$s or later. This site is running "
+"%2$s."
+msgstr ""

@@ -1,0 +1,2665 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Picot Theme Seeder 1.0.0\n"
+"Report-Msgid-Bugs-To: https://picot.tokyo/aio/\n"
+"POT-Creation-Date: 2026-06-20 22:26+0900\n"
+"PO-Revision-Date: 2026-06-20 22:26+0900\n"
+"Last-Translator: PICOT\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Picot Theme Seeder i18n sync\n"
+
+#: admin/views/main.php:8 includes/class-pts-admin.php:68
+msgid "Picot Theme Seeder"
+msgstr "Picot Theme Seeder"
+
+#: admin/views/main.php:9
+msgid "Create a Block (FSE) or Classic theme skeleton in minutes."
+msgstr "Block（FSE）または Classic テーマの骨組みを数分で作成できます。"
+
+#: admin/views/main.php:12
+msgid "Choose Theme Type"
+msgstr "テーマの種類を選択"
+
+#: admin/views/main.php:13
+msgid ""
+"Select the kind of theme you want to generate. You can change this later "
+"before generating files."
+msgstr "生成するテーマの種類を選んでください。ファイル生成前であれば、あとから変更できます。"
+
+#: admin/views/main.php:18 includes/class-pts-admin.php:122
+msgid "Block Theme (FSE)"
+msgstr "Block テーマ（FSE）"
+
+#: admin/views/main.php:19
+msgid "theme.json, HTML templates, template parts, block patterns"
+msgstr "theme.json、HTML テンプレート、テンプレートパーツ、ブロックパターン"
+
+#: admin/views/main.php:23 admin/views/main.php:47
+#: includes/class-pts-admin.php:124
+msgid "Classic Theme"
+msgstr "Classic テーマ"
+
+#: admin/views/main.php:24
+msgid "PHP templates, functions.php, style.css, sidebars"
+msgstr "PHP テンプレート、functions.php、style.css、サイドバー"
+
+#: admin/views/main.php:31 includes/class-pts-admin.php:127
+msgid "Continue"
+msgstr "続行"
+
+#: admin/views/main.php:38 admin/views/main.php:46
+#: includes/class-pts-admin.php:126
+msgid "Change theme type"
+msgstr "テーマ種別を変更"
+
+#: admin/views/main.php:39
+msgid "Block Theme"
+msgstr "Block テーマ"
+
+#: admin/views/partials/block-wizard.php:10
+#: admin/views/partials/classic-wizard.php:10
+msgid "Basic Info"
+msgstr "基本情報"
+
+#: admin/views/partials/block-wizard.php:11
+#: admin/views/partials/classic-wizard.php:11
+msgid "Presets"
+msgstr "プリセット"
+
+#: admin/views/partials/block-wizard.php:12
+#: admin/views/partials/classic-wizard.php:13
+msgid "Features"
+msgstr "機能"
+
+#: admin/views/partials/block-wizard.php:13
+msgid "Theme JSON"
+msgstr "Theme JSON"
+
+#: admin/views/partials/block-wizard.php:14
+#: admin/views/partials/block-wizard.php:246
+#: admin/views/partials/classic-wizard.php:14
+#: admin/views/partials/classic-wizard.php:72
+msgid "Preview"
+msgstr "プレビュー"
+
+#: admin/views/partials/block-wizard.php:15
+#: admin/views/partials/block-wizard.php:259
+#: admin/views/partials/classic-wizard.php:15
+#: admin/views/partials/classic-wizard.php:88
+msgid "Output"
+msgstr "出力"
+
+#: admin/views/partials/block-wizard.php:25
+#: admin/views/partials/classic-wizard.php:25
+msgid "Basic Information"
+msgstr "テーマの基本情報"
+
+#: admin/views/partials/block-wizard.php:31
+#: admin/views/partials/classic-wizard.php:32
+msgid "Next: Presets"
+msgstr "次へ: プリセット"
+
+#: admin/views/partials/block-wizard.php:36
+#: admin/views/partials/classic-wizard.php:37
+msgid "Select a Preset"
+msgstr "プリセットを選択"
+
+#: admin/views/partials/block-wizard.php:39
+msgid "All"
+msgstr "すべて"
+
+#: admin/views/partials/block-wizard.php:40 includes/class-pts-admin.php:176
+msgid "Uses (L1)"
+msgstr "用途 (L1)"
+
+#: admin/views/partials/block-wizard.php:47
+#: admin/views/partials/block-wizard.php:131
+#: admin/views/partials/block-wizard.php:239
+#: admin/views/partials/block-wizard.php:252
+#: admin/views/partials/block-wizard.php:267
+#: admin/views/partials/classic-wizard.php:42
+#: admin/views/partials/classic-wizard.php:53
+#: admin/views/partials/classic-wizard.php:65
+#: admin/views/partials/classic-wizard.php:81
+#: admin/views/partials/classic-wizard.php:95
+msgid "Back"
+msgstr "戻る"
+
+#: admin/views/partials/block-wizard.php:48
+#: admin/views/partials/classic-wizard.php:54
+msgid "Next: Features"
+msgstr "次へ: 機能"
+
+#: admin/views/partials/block-wizard.php:54
+msgid "Select Features"
+msgstr "機能を選択"
+
+#: admin/views/partials/block-wizard.php:56
+msgid "Core Features"
+msgstr "コア機能"
+
+#: admin/views/partials/block-wizard.php:58
+msgid "Generate theme.json"
+msgstr "theme.json を生成"
+
+#: admin/views/partials/block-wizard.php:59
+msgid "Generate Templates"
+msgstr "テンプレートを生成"
+
+#: admin/views/partials/block-wizard.php:60
+msgid "Generate Parts"
+msgstr "パーツを生成"
+
+#: admin/views/partials/block-wizard.php:61
+msgid "Generate SCSS sources (assets/scss + package.json)"
+msgstr "SCSS ソースを生成（assets/scss + package.json）"
+
+#: admin/views/partials/block-wizard.php:62
+msgid "Generate Style Variations (styles/ — Dark, Natural, Vivid)"
+msgstr "スタイルバリエーションを生成（styles/ — ダーク・ナチュラル・ビビッド）"
+
+#: admin/views/partials/block-wizard.php:65
+#: admin/views/partials/classic-wizard.php:12
+msgid "Templates"
+msgstr "テンプレート"
+
+#: admin/views/partials/block-wizard.php:66
+msgid ""
+"HTML templates in the templates/ folder. WordPress picks the most specific "
+"file for each view (template hierarchy)."
+msgstr ""
+"templates/ フォルダの HTML テンプレートです。表示内容に応じて WordPress が最も適したファイルを選びます（テンプレート階層）。"
+
+#: admin/views/partials/block-wizard.php:71
+msgid "Parts"
+msgstr "パーツ"
+
+#: admin/views/partials/block-wizard.php:72
+msgid ""
+"Reusable regions in the parts/ folder (header, footer, etc.). Referenced "
+"from templates with the template-part block."
+msgstr "parts/ フォルダの共通領域（ヘッダー・フッターなど）です。各テンプレートから template-part ブロックで読み込みます。"
+
+#: admin/views/partials/block-wizard.php:75
+#: admin/views/partials/block-wizard.php:76
+msgid "Basic Template Parts Set"
+msgstr "基本テンプレートパーツセット"
+
+#: admin/views/partials/block-wizard.php:78
+msgid ""
+"Select all recommended parts at once. Unchecking a part below turns the set "
+"off."
+msgstr "おすすめパーツをまとめて選択します。下の個別パーツを外すとセットは解除されます。"
+
+#: admin/views/partials/block-wizard.php:85
+#: admin/views/partials/block-wizard.php:86
+msgid "Extended Layout Parts Set"
+msgstr "拡張レイアウトパーツセット"
+
+#: admin/views/partials/block-wizard.php:88
+msgid ""
+"Common site layout variations: more headers and footers, sidebars, post "
+"grids, author box, and more."
+msgstr "よく使われるサイトレイアウト集。ヘッダー・フッターの各種バリエーション、サイドバー、投稿グリッド、著者ボックスなどをまとめて追加できます。"
+
+#: admin/views/partials/block-wizard.php:95
+#: admin/views/partials/block-wizard.php:96
+msgid "Japanese LP Parts Set"
+msgstr "LPパーツセット（日本向け）"
+
+#: admin/views/partials/block-wizard.php:98
+msgid ""
+"Landing page sections common on Japanese sites: first view, problems "
+"checklist, reasons, customer voices, pricing, FAQ, conversion area, and more"
+" (Japanese placeholder text)."
+msgstr ""
+"日本のサイトで定番のLP構成セクション。ファーストビュー・お悩みチェック・選ばれる理由・お客様の声・料金・FAQ・CVエリアなど（日本語のダミーテキスト入り）。"
+
+#: admin/views/partials/block-wizard.php:105
+#: admin/views/partials/block-wizard.php:106
+msgid "Product LP Parts Set"
+msgstr "商品LPパーツセット（EC向け）"
+
+#: admin/views/partials/block-wizard.php:108
+msgid ""
+"EC product page sections common on Japanese shopping sites such as Rakuten: "
+"sale banner, coupon, double pricing, reviews, specs, gift wrapping, "
+"shipping, and more (Japanese placeholder text)."
+msgstr ""
+"楽天などの日本のECサイトで定番の商品紹介LPセクション。セール帯・クーポン・二重価格・レビュー・商品仕様・ギフト対応・配送案内など（日本語のダミーテキスト入り）。"
+
+#: admin/views/partials/block-wizard.php:115
+#: admin/views/partials/block-wizard.php:116
+msgid "Common Layout Kit"
+msgstr "汎用レイアウトキット"
+
+#: admin/views/partials/block-wizard.php:118
+msgid ""
+"Everyday page layouts: text + image, card grids, gallery, timeline, team, "
+"stats, steps, table, accordion, and more (Japanese placeholder text and "
+"empty image placeholders)."
+msgstr ""
+"よく使う定番ページレイアウト集。テキスト＋画像・カードグリッド・ギャラリー・沿革・チーム紹介・数値・ステップ・表組み・アコーディオンなど（日本語ダミーテキストと画像プレースホルダー入り）。"
+
+#: admin/views/partials/block-wizard.php:124
+msgid "Patterns"
+msgstr "パターン"
+
+#: admin/views/partials/block-wizard.php:125
+msgid ""
+"Reusable block sections for the Site Editor or post editor. Selected files "
+"are copied into your theme’s patterns/ folder."
+msgstr "サイトエディター／投稿エディターから挿入できるブロックの部品です。選んだファイルはテーマの patterns/ フォルダにコピーされます。"
+
+#: admin/views/partials/block-wizard.php:132
+msgid "Next: Theme JSON"
+msgstr "次へ: Theme JSON"
+
+#: admin/views/partials/block-wizard.php:138
+msgid "Theme JSON Settings"
+msgstr "Theme JSON 設定"
+
+#: admin/views/partials/block-wizard.php:139
+msgid "Configure basic settings for your theme.json."
+msgstr "theme.json の基本設定を行います。"
+
+#: admin/views/partials/block-wizard.php:141
+msgid "Settings (theme.json v3)"
+msgstr "設定 (theme.json v3)"
+
+#: admin/views/partials/block-wizard.php:143
+msgid "Use Root Padding Aware Alignments"
+msgstr "ルートの余白を考慮した配置"
+
+#: admin/views/partials/block-wizard.php:144
+#: includes/class-pts-classic-definitions.php:171
+msgid "Appearance Tools"
+msgstr "外観ツール"
+
+#: admin/views/partials/block-wizard.php:145
+msgid "Background: Background Image"
+msgstr "背景: 背景画像"
+
+#: admin/views/partials/block-wizard.php:146
+msgid "Background: Size / Position / Repeat"
+msgstr "背景: サイズ・位置・繰り返し"
+
+#: admin/views/partials/block-wizard.php:147
+msgid "Border: Color"
+msgstr "枠線: 色"
+
+#: admin/views/partials/block-wizard.php:148
+msgid "Border: Radius"
+msgstr "枠線: 角丸"
+
+#: admin/views/partials/block-wizard.php:149
+msgid "Border: Style"
+msgstr "枠線: スタイル"
+
+#: admin/views/partials/block-wizard.php:150
+msgid "Border: Width"
+msgstr "枠線: 太さ"
+
+#: admin/views/partials/block-wizard.php:151
+msgid "Dimensions: Aspect Ratio"
+msgstr "サイズ: アスペクト比"
+
+#: admin/views/partials/block-wizard.php:152
+msgid "Dimensions: Height"
+msgstr "サイズ: 高さ"
+
+#: admin/views/partials/block-wizard.php:153
+msgid "Dimensions: Min Height"
+msgstr "サイズ: 最小高さ"
+
+#: admin/views/partials/block-wizard.php:154
+msgid "Dimensions: Width"
+msgstr "サイズ: 幅"
+
+#: admin/views/partials/block-wizard.php:155
+msgid "Position: Sticky"
+msgstr "配置: スティッキー"
+
+#: admin/views/partials/block-wizard.php:156
+msgid "Shadow: Default Presets"
+msgstr "シャドウ: デフォルトプリセット"
+
+#: admin/views/partials/block-wizard.php:157
+msgid "Spacing: Block Gap"
+msgstr "余白: ブロック間隔"
+
+#: admin/views/partials/block-wizard.php:158
+msgid "Spacing: Margin"
+msgstr "余白: マージン"
+
+#: admin/views/partials/block-wizard.php:159
+msgid "Spacing: Padding"
+msgstr "余白: パディング"
+
+#: admin/views/partials/block-wizard.php:160
+msgid "Spacing: Custom Size"
+msgstr "余白: カスタムサイズ"
+
+#: admin/views/partials/block-wizard.php:161
+msgid "Spacing: Default Presets"
+msgstr "余白: デフォルトプリセット"
+
+#: admin/views/partials/block-wizard.php:164
+msgid "Color"
+msgstr "色"
+
+#: admin/views/partials/block-wizard.php:166
+msgid "Background"
+msgstr "背景"
+
+#: admin/views/partials/block-wizard.php:167
+msgid "Text"
+msgstr "テキスト"
+
+#: admin/views/partials/block-wizard.php:168
+msgid "Link"
+msgstr "リンク"
+
+#: admin/views/partials/block-wizard.php:169
+msgid "Heading"
+msgstr "見出し"
+
+#: admin/views/partials/block-wizard.php:170
+msgid "Button"
+msgstr "ボタン"
+
+#: admin/views/partials/block-wizard.php:171
+msgid "Caption"
+msgstr "キャプション"
+
+#: admin/views/partials/block-wizard.php:172
+msgid "Custom Color Picker"
+msgstr "カスタムカラーピッカー"
+
+#: admin/views/partials/block-wizard.php:173
+msgid "Custom Gradients"
+msgstr "カスタムグラデーション"
+
+#: admin/views/partials/block-wizard.php:174
+msgid "Custom Duotone"
+msgstr "カスタムデュオトーン"
+
+#: admin/views/partials/block-wizard.php:175
+msgid "Default Palette (Core)"
+msgstr "デフォルトパレット（コア）"
+
+#: admin/views/partials/block-wizard.php:176
+msgid "Default Gradients (Core)"
+msgstr "デフォルトグラデーション（コア）"
+
+#: admin/views/partials/block-wizard.php:177
+msgid "Default Duotone (Core)"
+msgstr "デフォルトデュオトーン（コア）"
+
+#: admin/views/partials/block-wizard.php:180
+msgid "Typography"
+msgstr "タイポグラフィ"
+
+#: admin/views/partials/block-wizard.php:182
+msgid "Default Font Sizes"
+msgstr "デフォルトフォントサイズ"
+
+#: admin/views/partials/block-wizard.php:183
+msgid "Custom Font Size"
+msgstr "カスタムフォントサイズ"
+
+#: admin/views/partials/block-wizard.php:184
+msgid "Font Style"
+msgstr "フォントスタイル"
+
+#: admin/views/partials/block-wizard.php:185
+msgid "Font Weight"
+msgstr "フォントの太さ"
+
+#: admin/views/partials/block-wizard.php:186
+msgid "Letter Spacing"
+msgstr "字間"
+
+#: admin/views/partials/block-wizard.php:187
+msgid "Line Height"
+msgstr "行の高さ"
+
+#: admin/views/partials/block-wizard.php:188
+msgid "Text Align"
+msgstr "文字揃え"
+
+#: admin/views/partials/block-wizard.php:189
+msgid "Text Decoration"
+msgstr "文字装飾"
+
+#: admin/views/partials/block-wizard.php:190
+msgid "Text Transform"
+msgstr "文字変換"
+
+#: admin/views/partials/block-wizard.php:191
+msgid "Drop Cap"
+msgstr "ドロップキャップ"
+
+#: admin/views/partials/block-wizard.php:192
+msgid "Fluid Typography"
+msgstr "フルイドタイポグラフィ"
+
+#: admin/views/partials/block-wizard.php:195
+msgid "WordPress 7.0+ (theme.json)"
+msgstr "WordPress 7.0+（theme.json）"
+
+#: admin/views/partials/block-wizard.php:197
+msgid "Border radius presets (radiusSizes)"
+msgstr "角丸プリセット（radiusSizes）"
+
+#: admin/views/partials/block-wizard.php:198
+msgid "Predefined border radius values in the editor (WordPress 6.9+)."
+msgstr "エディターで選べる角丸プリセットを定義します（WordPress 6.9 以降）。"
+
+#: admin/views/partials/block-wizard.php:199
+msgid "Form element styles (select & textInput)"
+msgstr "フォーム要素のスタイル（select と textInput）"
+
+#: admin/views/partials/block-wizard.php:200
+msgid ""
+"Default styles for select and text inputs via styles.elements (WordPress "
+"6.9+)."
+msgstr "styles.elements で select とテキスト入力のデフォルトスタイルを設定します（WordPress 6.9 以降）。"
+
+#: admin/views/partials/block-wizard.php:203
+msgid "Brand Colors"
+msgstr "ブランドカラー"
+
+#: admin/views/partials/block-wizard.php:204
+msgid ""
+"Written to theme.json as the color palette. Buttons and links use these "
+"presets, so the whole theme recolors from the Styles panel later."
+msgstr ""
+"theme.json "
+"のカラーパレットとして書き出されます。ボタンやリンクがこのプリセットを参照するため、後からスタイルパネルでテーマ全体の配色を一括変更できます。"
+
+#: admin/views/partials/block-wizard.php:207
+msgid "Primary color"
+msgstr "プライマリカラー"
+
+#: admin/views/partials/block-wizard.php:210
+msgid "Buttons and links. The main brand color."
+msgstr "ボタンとリンクに使われるメインのブランドカラー。"
+
+#: admin/views/partials/block-wizard.php:214
+msgid "Secondary color"
+msgstr "セカンダリカラー"
+
+#: admin/views/partials/block-wizard.php:217
+msgid "Hover states and accents. Usually a darker shade of the primary color."
+msgstr "ホバー時やアクセントに使用。通常はプライマリより暗めの色。"
+
+#: admin/views/partials/block-wizard.php:221
+msgid "Background color"
+msgstr "背景色"
+
+#: admin/views/partials/block-wizard.php:224
+msgid "Site background color."
+msgstr "サイト全体の背景色。"
+
+#: admin/views/partials/block-wizard.php:228
+msgid "Text color"
+msgstr "文字色"
+
+#: admin/views/partials/block-wizard.php:231
+msgid "Default body text color."
+msgstr "本文の標準文字色。"
+
+#: admin/views/partials/block-wizard.php:240
+#: admin/views/partials/classic-wizard.php:66
+msgid "Next: Preview"
+msgstr "次へ: プレビュー"
+
+#: admin/views/partials/block-wizard.php:248
+#: admin/views/partials/classic-wizard.php:74
+msgid "Summary of generated files:"
+msgstr "生成されるファイル一覧:"
+
+#: admin/views/partials/block-wizard.php:253
+#: admin/views/partials/classic-wizard.php:82
+msgid "Next: Output"
+msgstr "次へ: 出力"
+
+#: admin/views/partials/block-wizard.php:260
+msgid "Generate your starter theme."
+msgstr "テーマの骨格を生成します。"
+
+#: admin/views/partials/block-wizard.php:262
+#: admin/views/partials/classic-wizard.php:91
+msgid "Write to themes directory"
+msgstr "themesディレクトリに直接作成"
+
+#: admin/views/partials/block-wizard.php:263
+#: admin/views/partials/classic-wizard.php:90
+msgid "Download ZIP"
+msgstr "ZIPファイルをダウンロード"
+
+#: admin/views/partials/block-wizard.php:265
+#: admin/views/partials/classic-wizard.php:93 includes/class-pts-admin.php:224
+#: includes/class-pts-admin.php:1370
+msgid "Generate Theme"
+msgstr "テーマを生成"
+
+#: admin/views/partials/classic-wizard.php:43
+msgid "Next: Templates"
+msgstr "次へ: テンプレート選択"
+
+#: admin/views/partials/classic-wizard.php:49
+msgid "Select Templates"
+msgstr "テンプレートの選択"
+
+#: admin/views/partials/classic-wizard.php:50
+msgid ""
+"PHP template files in your theme folder. WordPress uses the template "
+"hierarchy to pick the best match for each view."
+msgstr "テーマフォルダ内の PHP テンプレートです。表示内容に応じて WordPress が最適なファイルを選びます（テンプレート階層）。"
+
+#: admin/views/partials/classic-wizard.php:61
+msgid "Theme Features (functions.php)"
+msgstr "テーマ機能 (functions.php)"
+
+#: admin/views/partials/classic-wizard.php:62
+msgid ""
+"Optional code added to functions.php (theme support, menus, security, block "
+"editor, etc.)."
+msgstr "functions.php に追加する任意のコード（テーマサポート、メニュー、セキュリティ、ブロックエディター対応など）。"
+
+#: admin/views/partials/classic-wizard.php:77
+msgid "Enabled Features:"
+msgstr "有効な機能:"
+
+#: admin/views/partials/root-layout-fields.php:10
+msgid "Root layout (:root)"
+msgstr "ルートレイアウト（:root）"
+
+#: admin/views/partials/root-layout-fields.php:11
+msgid ""
+"Width and spacing tokens written to :root CSS variables. Classic themes use "
+"them in style.css; block themes also map content/wide sizes to theme.json."
+msgstr ""
+"幅・余白のトークンを :root の CSS 変数として出力します。Classic は style.css、Block は theme.json の "
+"content / wide 幅にも反映されます。"
+
+#: admin/views/partials/root-layout-fields.php:14
+msgid "Site max width"
+msgstr "サイト最大幅"
+
+#: admin/views/partials/root-layout-fields.php:17
+msgid "Maximum width of the site shell (header, main, footer)."
+msgstr "ヘッダー・メイン・フッターを包むサイト全体の最大幅です。"
+
+#: admin/views/partials/root-layout-fields.php:21
+msgid "Content width"
+msgstr "コンテンツ幅"
+
+#: admin/views/partials/root-layout-fields.php:24
+msgid ""
+"Main column width. Block themes: theme.json settings.layout.contentSize."
+msgstr "メインカラムの幅。Block テーマでは theme.json の settings.layout.contentSize に対応します。"
+
+#: admin/views/partials/root-layout-fields.php:28
+msgid "Wide width"
+msgstr "ワイド幅"
+
+#: admin/views/partials/root-layout-fields.php:31
+msgid ""
+"Wide alignment width. Block themes: theme.json settings.layout.wideSize."
+msgstr "ワイド配置用の幅。Block テーマでは theme.json の settings.layout.wideSize に対応します。"
+
+#: admin/views/partials/root-layout-fields.php:35
+msgid "Root padding (inline)"
+msgstr "ルート余白（左右）"
+
+#: admin/views/partials/root-layout-fields.php:38
+msgid "Horizontal padding applied to the site shell."
+msgstr "サイトシェルに適用する左右のパディングです。"
+
+#: admin/views/partials/root-layout-fields.php:42
+msgid "Block / column gap"
+msgstr "ブロック／カラム間隔"
+
+#: admin/views/partials/root-layout-fields.php:45
+msgid ""
+"Gap between main content and sidebar, and block spacing where supported."
+msgstr "メインとサイドバーの間隔、および対応するブロック間隔です。"
+
+#. translators: %s: file name.
+#: includes/class-bts-generator.php:18 includes/class-cts-generator.php:20
+msgid "Could not write file: %s"
+msgstr "ファイルを書き込めませんでした: %s"
+
+#: includes/class-bts-generator.php:84 includes/class-cts-generator.php:46
+msgid "Could not create temporary directory."
+msgstr "一時ディレクトリを作成できませんでした。"
+
+#. translators: %s: theme slug
+#: includes/class-bts-generator.php:340
+msgid "Theme directory already exists: %s"
+msgstr "テーマディレクトリが既に存在します: %s"
+
+#: includes/class-bts-generator.php:354 includes/class-bts-generator.php:378
+#: includes/class-cts-generator.php:637 includes/class-cts-generator.php:651
+#: includes/class-pts-admin.php:225 includes/class-pts-admin.php:1366
+msgid "Theme generated successfully."
+msgstr "テーマを生成しました。"
+
+#: includes/class-bts-generator.php:358 includes/class-cts-generator.php:640
+msgid "Could not move theme to the themes directory. Check permissions."
+msgstr "テーマを themes ディレクトリへ移動できませんでした。権限を確認してください。"
+
+#: includes/class-bts-zip.php:12 includes/class-cts-zip.php:12
+msgid "ZipArchive class is missing on this server."
+msgstr "このサーバーに ZipArchive クラスがありません。"
+
+#: includes/class-bts-zip.php:17 includes/class-cts-zip.php:17
+msgid "Could not open ZIP file for writing."
+msgstr "ZIP ファイルを書き込み用に開けませんでした。"
+
+#: includes/class-cts-generator.php:627
+msgid "Theme directory already exists."
+msgstr "同名のテーマディレクトリが既に存在します。"
+
+#: includes/class-pts-admin.php:44
+msgid "Invalid theme type. Choose Block or Classic."
+msgstr "テーマの種類が不正です。Block または Classic を選択してください。"
+
+#: includes/class-pts-admin.php:69
+msgid "Theme Seeder"
+msgstr "テーマシーダー"
+
+#: includes/class-pts-admin.php:121
+msgid "Please choose a theme type to continue."
+msgstr "続行するにはテーマの種類を選択してください。"
+
+#: includes/class-pts-admin.php:123
+msgid ""
+"Full Site Editing theme with theme.json, HTML templates, template parts, and"
+" block patterns."
+msgstr ""
+"theme.json、HTML テンプレート、テンプレートパーツ、ブロックパターンを備えた Full Site Editing テーマです。"
+
+#: includes/class-pts-admin.php:125
+msgid "PHP templates, functions.php, style.css, and optional theme features."
+msgstr "PHP テンプレート、functions.php、style.css、および任意のテーマ機能です。"
+
+#: includes/class-pts-admin.php:142
+msgid "Bare Minimum"
+msgstr "最小構成"
+
+#: includes/class-pts-admin.php:143
+msgid ""
+"Just the essentials: theme.json, a base template shell, and the required "
+"header/footer parts."
+msgstr "最低限の構成: theme.json、基本テンプレートシェル、必須の header/footer パーツのみ。"
+
+#: includes/class-pts-admin.php:146
+msgid "Editorial Blog"
+msgstr "編集ブログ"
+
+#: includes/class-pts-admin.php:147
+msgid ""
+"A practical publishing setup with post templates, post metadata, comments, "
+"and latest-post patterns."
+msgstr "投稿テンプレート、投稿メタ、コメント、最新投稿パターンを含む実用的な公開向け構成です。"
+
+#: includes/class-pts-admin.php:150
+msgid "Marketing / Landing"
+msgstr "マーケティング・LP"
+
+#: includes/class-pts-admin.php:151
+msgid ""
+"A conversion-focused business site with landing-page templates, reusable "
+"sections, and style variations."
+msgstr "ランディングページテンプレート、再利用セクション、スタイルバリエーションを備えたコンバージョン重視のビジネスサイト向けです。"
+
+#: includes/class-pts-admin.php:154 includes/class-pts-admin.php:1230
+msgid "Business / Corporate"
+msgstr "ビジネス・コーポレートサイト"
+
+#: includes/class-pts-admin.php:155
+msgid ""
+"A polished company-site starter with page templates, common layout parts, "
+"and trust-building patterns."
+msgstr "ページテンプレート、一般的なレイアウトパーツ、信頼構築パターンを備えた企業サイト向けスターターです。"
+
+#: includes/class-pts-admin.php:158
+msgid "Design System Starter"
+msgstr "デザインシステム"
+
+#: includes/class-pts-admin.php:159
+msgid ""
+"A strong foundation for custom projects with theme.json, SCSS sources, "
+"layout kits, and multiple style directions."
+msgstr "theme.json、SCSS ソース、レイアウトキット、複数スタイル方向を備えたカスタムプロジェクト向け基盤です。"
+
+#: includes/class-pts-admin.php:162
+msgid "All-in-One"
+msgstr "全て"
+
+#: includes/class-pts-admin.php:163
+msgid ""
+"A kitchen-sink starter with nearly every template, part set, pattern, and "
+"optional source file enabled."
+msgstr "ほぼすべてのテンプレート、パーツセット、パターン、任意ソースファイルを有効にしたフルセット構成です。"
+
+#: includes/class-pts-admin.php:221
+msgid "No presets found for this category."
+msgstr "このカテゴリーに該当するプリセットはありません。"
+
+#: includes/class-pts-admin.php:222 includes/class-pts-admin.php:1365
+msgid "Please fill in Theme Name and Slug."
+msgstr "テーマ名とスラッグを入力してください。"
+
+#: includes/class-pts-admin.php:223 includes/class-pts-admin.php:1369
+msgid "Generating..."
+msgstr "生成中..."
+
+#: includes/class-pts-admin.php:226 includes/class-pts-admin.php:1367
+msgid "Error: "
+msgstr "エラー: "
+
+#: includes/class-pts-admin.php:227 includes/class-pts-admin.php:1368
+msgid "Unknown error"
+msgstr "不明なエラー"
+
+#: includes/class-pts-admin.php:261
+msgid "Index"
+msgstr "インデックス"
+
+#: includes/class-pts-admin.php:262
+#: includes/class-pts-classic-definitions.php:263
+msgid "required"
+msgstr "必須"
+
+#: includes/class-pts-admin.php:263
+msgid "Fallback template for all views when no more specific template exists."
+msgstr "より専用のテンプレートがないときの最終フォールバック（必須）。"
+
+#: includes/class-pts-admin.php:268
+msgid "Front Page"
+msgstr "フロントページ"
+
+#: includes/class-pts-admin.php:269
+msgid ""
+"Site front landing page (hero, features, latest posts, CTA). Always wins on "
+"the front page, regardless of Reading settings."
+msgstr "サイトのトップページ用ランディング（ヒーロー・特徴・最新記事・CTA）。表示設定に関わらずトップページで最優先されます。"
+
+#: includes/class-pts-admin.php:274
+msgid "Home"
+msgstr "ホーム"
+
+#: includes/class-pts-admin.php:275
+msgid "Blog posts index when the front page shows latest posts."
+msgstr "フロントで最新投稿一覧を表示するときの投稿インデックス。"
+
+#: includes/class-pts-admin.php:281
+msgid "Single"
+msgstr "個別投稿"
+
+#: includes/class-pts-admin.php:282
+msgid "Layout for a single blog post."
+msgstr "ブログ投稿1件の表示レイアウト。"
+
+#: includes/class-pts-admin.php:287
+msgid "Single (With Sidebar)"
+msgstr "投稿（サイドバー付き）"
+
+#: includes/class-pts-admin.php:288
+msgid ""
+"Two-column single post with the sidebar part on the right. Selectable per "
+"post as a custom template."
+msgstr "右にサイドバーパーツを配置した2カラムの投稿テンプレート。投稿ごとにカスタムテンプレートとして選択できます。"
+
+#: includes/class-pts-admin.php:293
+msgid "Page"
+msgstr "固定ページ"
+
+#: includes/class-pts-admin.php:294
+msgid "Layout for static pages."
+msgstr "固定ページの表示レイアウト。"
+
+#: includes/class-pts-admin.php:299
+msgid "Page (With Sidebar)"
+msgstr "固定ページ（サイドバー付き）"
+
+#: includes/class-pts-admin.php:300
+msgid ""
+"Two-column page with the sidebar part on the right. Selectable per page as a"
+" custom template."
+msgstr "右にサイドバーパーツを配置した2カラムの固定ページテンプレート。ページごとにカスタムテンプレートとして選択できます。"
+
+#: includes/class-pts-admin.php:305
+msgid "LP Page (Blank Canvas)"
+msgstr "LPページ（ヘッダー・フッターなし）"
+
+#: includes/class-pts-admin.php:306
+msgid ""
+"No header or footer — a full canvas for landing pages built from the LP "
+"parts. Selectable per page as a custom template."
+msgstr ""
+"ヘッダー・フッターなしの白紙キャンバス。LPパーツを並べてランディングページを作る用途に。ページごとにカスタムテンプレートとして選択できます。"
+
+#: includes/class-pts-admin.php:311
+msgid "Singular"
+msgstr "シングル"
+
+#: includes/class-pts-admin.php:312
+msgid "Fallback for single posts, pages, and custom post types."
+msgstr "投稿・固定ページ・カスタム投稿タイプの共通フォールバック。"
+
+#: includes/class-pts-admin.php:317
+msgid "Archive"
+msgstr "アーカイブ"
+
+#: includes/class-pts-admin.php:318
+msgid "Category, tag, author, and date archive listings."
+msgstr "カテゴリー・タグ・著者・日付などのアーカイブ一覧。"
+
+#: includes/class-pts-admin.php:323
+msgid "Search"
+msgstr "検索"
+
+#: includes/class-pts-admin.php:324
+msgid "Search results page."
+msgstr "サイト内検索の結果ページ。"
+
+#: includes/class-pts-admin.php:329
+msgid "404"
+msgstr "404"
+
+#: includes/class-pts-admin.php:330
+msgid "Page shown when the requested URL is not found."
+msgstr "URL が見つからないときのエラーページ。"
+
+#: includes/class-pts-admin.php:348
+msgid "Header"
+msgstr "ヘッダー"
+
+#: includes/class-pts-admin.php:349
+msgid "Site title and navigation; included via template-part in templates."
+msgstr "サイトタイトルとナビ。テンプレートから template-part で読み込み。"
+
+#: includes/class-pts-admin.php:354
+msgid "Header (Centered)"
+msgstr "ヘッダー（中央揃え）"
+
+#: includes/class-pts-admin.php:355
+msgid ""
+"Alternative header with centered title and menu. Swap via the Replace menu "
+"in the Site Editor."
+msgstr "タイトルとメニューを中央揃えにした別バージョンのヘッダー。サイトエディターの「置換」メニューで差し替えできます。"
+
+#: includes/class-pts-admin.php:360
+msgid "Header (With Button)"
+msgstr "ヘッダー（ボタン付き）"
+
+#: includes/class-pts-admin.php:361
+msgid ""
+"Alternative header with navigation and a call-to-action button. Swap via the"
+" Replace menu in the Site Editor."
+msgstr "ナビゲーションと CTA ボタンを配置した別バージョンのヘッダー。サイトエディターの「置換」メニューで差し替えできます。"
+
+#: includes/class-pts-admin.php:366
+msgid "Footer"
+msgstr "フッター"
+
+#: includes/class-pts-admin.php:367
+msgid "Site footer area, typically copyright and links."
+msgstr "フッター領域（コピーライトやリンクなど）。"
+
+#: includes/class-pts-admin.php:372
+msgid "Footer (Columns)"
+msgstr "フッター（3カラム）"
+
+#: includes/class-pts-admin.php:373
+msgid ""
+"Alternative three-column footer with links and contact info. Swap via the "
+"Replace menu in the Site Editor."
+msgstr "リンクと連絡先を配置した3カラムの別バージョンのフッター。サイトエディターの「置換」メニューで差し替えできます。"
+
+#: includes/class-pts-admin.php:378
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: includes/class-pts-admin.php:379
+msgid "Optional sidebar column for widgets or secondary content."
+msgstr "ウィジェットや補足コンテンツ用のサイドバー。"
+
+#: includes/class-pts-admin.php:384
+msgid "Comments"
+msgstr "コメント"
+
+#: includes/class-pts-admin.php:385
+msgid "Comment list and reply form for single posts."
+msgstr "投稿のコメント一覧と返信フォーム。"
+
+#: includes/class-pts-admin.php:390
+msgid "Post Meta"
+msgstr "投稿メタ"
+
+#: includes/class-pts-admin.php:391
+msgid "Post date, author, categories, and similar metadata."
+msgstr "投稿日・著者・カテゴリーなどのメタ情報。"
+
+#: includes/class-pts-admin.php:396
+msgid "Post Navigation"
+msgstr "前後の投稿ナビゲーション"
+
+#: includes/class-pts-admin.php:397
+msgid "Previous / next post links shown below single posts."
+msgstr "投稿ページの下に表示する「前の投稿／次の投稿」リンク。"
+
+#: includes/class-pts-admin.php:402
+msgid "Post Loop"
+msgstr "投稿ループ"
+
+#: includes/class-pts-admin.php:403
+msgid "Reusable post list with pagination, for custom templates and pages."
+msgstr "ページネーション付きの投稿一覧。カスタムテンプレートや固定ページで再利用できます。"
+
+#: includes/class-pts-admin.php:408 includes/class-pts-admin.php:1030
+msgid "Call to Action"
+msgstr "CTA（行動喚起）"
+
+#: includes/class-pts-admin.php:409
+msgid "Reusable call-to-action band with heading, text, and a button."
+msgstr "見出し・テキスト・ボタンで構成する再利用可能な CTA セクション。"
+
+#: includes/class-pts-admin.php:414
+msgid "Hero (Full-width Image)"
+msgstr "ヒーロー（全幅画像）"
+
+#: includes/class-pts-admin.php:415
+msgid "Full-viewport cover hero with a background image and centered headline, text, and buttons."
+msgstr "背景画像付きの全画面 Cover ヒーロー。見出し・テキスト・ボタンは中央配置です。"
+
+#: includes/class-pts-admin.php:420
+msgid "Hero (Edge to Edge)"
+msgstr "ヒーロー（エッジ to エッジ）"
+
+#: includes/class-pts-admin.php:421
+msgid "Hero section that spans the full viewport width, including background and wide content."
+msgstr "背景とワイドコンテンツを含め、ビューポート幅いっぱいに広がるヒーローセクション。"
+
+#: includes/class-pts-admin.php:426
+msgid "Hero (Crossfade Background)"
+msgstr "ヒーロー（クロスフェード背景）"
+
+#: includes/class-pts-admin.php:427
+msgid ""
+"Hero with multiple background images that crossfade smoothly using an ease-"
+"in-out transition. Add or remove images in the slides group."
+msgstr ""
+"複数の背景画像が ease-in-out で滑らかに切り替わるヒーロー。slides "
+"グループ内の画像ブロックを追加・削除して調整できます。"
+
+#: includes/class-pts-admin.php:432
+msgid "Category Featured + 3 Links"
+msgstr "カテゴリー注目 + 3 リンク"
+
+#: includes/class-pts-admin.php:415
+msgid ""
+"Shows one featured latest post from a chosen category, followed by three "
+"compact latest-post links from the same category."
+msgstr "選択したカテゴリーの最新注目投稿 1 件と、同カテゴリーのコンパクトな最新投稿リンク 3 件を表示します。"
+
+#: includes/class-pts-admin.php:420
+msgid "Selected Post + Page"
+msgstr "選択した投稿 + 固定ページ"
+
+#: includes/class-pts-admin.php:421
+msgid ""
+"A two-card section for highlighting one chosen blog post and one chosen "
+"static page with editable links."
+msgstr "選択したブログ投稿と固定ページを 2 カードで強調表示し、リンクを編集できます。"
+
+#: includes/class-pts-admin.php:440
+msgid "Header (Minimal)"
+msgstr "ヘッダー（ミニマル）"
+
+#: includes/class-pts-admin.php:441
+msgid "Slim header with the centered site title only."
+msgstr "サイトタイトルのみを中央に配置したスリムなヘッダー。"
+
+#: includes/class-pts-admin.php:446
+msgid "Header (With Search)"
+msgstr "ヘッダー（検索付き）"
+
+#: includes/class-pts-admin.php:447
+msgid "Header with navigation and a search box."
+msgstr "ナビゲーションと検索ボックスを配置したヘッダー。"
+
+#: includes/class-pts-admin.php:452
+msgid "Header (With Social)"
+msgstr "ヘッダー（SNS付き）"
+
+#: includes/class-pts-admin.php:453
+msgid "Header with navigation and social media icons."
+msgstr "ナビゲーションと SNS アイコンを配置したヘッダー。"
+
+#: includes/class-pts-admin.php:458
+msgid "Header (With Tagline)"
+msgstr "ヘッダー（キャッチフレーズ付き）"
+
+#: includes/class-pts-admin.php:459
+msgid "Header showing the site title with tagline next to the navigation."
+msgstr "サイトタイトルとキャッチフレーズ、ナビゲーションを並べたヘッダー。"
+
+#: includes/class-pts-admin.php:464
+msgid "Header (Split)"
+msgstr "ヘッダー（3分割）"
+
+#: includes/class-pts-admin.php:465
+msgid "Three-zone header: navigation, centered site title, and a button."
+msgstr "ナビゲーション・中央のサイトタイトル・ボタンの3ゾーン構成ヘッダー。"
+
+#: includes/class-pts-admin.php:470
+msgid "Footer (Minimal)"
+msgstr "フッター（ミニマル）"
+
+#: includes/class-pts-admin.php:471
+msgid "Single centered copyright line."
+msgstr "中央揃えのコピーライト1行のみのフッター。"
+
+#: includes/class-pts-admin.php:476
+msgid "Footer (With Menu)"
+msgstr "フッター（メニュー付き）"
+
+#: includes/class-pts-admin.php:477
+msgid "Footer with site title, navigation, and copyright."
+msgstr "サイトタイトル・ナビゲーション・コピーライトを配置したフッター。"
+
+#: includes/class-pts-admin.php:482
+msgid "Footer (Social)"
+msgstr "フッター（SNS）"
+
+#: includes/class-pts-admin.php:483
+msgid "Centered social media icons above the copyright line."
+msgstr "コピーライトの上に SNS アイコンを中央配置したフッター。"
+
+#: includes/class-pts-admin.php:488
+msgid "Footer (Mega)"
+msgstr "フッター（メガ）"
+
+#: includes/class-pts-admin.php:489
+msgid "Four-column footer with links, resources, contact, and a bottom bar."
+msgstr "リンク・リソース・連絡先の4カラムと下部バーで構成するフッター。"
+
+#: includes/class-pts-admin.php:494
+msgid "Footer (CTA)"
+msgstr "フッター（CTA）"
+
+#: includes/class-pts-admin.php:495
+msgid "Footer leading with a call-to-action, then the copyright line."
+msgstr "CTA（行動喚起）を先頭に置き、コピーライトを続けるフッター。"
+
+#: includes/class-pts-admin.php:500
+msgid "Sidebar (Blog)"
+msgstr "サイドバー（ブログ）"
+
+#: includes/class-pts-admin.php:501
+msgid "Blog sidebar with search, recent posts, categories, and archives."
+msgstr "検索・最新記事・カテゴリー・アーカイブを備えたブログ用サイドバー。"
+
+#: includes/class-pts-admin.php:506
+msgid "Sidebar (CTA)"
+msgstr "サイドバー（CTA）"
+
+#: includes/class-pts-admin.php:507
+msgid "Sidebar box with a short message and a button."
+msgstr "短いメッセージとボタンを配置したサイドバー用ボックス。"
+
+#: includes/class-pts-admin.php:512
+msgid "Post Loop (Grid)"
+msgstr "投稿ループ（グリッド）"
+
+#: includes/class-pts-admin.php:513
+msgid "Three-column post grid with featured images and pagination."
+msgstr "アイキャッチ付き3カラムの投稿グリッド。ページネーション付き。"
+
+#: includes/class-pts-admin.php:518
+msgid "Post Loop (Compact)"
+msgstr "投稿ループ（コンパクト）"
+
+#: includes/class-pts-admin.php:519
+msgid "Compact date and title list, ideal for news updates."
+msgstr "日付とタイトルだけのコンパクトな一覧。お知らせ・新着情報向け。"
+
+#: includes/class-pts-admin.php:524
+msgid "Archive Header"
+msgstr "アーカイブヘッダー"
+
+#: includes/class-pts-admin.php:525
+msgid "Archive title band with the term description."
+msgstr "アーカイブタイトルとターム説明文の見出し帯。"
+
+#: includes/class-pts-admin.php:530
+msgid "Page Header"
+msgstr "ページヘッダー"
+
+#: includes/class-pts-admin.php:531
+msgid "Centered page title band for posts and pages."
+msgstr "投稿・固定ページ用の中央揃えタイトル帯。"
+
+#: includes/class-pts-admin.php:536
+msgid "Author Box"
+msgstr "著者ボックス"
+
+#: includes/class-pts-admin.php:537
+msgid "Author avatar, name, and biography for single posts."
+msgstr "投稿ページ用の著者アバター・名前・プロフィール。"
+
+#: includes/class-pts-admin.php:542
+msgid "Related Posts"
+msgstr "関連記事"
+
+#: includes/class-pts-admin.php:543
+msgid "Heading with a three-column grid of recent posts."
+msgstr "見出しと最新記事3件のグリッドで構成する関連記事セクション。"
+
+#: includes/class-pts-admin.php:548
+msgid "Social Links"
+msgstr "SNS リンク"
+
+#: includes/class-pts-admin.php:549
+msgid "Centered row of social media icons, usable anywhere."
+msgstr "どこにでも挿入できる中央揃えの SNS アイコン行。"
+
+#: includes/class-pts-admin.php:573
+msgid "LP First View"
+msgstr "LP ファーストビュー"
+
+#: includes/class-pts-admin.php:574
+msgid ""
+"Catch copy, sub copy, and two CTA buttons for the top of a landing page."
+msgstr "LP冒頭用のキャッチコピー・サブコピー・CTAボタン2つのセット。"
+
+#: includes/class-pts-admin.php:579
+msgid "LP Problems Checklist"
+msgstr "LP お悩みチェック"
+
+#: includes/class-pts-admin.php:580
+msgid "\"Do you have these problems?\" heading with a checklist."
+msgstr "「こんなお悩みはありませんか？」見出しとチェックリスト。"
+
+#: includes/class-pts-admin.php:585
+msgid "LP Empathy"
+msgstr "LP 共感・問題提起"
+
+#: includes/class-pts-admin.php:586
+msgid "Empathy section warning about leaving problems unresolved."
+msgstr "課題を放置するリスクに共感を促すセクション。"
+
+#: includes/class-pts-admin.php:591
+msgid "LP Solution"
+msgstr "LP 解決策"
+
+#: includes/class-pts-admin.php:592
+msgid "\"Our service solves it all\" section introducing the product."
+msgstr "「〇〇がすべて解決します」とサービスを提示するセクション。"
+
+#: includes/class-pts-admin.php:597
+msgid "LP Three Reasons"
+msgstr "LP 選ばれる理由"
+
+#: includes/class-pts-admin.php:598
+msgid "\"Three reasons we are chosen\" in three columns."
+msgstr "「選ばれる3つの理由」を3カラムで紹介。"
+
+#: includes/class-pts-admin.php:603
+msgid "LP Achievements"
+msgstr "LP 実績数値"
+
+#: includes/class-pts-admin.php:604
+msgid "Big numbers band: track record, satisfaction, retention."
+msgstr "支援実績・満足度・継続率などを大きな数字で見せる帯。"
+
+#: includes/class-pts-admin.php:609
+msgid "LP Customer Voices"
+msgstr "LP お客様の声"
+
+#: includes/class-pts-admin.php:610
+msgid "Three customer testimonials with attributes."
+msgstr "属性付きのお客様の声を3件掲載。"
+
+#: includes/class-pts-admin.php:615
+msgid "LP Before / After"
+msgstr "LP ビフォーアフター"
+
+#: includes/class-pts-admin.php:616
+msgid "Two-column comparison of before and after adopting the service."
+msgstr "導入前と導入後を2カラムで比較。"
+
+#: includes/class-pts-admin.php:621
+msgid "LP Pricing Plans"
+msgstr "LP 料金プラン"
+
+#: includes/class-pts-admin.php:622
+msgid "Three pricing plans with features and buttons."
+msgstr "機能一覧とボタン付きの料金プラン3種。"
+
+#: includes/class-pts-admin.php:627
+msgid "LP Comparison Table"
+msgstr "LP 比較表"
+
+#: includes/class-pts-admin.php:628
+msgid "Comparison table against competitor services."
+msgstr "他社サービスとの比較表。"
+
+#: includes/class-pts-admin.php:633
+msgid "LP Service Flow"
+msgstr "LP ご利用の流れ"
+
+#: includes/class-pts-admin.php:634
+msgid "Four-step flow from inquiry to start."
+msgstr "お問い合わせから開始までの4ステップ。"
+
+#: includes/class-pts-admin.php:639
+msgid "LP FAQ"
+msgstr "LP よくある質問"
+
+#: includes/class-pts-admin.php:640
+msgid "Frequently asked questions with expandable answers."
+msgstr "開閉式の回答が付いたよくある質問。"
+
+#: includes/class-pts-admin.php:645
+msgid "LP Campaign Banner"
+msgstr "LP キャンペーン"
+
+#: includes/class-pts-admin.php:646
+msgid "Limited-time campaign banner with deadline and button."
+msgstr "締切とボタン付きの期間限定キャンペーン帯。"
+
+#: includes/class-pts-admin.php:651
+msgid "LP Benefits"
+msgstr "LP 特典"
+
+#: includes/class-pts-admin.php:652
+msgid "Three limited-time bonuses in columns."
+msgstr "今だけの3つの特典を3カラムで紹介。"
+
+#: includes/class-pts-admin.php:657
+msgid "LP Guarantee"
+msgstr "LP 保証"
+
+#: includes/class-pts-admin.php:658
+msgid "Money-back guarantee section to remove purchase anxiety."
+msgstr "購入の不安を取り除く返金保証セクション。"
+
+#: includes/class-pts-admin.php:663
+msgid "LP Owner Message"
+msgstr "LP 代表メッセージ"
+
+#: includes/class-pts-admin.php:664
+msgid "Message from the company representative with signature."
+msgstr "署名付きの代表者メッセージ。"
+
+#: includes/class-pts-admin.php:669
+msgid "LP Company Profile"
+msgstr "LP 会社概要"
+
+#: includes/class-pts-admin.php:670
+msgid "Company overview table: name, address, founding, business."
+msgstr "会社名・所在地・設立・事業内容の会社概要テーブル。"
+
+#: includes/class-pts-admin.php:675
+msgid "LP Access"
+msgstr "LP アクセス"
+
+#: includes/class-pts-admin.php:676
+msgid "Address, station access, business hours, and a map placeholder."
+msgstr "住所・最寄り駅・受付時間と地図プレースホルダー。"
+
+#: includes/class-pts-admin.php:681
+msgid "LP News"
+msgstr "LP お知らせ"
+
+#: includes/class-pts-admin.php:682
+msgid "Date and title list of the latest posts as announcements."
+msgstr "最新投稿を日付＋タイトルで表示するお知らせ一覧。"
+
+#: includes/class-pts-admin.php:687
+msgid "LP Conversion Area"
+msgstr "LP CVエリア"
+
+#: includes/class-pts-admin.php:688
+msgid "Closing conversion area with phone number, hours, and buttons."
+msgstr "電話番号・受付時間・ボタンを備えた締めのコンバージョンエリア。"
+
+#: includes/class-pts-admin.php:712
+msgid "Product Hero"
+msgstr "商品LP ファーストビュー"
+
+#: includes/class-pts-admin.php:713
+msgid "Ranking badge, product name, price, and an add-to-cart button."
+msgstr "ランキングバッジ・商品名・価格・カートボタンのセット。"
+
+#: includes/class-pts-admin.php:718
+msgid "Product Trust Badges"
+msgstr "商品LP 安心バッジ"
+
+#: includes/class-pts-admin.php:719
+msgid "Free shipping, next-day delivery, domestic production, gift wrapping."
+msgstr "送料無料・あす楽・国内生産・ギフト対応の4バッジ帯。"
+
+#: includes/class-pts-admin.php:724
+msgid "Product Ranking Awards"
+msgstr "商品LP ランキング受賞"
+
+#: includes/class-pts-admin.php:725
+msgid "List of ranking awards with period disclaimers."
+msgstr "受賞実績の一覧（集計期間の注記付き）。"
+
+#: includes/class-pts-admin.php:730
+msgid "Product Media Mentions"
+msgstr "商品LP メディア掲載"
+
+#: includes/class-pts-admin.php:731
+msgid "\"Featured in media and SNS\" section with a logo placeholder."
+msgstr "「メディア・SNSで話題」セクション（ロゴ配置用プレースホルダー付き）。"
+
+#: includes/class-pts-admin.php:736
+msgid "Product Time Sale"
+msgstr "商品LP タイムセール"
+
+#: includes/class-pts-admin.php:737
+msgid "Limited-time sale banner with deadline and buy button."
+msgstr "締切と購入ボタン付きの期間限定セール帯。"
+
+#: includes/class-pts-admin.php:742
+msgid "Product Coupon"
+msgstr "商品LP クーポン"
+
+#: includes/class-pts-admin.php:743
+msgid "Page-limited coupon banner with a claim button."
+msgstr "獲得ボタン付きのページ限定クーポン帯。"
+
+#: includes/class-pts-admin.php:748
+msgid "Product Price Appeal"
+msgstr "商品LP 価格訴求"
+
+#: includes/class-pts-admin.php:749
+msgid "Regular price with strikethrough, special price, discount and points."
+msgstr "通常価格の打ち消し表示と特別価格・割引率・ポイント訴求。"
+
+#: includes/class-pts-admin.php:754
+msgid "Product Selling Points"
+msgstr "商品LP こだわりポイント"
+
+#: includes/class-pts-admin.php:755
+msgid "POINT 01-03 sections highlighting product quality."
+msgstr "商品の品質を伝える POINT 01〜03 のセクション。"
+
+#: includes/class-pts-admin.php:760
+msgid "Product Usage Steps"
+msgstr "商品LP 使い方ステップ"
+
+#: includes/class-pts-admin.php:761
+msgid "Easy three-step usage guide in columns."
+msgstr "かんたん3ステップの使い方ガイド（3カラム）。"
+
+#: includes/class-pts-admin.php:766
+msgid "Product Recommended For"
+msgstr "商品LP おすすめシーン"
+
+#: includes/class-pts-admin.php:767
+msgid "Checklist of recommended users and gift occasions."
+msgstr "おすすめの方・ギフトシーンのチェックリスト。"
+
+#: includes/class-pts-admin.php:772
+msgid "Product Variations"
+msgstr "商品LP バリエーション"
+
+#: includes/class-pts-admin.php:773
+msgid "Color and size variation table."
+msgstr "カラー・サイズ展開の一覧表。"
+
+#: includes/class-pts-admin.php:778
+msgid "Product Set Contents"
+msgstr "商品LP セット内容"
+
+#: includes/class-pts-admin.php:779
+msgid "List of everything included in the package."
+msgstr "同梱物の一覧リスト。"
+
+#: includes/class-pts-admin.php:784
+msgid "Product Specs Table"
+msgstr "商品LP 商品仕様"
+
+#: includes/class-pts-admin.php:785
+msgid "Specification table: name, size, material, country of origin."
+msgstr "品名・サイズ・素材・原産国などの仕様テーブル。"
+
+#: includes/class-pts-admin.php:790
+msgid "Product Reviews"
+msgstr "商品LP レビュー"
+
+#: includes/class-pts-admin.php:791
+msgid "Star rating, review count, and three customer reviews."
+msgstr "星評価・レビュー件数とお客様レビュー3件。"
+
+#: includes/class-pts-admin.php:796
+msgid "Product Story"
+msgstr "商品LP 開発ストーリー"
+
+#: includes/class-pts-admin.php:797
+msgid "Development story building trust and attachment."
+msgstr "信頼と愛着を生む開発ストーリー。"
+
+#: includes/class-pts-admin.php:802
+msgid "Product Gift Wrapping"
+msgstr "商品LP ギフト対応"
+
+#: includes/class-pts-admin.php:803
+msgid "Wrapping, noshi, and message card support details."
+msgstr "ラッピング・のし・メッセージカード対応の案内。"
+
+#: includes/class-pts-admin.php:808
+msgid "Product Shipping Info"
+msgstr "商品LP 配送・送料"
+
+#: includes/class-pts-admin.php:809
+msgid "Shipping fee, carriers, delivery time, and same-day options table."
+msgstr "送料・配送方法・お届け目安・あす楽対応のテーブル。"
+
+#: includes/class-pts-admin.php:814
+msgid "Product Returns Policy"
+msgstr "商品LP 返品・交換"
+
+#: includes/class-pts-admin.php:815
+msgid "Conditions for returns and exchanges."
+msgstr "返品・交換の条件案内。"
+
+#: includes/class-pts-admin.php:820
+msgid "Product Purchase Notes"
+msgstr "商品LP 注意事項"
+
+#: includes/class-pts-admin.php:821
+msgid "Pre-purchase notes such as color differences on monitors."
+msgstr "モニターによる色味の違いなど、ご購入前の注意事項。"
+
+#: includes/class-pts-admin.php:826
+msgid "Product Cart Area"
+msgstr "商品LP 購入エリア"
+
+#: includes/class-pts-admin.php:827
+msgid "Closing purchase area with price, perks, and cart buttons."
+msgstr "価格・特典表記とカートボタンを備えた締めの購入エリア。"
+
+#: includes/class-pts-admin.php:851
+msgid "Layout: Section Header"
+msgstr "レイアウト セクション見出し"
+
+#: includes/class-pts-admin.php:852
+msgid "Centered section heading with a lead paragraph."
+msgstr "中央揃えのセクション見出しとリード文。"
+
+#: includes/class-pts-admin.php:857
+msgid "Layout: Text + Image"
+msgstr "レイアウト テキスト＋画像"
+
+#: includes/class-pts-admin.php:858
+msgid "Text on the left, image placeholder on the right."
+msgstr "左にテキスト、右に画像プレースホルダーの定番2カラム。"
+
+#: includes/class-pts-admin.php:863
+msgid "Layout: Image + Text"
+msgstr "レイアウト 画像＋テキスト"
+
+#: includes/class-pts-admin.php:864
+msgid "Image placeholder on the left, text on the right."
+msgstr "左に画像プレースホルダー、右にテキストの定番2カラム。"
+
+#: includes/class-pts-admin.php:869
+msgid "Layout: Two Column Text"
+msgstr "レイアウト 2カラム本文"
+
+#: includes/class-pts-admin.php:870
+msgid "Two headed text columns side by side."
+msgstr "見出し付き本文を左右に並べる2カラム。"
+
+#: includes/class-pts-admin.php:875
+msgid "Layout: Three Cards"
+msgstr "レイアウト 3カラムカード"
+
+#: includes/class-pts-admin.php:876
+msgid "Three cards with image, heading, and text."
+msgstr "画像・見出し・本文のカード3枚組。"
+
+#: includes/class-pts-admin.php:881
+msgid "Layout: Four Cards"
+msgstr "レイアウト 4カラムカード"
+
+#: includes/class-pts-admin.php:882
+msgid "Four compact heading and text columns."
+msgstr "見出しと短文の4カラム。"
+
+#: includes/class-pts-admin.php:887
+msgid "Layout: Feature List"
+msgstr "レイアウト 特徴リスト"
+
+#: includes/class-pts-admin.php:888
+msgid "Two-column checklist of features or benefits."
+msgstr "特徴・メリットを2カラムで並べるチェックリスト。"
+
+#: includes/class-pts-admin.php:893
+msgid "Layout: Gallery"
+msgstr "レイアウト ギャラリー"
+
+#: includes/class-pts-admin.php:894
+msgid "Six image placeholders in a three-column grid."
+msgstr "3カラム×2段の画像プレースホルダー6枚。"
+
+#: includes/class-pts-admin.php:899
+msgid "Layout: Full-width Image"
+msgstr "レイアウト 全幅画像"
+
+#: includes/class-pts-admin.php:900
+msgid "Single full-width image placeholder."
+msgstr "画面幅いっぱいに広がる画像プレースホルダー1枚。"
+
+#: includes/class-pts-admin.php:905
+msgid "Layout: Timeline"
+msgstr "レイアウト 沿革・年表"
+
+#: includes/class-pts-admin.php:906
+msgid "Company history table with years and events."
+msgstr "年と出来事を並べる沿革テーブル。"
+
+#: includes/class-pts-admin.php:911
+msgid "Layout: Team"
+msgstr "レイアウト チーム紹介"
+
+#: includes/class-pts-admin.php:912
+msgid "Three member profiles with photo, name, and role."
+msgstr "写真・名前・役職のメンバー紹介3名分。"
+
+#: includes/class-pts-admin.php:917
+msgid "Layout: Logos"
+msgstr "レイアウト ロゴ一覧"
+
+#: includes/class-pts-admin.php:918
+msgid "Row of client or partner logo placeholders."
+msgstr "取引先・掲載メディアなどのロゴプレースホルダー行。"
+
+#: includes/class-pts-admin.php:923
+msgid "Layout: Stats"
+msgstr "レイアウト 数値ハイライト"
+
+#: includes/class-pts-admin.php:924
+msgid "Four big numbers with captions."
+msgstr "キャプション付きの大きな数字4つ。"
+
+#: includes/class-pts-admin.php:929
+msgid "Layout: Quote"
+msgstr "レイアウト 引用"
+
+#: includes/class-pts-admin.php:930
+msgid "Large pull quote with attribution."
+msgstr "出典付きの大きな引用（プルクオート）。"
+
+#: includes/class-pts-admin.php:935
+msgid "Layout: Banner CTA"
+msgstr "レイアウト 帯バナーCTA"
+
+#: includes/class-pts-admin.php:936
+msgid "Slim banner with a heading and a button side by side."
+msgstr "見出しとボタンを横並びにしたスリムな帯バナー。"
+
+#: includes/class-pts-admin.php:941
+msgid "Layout: Contact Info"
+msgstr "レイアウト お問い合わせ案内"
+
+#: includes/class-pts-admin.php:942
+msgid "Phone and form contact options in two columns."
+msgstr "電話とフォームの問い合わせ先を2カラムで案内。"
+
+#: includes/class-pts-admin.php:947
+msgid "Layout: Steps"
+msgstr "レイアウト ステップ"
+
+#: includes/class-pts-admin.php:948
+msgid "Numbered step-by-step list."
+msgstr "番号付きの手順リスト。"
+
+#: includes/class-pts-admin.php:953
+msgid "Layout: Table"
+msgstr "レイアウト 表組み"
+
+#: includes/class-pts-admin.php:954
+msgid "Generic two-column item and description table."
+msgstr "項目と内容の汎用2カラムテーブル。"
+
+#: includes/class-pts-admin.php:959
+msgid "Layout: Accordion"
+msgstr "レイアウト アコーディオン"
+
+#: includes/class-pts-admin.php:960
+msgid "Three expandable details sections."
+msgstr "クリックで開閉するセクション3つ。"
+
+#: includes/class-pts-admin.php:965
+msgid "Layout: Main + Aside"
+msgstr "レイアウト 本文＋サイドノート"
+
+#: includes/class-pts-admin.php:966
+msgid "Wide main text column with a narrow side note."
+msgstr "広いメイン本文と狭い補足カラムの2:1構成。"
+
+#. translators: 1: label, 2: filename, 3: note (e.g. required)
+#: includes/class-pts-admin.php:993
+msgid "%1$s (%2$s) — %3$s"
+msgstr "%1$s（%2$s）— %3$s"
+
+#. translators: 1: label, 2: filename
+#. translators: 1: pattern title, 2: pattern filename
+#: includes/class-pts-admin.php:1001 includes/class-pts-admin.php:1116
+msgid "%1$s (%2$s)"
+msgstr "%1$s（%2$s）"
+
+#: includes/class-pts-admin.php:1024
+msgid "Hero Section"
+msgstr "ヒーローセクション"
+
+#: includes/class-pts-admin.php:1025
+msgid "Large top banner with headline, intro text, and a primary button."
+msgstr "見出し・短い紹介文・メインボタン付きのページ上部バナー。"
+
+#: includes/class-pts-admin.php:1031
+msgid "Encourage visitors to contact you or take the next step."
+msgstr "お問い合わせや次のアクションを促すセクション。"
+
+#: includes/class-pts-admin.php:1036
+msgid "Pricing Table"
+msgstr "料金表"
+
+#: includes/class-pts-admin.php:1037
+msgid "Two-column plan comparison (e.g. Basic / Pro)."
+msgstr "2列の料金プラン比較（例: Basic / Pro）。"
+
+#: includes/class-pts-admin.php:1042
+msgid "Features List"
+msgstr "機能一覧"
+
+#: includes/class-pts-admin.php:1043
+msgid "Three columns highlighting product or service features."
+msgstr "サービスや製品の特徴を3列で紹介。"
+
+#: includes/class-pts-admin.php:1048
+msgid "About Section"
+msgstr "会社紹介・About"
+
+#: includes/class-pts-admin.php:1049
+msgid "Company or personal introduction in two columns."
+msgstr "2列レイアウトの会社・自己紹介。"
+
+#: includes/class-pts-admin.php:1054
+msgid "Text with Image"
+msgstr "テキスト＋画像"
+
+#: includes/class-pts-admin.php:1055
+msgid "Headline and copy beside an image block."
+msgstr "見出しと本文の横に画像ブロック。"
+
+#: includes/class-pts-admin.php:1060
+msgid "Testimonials"
+msgstr "お客様の声"
+
+#: includes/class-pts-admin.php:1061
+msgid "Customer quotes in a two-column layout."
+msgstr "2列のお客様の声（引用）。"
+
+#: includes/class-pts-admin.php:1066
+msgid "Team"
+msgstr "チーム紹介"
+
+#: includes/class-pts-admin.php:1067
+msgid "Team member names and roles in three columns."
+msgstr "メンバー名と役職を3列で表示。"
+
+#: includes/class-pts-admin.php:1072
+msgid "Stats"
+msgstr "実績・数字"
+
+#: includes/class-pts-admin.php:1073
+msgid "Key numbers (clients, support, experience, etc.)."
+msgstr "クライアント数・サポート・実績年数などの数字。"
+
+#: includes/class-pts-admin.php:1078
+msgid "Logo Cloud"
+msgstr "ロゴ一覧"
+
+#: includes/class-pts-admin.php:1079
+msgid "“Trusted by” row for client or partner logos."
+msgstr "「導入企業」などのロゴ並び。"
+
+#: includes/class-pts-admin.php:1084
+msgid "Image Gallery"
+msgstr "画像ギャラリー"
+
+#: includes/class-pts-admin.php:1085
+msgid "Empty gallery block ready for your photos."
+msgstr "写真を追加できる空のギャラリーブロック。"
+
+#: includes/class-pts-admin.php:1090
+msgid "Latest Posts"
+msgstr "最新の投稿"
+
+#: includes/class-pts-admin.php:1091
+msgid "Grid of the three most recent blog posts."
+msgstr "直近3件のブログ投稿をグリッド表示。"
+
+#: includes/class-pts-admin.php:1096
+msgid "FAQ"
+msgstr "よくある質問"
+
+#: includes/class-pts-admin.php:1097
+msgid "Question and answer pairs you can duplicate."
+msgstr "質問と回答のペア（複製して増やせます）。"
+
+#: includes/class-pts-admin.php:1102
+msgid "Contact"
+msgstr "お問い合わせ"
+
+#: includes/class-pts-admin.php:1103
+msgid "Address, email, and space for a contact form."
+msgstr "住所・メール・お問い合わせフォーム用のスペース。"
+
+#: includes/class-pts-admin.php:1108
+msgid "Newsletter"
+msgstr "メールマガジン"
+
+#: includes/class-pts-admin.php:1109
+msgid "Email signup call-to-action with subscribe button."
+msgstr "メール登録を促すCTAと登録ボタン。"
+
+#: includes/class-pts-admin.php:1132
+msgid "Full Features"
+msgstr "全て選択"
+
+#: includes/class-pts-admin.php:1133
+msgid "Select all available templates and features for a complete theme."
+msgstr "利用可能なすべてのテンプレートとテーマ機能を選択し、フル装備のテーマを構成します。"
+
+#: includes/class-pts-admin.php:1141
+msgid "Starter Classic"
+msgstr "スターター Classic"
+
+#: includes/class-pts-admin.php:1142
+msgid ""
+"A clean baseline with the key structural files, menus, widgets, and modern "
+"HTML support."
+msgstr "主要な構造ファイル、メニュー、ウィジェット、モダン HTML サポートを備えたクリーンなベースラインです。"
+
+#: includes/class-pts-admin.php:1160
+msgid "Professional Blog"
+msgstr "本格ブログ構成"
+
+#: includes/class-pts-admin.php:1161
+msgid ""
+"A publishing-focused setup with search, comments, archives, pagination, and "
+"content template parts."
+msgstr "検索、コメント、アーカイブ、ページネーション、コンテンツテンプレートパーツを備えた公開向け構成です。"
+
+#: includes/class-pts-admin.php:1204
+msgid "Core Performance & Security"
+msgstr "高速化・セキュリティ重視"
+
+#: includes/class-pts-admin.php:1205
+msgid ""
+"A lean output preset focused on cleanup, lighter front-end assets, and safe "
+"media defaults."
+msgstr "クリーンアップ、軽量フロントエンド、安全なメディア既定値に重点を置いた軽量プリセットです。"
+
+#: includes/class-pts-admin.php:1231
+msgid ""
+"A company-site preset with front-page support, flexible page templates, "
+"branding, and client-friendly admin touches."
+msgstr "フロントページ対応、柔軟なページテンプレート、ブランディング、クライアント向け管理画面調整を備えた企業サイト向けプリセットです。"
+
+#: includes/class-pts-admin.php:1261
+msgid "Modern Block Friendly"
+msgstr "最新ブロックエディタ対応"
+
+#: includes/class-pts-admin.php:1262
+msgid ""
+"A classic theme tuned for the block editor with richer design controls, "
+"presets, and editor styling."
+msgstr "ブロックエディター向けに調整され、デザインコントロール、プリセット、エディタースタイルが充実した Classic テーマです。"
+
+#: includes/class-pts-admin.php:1297
+msgid "Portfolio / Agency"
+msgstr "ポートフォリオ / エージェンシー"
+
+#: includes/class-pts-admin.php:1298
+msgid ""
+"A presentation-oriented preset for studios and freelancers with page "
+"templates, galleries, and branded polish."
+msgstr "スタジオ・フリーランス向けに、ページテンプレート、ギャラリー、ブランド感のある仕上げを備えたプレゼン重視プリセットです。"
+
+#: includes/class-pts-admin.php:1332
+msgid "E-Commerce Ready"
+msgstr "EC（WooCommerce）対応"
+
+#: includes/class-pts-admin.php:1333
+msgid ""
+"A practical WooCommerce starter with sidebar support, menus, widget areas, "
+"and conservative security defaults."
+msgstr "サイドバー、メニュー、ウィジェットエリア、保守的なセキュリティ既定値を備えた WooCommerce 向け実用スターターです。"
+
+#: includes/class-pts-admin.php:1360
+msgid "Classic"
+msgstr "Classic"
+
+#: includes/class-pts-admin.php:1364
+msgid "No presets found."
+msgstr "プリセットが見つかりません。"
+
+#: includes/class-pts-admin.php:1371
+msgid "Select"
+msgstr "選択"
+
+#: includes/class-pts-admin.php:1391
+msgid "Generated ZIP file was not found."
+msgstr "生成された ZIP ファイルが見つかりませんでした。"
+
+#: includes/class-pts-admin.php:1415
+msgid "You are not allowed to download this file."
+msgstr "このファイルをダウンロードする権限がありません。"
+
+#: includes/class-pts-admin.php:1424
+msgid "Missing download token."
+msgstr "ダウンロードトークンがありません。"
+
+#: includes/class-pts-admin.php:1431
+msgid "This download link has expired."
+msgstr "このダウンロードリンクは期限切れです。"
+
+#: includes/class-pts-admin.php:1440
+msgid "The generated ZIP file is no longer available."
+msgstr "生成された ZIP ファイルは利用できなくなりました。"
+
+#: includes/class-pts-classic-definitions.php:25
+msgid "Theme Name"
+msgstr "テーマ名"
+
+#: includes/class-pts-classic-definitions.php:29
+msgid ""
+"The display name in Appearance → Themes. Use your project or brand name."
+msgstr "外観 → テーマに表示される名前。プロジェクト名やブランド名を入力します。"
+
+#: includes/class-pts-classic-definitions.php:32
+msgid "Theme Slug"
+msgstr "テーマスラッグ"
+
+#: includes/class-pts-classic-definitions.php:36
+msgid ""
+"Folder name under wp-content/themes/ (lowercase letters, numbers, hyphens "
+"only). Cannot be changed easily later."
+msgstr "wp-content/themes/ 内のフォルダ名（半角英小文字・数字・ハイフンのみ）。後から変更しづらいので慎重に。"
+
+#: includes/class-pts-classic-definitions.php:39
+msgid "Author"
+msgstr "作成者"
+
+#: includes/class-pts-classic-definitions.php:42
+msgid "Written into style.css theme metadata. Your name or company name."
+msgstr "style.css のテーマメタデータに記載されます。個人名または会社名。"
+
+#: includes/class-pts-classic-definitions.php:43
+msgid "Written into style.css. Your name or company name."
+msgstr "style.css に記載されます。個人名または会社名。"
+
+#: includes/class-pts-classic-definitions.php:46
+msgid "Author URI"
+msgstr "作成者 URL"
+
+#: includes/class-pts-classic-definitions.php:49
+msgid "Optional link to your website, shown in the theme header metadata."
+msgstr "任意。テーマメタデータに表示するサイトURL。"
+
+#: includes/class-pts-classic-definitions.php:52
+msgid "Description"
+msgstr "説明"
+
+#: includes/class-pts-classic-definitions.php:56
+msgid ""
+"Short summary for the theme list and style.css. Shown in Site Editor theme "
+"details."
+msgstr "テーマ一覧と style.css 用の短い説明。サイトエディターのテーマ情報にも表示されます。"
+
+#: includes/class-pts-classic-definitions.php:57
+msgid "Short summary of the theme for the theme list and style.css header."
+msgstr "テーマ一覧や style.css ヘッダー用の短い説明文。"
+
+#: includes/class-pts-classic-definitions.php:71
+msgid "Basic Parts"
+msgstr "基本パーツ"
+
+#: includes/class-pts-classic-definitions.php:73
+msgid "The main template file (Required)"
+msgstr "メインのテンプレートファイル（必須）"
+
+#: includes/class-pts-classic-definitions.php:74
+msgid "Document head and navigation area"
+msgstr "ドキュメントのヘッダーとナビゲーションエリア"
+
+#: includes/class-pts-classic-definitions.php:75
+msgid "Site footer and script loading"
+msgstr "サイトのフッターとスクリプトの読み込み"
+
+#: includes/class-pts-classic-definitions.php:76
+msgid "Widget area for the sidebar"
+msgstr "サイドバーのウィジェットエリア"
+
+#: includes/class-pts-classic-definitions.php:77
+msgid "Template for displaying comments"
+msgstr "コメント一覧と投稿フォームを表示するためのテンプレートです。"
+
+#: includes/class-pts-classic-definitions.php:78
+msgid "Custom search form template"
+msgstr "カスタム検索フォームのテンプレート"
+
+#: includes/class-pts-classic-definitions.php:79
+msgid "Custom display for embedded posts"
+msgstr "埋め込み投稿用のカスタム表示"
+
+#: includes/class-pts-classic-definitions.php:83
+msgid "Singular Templates"
+msgstr "個別投稿・固定ページ"
+
+#: includes/class-pts-classic-definitions.php:85
+msgid "Template for single blog posts"
+msgstr "個別投稿用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:86
+msgid "Template for static pages"
+msgstr "固定ページ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:87
+msgid "Fallback for both single posts and pages"
+msgstr "個別投稿と固定ページの両方のフォールバック"
+
+#: includes/class-pts-classic-definitions.php:88
+msgid "Template for media attachment pages"
+msgstr "メディア添付ページ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:89
+msgid "Specialized template for image attachments"
+msgstr "画像アタッチメント専用の表示用テンプレートです。"
+
+#: includes/class-pts-classic-definitions.php:90
+msgid "Specialized template for video attachments"
+msgstr "動画アタッチメント専用の表示用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:91
+msgid "Specialized template for audio attachments"
+msgstr "音声アタッチメント専用の表示用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:92
+msgid "Template for the privacy policy page"
+msgstr "プライバシーポリシーページ用のテンプレートです。"
+
+#: includes/class-pts-classic-definitions.php:96
+msgid "Custom Page Templates"
+msgstr "カスタムページテンプレート"
+
+#: includes/class-pts-classic-definitions.php:98
+msgid "Full-width layout without sidebars"
+msgstr "サイドバーなしの全幅レイアウト"
+
+#: includes/class-pts-classic-definitions.php:99
+msgid "Content-only layout without sidebars"
+msgstr "サイドバーなしのコンテンツのみのレイアウト"
+
+#: includes/class-pts-classic-definitions.php:103
+msgid "Archive Templates"
+msgstr "アーカイブ・一覧ページ"
+
+#: includes/class-pts-classic-definitions.php:105
+msgid "General archive (categories, tags, dates)"
+msgstr "一般的なアーカイブ（カテゴリー、タグ、日付など）"
+
+#: includes/class-pts-classic-definitions.php:106
+msgid "Template for category archives"
+msgstr "カテゴリーアーカイブ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:107
+msgid "Template for tag archives"
+msgstr "タグアーカイブ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:108
+msgid "Template for custom taxonomy archives"
+msgstr "カスタムタクソノミーアーカイブ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:109
+msgid "Template for author-specific posts"
+msgstr "投稿者別の投稿用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:110
+msgid "Template for date-based archives"
+msgstr "日付ベースのアーカイブ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:111
+msgid "Template for paginated archive results"
+msgstr "アーカイブの2ページ目以降を表示するためのテンプレートです。"
+
+#: includes/class-pts-classic-definitions.php:115
+msgid "Template Parts"
+msgstr "テンプレートパーツ"
+
+#: includes/class-pts-classic-definitions.php:117
+msgid "The primary loop content template"
+msgstr "メインループで使用される基本的な記事表示用パーツです。"
+
+#: includes/class-pts-classic-definitions.php:118
+msgid "Content template for single posts"
+msgstr "個別投稿の本文を表示するためのパーツです。"
+
+#: includes/class-pts-classic-definitions.php:119
+msgid "Content template for pages"
+msgstr "固定ページの本文を表示するためのパーツです。"
+
+#: includes/class-pts-classic-definitions.php:120
+msgid "Content template for search results"
+msgstr "検索結果一覧での記事表示用パーツです。"
+
+#: includes/class-pts-classic-definitions.php:121
+msgid "Template for when no results are found"
+msgstr "検索結果がなかった際などに表示するパーツです。"
+
+#: includes/class-pts-classic-definitions.php:125
+msgid "Other Templates"
+msgstr "その他"
+
+#: includes/class-pts-classic-definitions.php:127
+msgid "The site's front page"
+msgstr "サイトのフロントページ（ホームページ）"
+
+#: includes/class-pts-classic-definitions.php:128
+msgid "The blog posts index page"
+msgstr "ブログ投稿のインデックスページ"
+
+#: includes/class-pts-classic-definitions.php:129
+msgid "Template for search results"
+msgstr "検索結果ページ用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:130
+msgid "Template for 404 Error pages"
+msgstr "404エラー（ページ未発見）用テンプレート"
+
+#: includes/class-pts-classic-definitions.php:145
+msgid "Core Support"
+msgstr "コア機能のサポート"
+
+#: includes/class-pts-classic-definitions.php:147
+msgid "Optimized title management for better SEO"
+msgstr "WordPress側で<title>タグを自動管理し、SEOを最適化します。"
+
+#: includes/class-pts-classic-definitions.php:147
+msgid "Title Tag (Required for modern SEO)"
+msgstr "Titleタグ（最新のSEOに必須）"
+
+#: includes/class-pts-classic-definitions.php:148
+msgid "Enable post thumbnail support for posts and pages"
+msgstr "投稿や固定ページでアイキャッチ画像（サムネイル）を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:148
+msgid "Featured Images (Post Thumbnails)"
+msgstr "アイキャッチ画像（投稿サムネイル）"
+
+#: includes/class-pts-classic-definitions.php:149
+msgid "HTML5 Support (Search form, Comment form, etc.)"
+msgstr "HTML5サポート（検索フォーム、コメントフォームなど）"
+
+#: includes/class-pts-classic-definitions.php:149
+msgid "Output semantic HTML5 for forms and lists"
+msgstr "検索フォームやコメント欄などの出力を最新のHTML5形式に変換します。"
+
+#: includes/class-pts-classic-definitions.php:150
+msgid "Add RSS feed links to the document head"
+msgstr "投稿やコメントのRSSフィード用リンクを自動でヘッダーに追加します。"
+
+#: includes/class-pts-classic-definitions.php:150
+msgid "Automatic Feed Links"
+msgstr "自動フィードリンク"
+
+#: includes/class-pts-classic-definitions.php:151
+msgid "Allow logo uploads via the customizer"
+msgstr "外観テーマのカスタマイズ画面から独自のロゴをアップロード可能にします。"
+
+#: includes/class-pts-classic-definitions.php:151
+msgid "Custom Logo"
+msgstr "カスタムロゴ"
+
+#: includes/class-pts-classic-definitions.php:152
+msgid "Custom Header"
+msgstr "カスタムヘッダー"
+
+#: includes/class-pts-classic-definitions.php:152
+msgid "Enable custom header image management"
+msgstr "ヘッダー画像の設定機能を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:153
+msgid "Custom Background"
+msgstr "カスタム背景"
+
+#: includes/class-pts-classic-definitions.php:153
+msgid "Support for custom background colors/images"
+msgstr "背景色や背景画像の設定機能を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:154
+msgid "Enable support for various post types like video, gallery, etc."
+msgstr "動画、ギャラリー、引用などの投稿フォーマット機能を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:154
+msgid "Post Formats"
+msgstr "投稿フォーマット"
+
+#: includes/class-pts-classic-definitions.php:155
+msgid "Setup default content for new installations"
+msgstr "新規インストール時に初期コンテンツ（ページ、メニュー、ウィジェット等）を自動セットアップします。"
+
+#: includes/class-pts-classic-definitions.php:155
+msgid "Starter Content"
+msgstr "スターターコンテンツ"
+
+#: includes/class-pts-classic-definitions.php:156
+msgid "Basic compatibility for the WooCommerce plugin"
+msgstr "ECプラグイン「WooCommerce」との基本的な互換性を確保します。"
+
+#: includes/class-pts-classic-definitions.php:156
+msgid "WooCommerce Support"
+msgstr "WooCommerce サポート"
+
+#: includes/class-pts-classic-definitions.php:157
+msgid "Enable faster widget updating in customizer"
+msgstr "カスタマイザーでのウィジェット更新を高速化（部分更新）します。"
+
+#: includes/class-pts-classic-definitions.php:157
+msgid "Selective Refresh Widgets"
+msgstr "ウィジェットの選択的リフレッシュ"
+
+#: includes/class-pts-classic-definitions.php:161
+msgid "Navigation & Menus"
+msgstr "ナビゲーションとメニュー"
+
+#: includes/class-pts-classic-definitions.php:163
+msgid "Navigation Menus"
+msgstr "ナビゲーションメニュー"
+
+#: includes/class-pts-classic-definitions.php:163
+msgid "Support for custom menus via the dashboard"
+msgstr "管理画面から操作可能なカスタムメニュー機能を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:164
+msgid "Multiple Menu Locations"
+msgstr "複数のメニュー位置"
+
+#: includes/class-pts-classic-definitions.php:164
+msgid "Register Primary, Footer, Mobile, and Social menus"
+msgstr "メイン、フッター、モバイル、ソーシャルの4つのメニュー位置を登録します。"
+
+#: includes/class-pts-classic-definitions.php:165
+msgid "Enable widget-ready sidebar areas"
+msgstr "サイドバーなどのウィジェットエリアを登録します。"
+
+#: includes/class-pts-classic-definitions.php:165
+msgid "Widgets / Sidebar"
+msgstr "ウィジェット / サイドバー"
+
+#: includes/class-pts-classic-definitions.php:169
+msgid "Block Editor (Gutenberg) Support"
+msgstr "ブロックエディタ対応"
+
+#: includes/class-pts-classic-definitions.php:171
+msgid "Enable comprehensive design controls like link color and borders"
+msgstr "リンク色、ボーダー、マージン、パディングなどの包括的なデザイン制御を有効化します。"
+
+#: includes/class-pts-classic-definitions.php:172
+msgid "Enable wide and full-width block alignments"
+msgstr "ブロックエディタで「幅広」「全幅」の設定を可能にします。"
+
+#: includes/class-pts-classic-definitions.php:172
+msgid "Wide Alignment Support"
+msgstr "幅広・全幅配置のサポート"
+
+#: includes/class-pts-classic-definitions.php:173
+msgid "Core Block Styles"
+msgstr "コアブロックの標準スタイル"
+
+#: includes/class-pts-classic-definitions.php:173
+msgid "Include standard WordPress block styles"
+msgstr "WordPress標準のブロック用スタイルをフロントエンドに読み込みます。"
+
+#: includes/class-pts-classic-definitions.php:174
+msgid "Ensure embedded content scales correctly"
+msgstr "動画などの埋め込みコンテンツを画面幅に合わせて自動調整します。"
+
+#: includes/class-pts-classic-definitions.php:174
+msgid "Responsive Embeds"
+msgstr "レスポンシブ埋め込み"
+
+#: includes/class-pts-classic-definitions.php:175
+msgid "Editor Styles"
+msgstr "エディタースタイル"
+
+#: includes/class-pts-classic-definitions.php:175
+msgid "Reflect theme styles within the block editor"
+msgstr "管理画面のエディタ上でもテーマと同じスタイルを反映させます。"
+
+#: includes/class-pts-classic-definitions.php:176
+msgid "Custom Color Palette"
+msgstr "カスタムカラーパレット"
+
+#: includes/class-pts-classic-definitions.php:176
+msgid "Define a specific set of colors for the block editor"
+msgstr "ブロックエディタで選択できる色のセットを独自に定義します。"
+
+#: includes/class-pts-classic-definitions.php:177
+msgid "Disable Custom Colors"
+msgstr "カスタム色の無効化"
+
+#: includes/class-pts-classic-definitions.php:177
+msgid "Restrict colors to theme presets only"
+msgstr "ユーザーがカラーパレット以外の独自の色を選択できないように制限します。"
+
+#: includes/class-pts-classic-definitions.php:178
+msgid "Define custom gradients for blocks"
+msgstr "ブロックエディターで使用する独自のグラデーションセットを定義します。"
+
+#: includes/class-pts-classic-definitions.php:178
+msgid "Editor Gradient Presets"
+msgstr "エディターのグラデーションプリセット"
+
+#: includes/class-pts-classic-definitions.php:179
+msgid "Disable Custom Gradients"
+msgstr "カスタムグラデーションの無効化"
+
+#: includes/class-pts-classic-definitions.php:179
+msgid "Restrict gradients to theme presets only"
+msgstr "ユーザーが独自のグラデーションを作成できないようにし、テーマ提供のものに制限します。"
+
+#: includes/class-pts-classic-definitions.php:180
+msgid "Custom Font Sizes"
+msgstr "カスタムフォントサイズ"
+
+#: includes/class-pts-classic-definitions.php:180
+msgid "Register specific font sizes for text-based blocks"
+msgstr "ブロックエディタで使用するフォントサイズの選択肢を登録します。"
+
+#: includes/class-pts-classic-definitions.php:181
+msgid "Disable Custom Font Sizes"
+msgstr "カスタムフォントサイズの無効化"
+
+#: includes/class-pts-classic-definitions.php:181
+msgid "Restrict font sizes to theme presets only"
+msgstr "ユーザーがプリセット以外の独自のフォントサイズを入力できないように制限します。"
+
+#: includes/class-pts-classic-definitions.php:182
+msgid "Custom Line Height"
+msgstr "カスタム行間設定"
+
+#: includes/class-pts-classic-definitions.php:182
+msgid "Enable line height control in the editor"
+msgstr "ブロックエディターでの行間（line-height）制御を有効にします。"
+
+#: includes/class-pts-classic-definitions.php:183
+msgid "Custom Spacing Controls"
+msgstr "カスタム余白制御"
+
+#: includes/class-pts-classic-definitions.php:183
+msgid "Enable margin and padding controls for blocks"
+msgstr "ブロックの余白（マージン、パディング）をエディターから調整可能にします。"
+
+#: includes/class-pts-classic-definitions.php:184
+msgid "Custom Units"
+msgstr "カスタム単位設定"
+
+#: includes/class-pts-classic-definitions.php:184
+msgid "Register specific CSS units for block sizes"
+msgstr "ブロックのサイズ指定に使用できるCSS単位（rem, em, vh等）を制限・追加します。"
+
+#: includes/class-pts-classic-definitions.php:185
+msgid "Enable link color settings in the block editor (WordPress 6.3+)."
+msgstr "ブロックエディターでリンク色の設定を有効にします（WordPress 6.3 以降）。"
+
+#: includes/class-pts-classic-definitions.php:185
+msgid "Link Color Control"
+msgstr "リンク色の制御"
+
+#: includes/class-pts-classic-definitions.php:186
+msgid "Border Controls"
+msgstr "ボーダー制御"
+
+#: includes/class-pts-classic-definitions.php:186
+msgid ""
+"Enable border design tools for blocks in classic themes (WordPress 6.3+)."
+msgstr "クラシックテーマでブロックのボーダー関連デザインツールを有効にします（WordPress 6.3 以降）。"
+
+#: includes/class-pts-classic-definitions.php:187
+msgid "Editor Spacing Presets"
+msgstr "エディター用スペーシングプリセット"
+
+#: includes/class-pts-classic-definitions.php:187
+msgid "Register spacing size presets for the block editor (WordPress 6.6+)."
+msgstr "ブロックエディター用のスペーシングサイズプリセットを登録します（WordPress 6.6 以降）。"
+
+#: includes/class-pts-classic-definitions.php:188
+msgid "Disable Default Layout Styles"
+msgstr "デフォルトのレイアウトスタイルを無効化"
+
+#: includes/class-pts-classic-definitions.php:188
+msgid "Turn off WordPress default layout block styles (WordPress 6.1+)."
+msgstr "WordPress 標準のレイアウトブロックスタイルをオフにします（WordPress 6.1 以降）。"
+
+#: includes/class-pts-classic-definitions.php:189
+msgid "Block Widget Editor"
+msgstr "ブロックウィジェットエディター"
+
+#: includes/class-pts-classic-definitions.php:189
+msgid ""
+"Use the blocks-based widget screen instead of the legacy widgets UI "
+"(WordPress 5.8+)."
+msgstr "従来のウィジェット画面の代わりにブロックベースのウィジェット画面を使います（WordPress 5.8 以降）。"
+
+#: includes/class-pts-classic-definitions.php:190
+msgid "Remove Global Styles (Inline CSS)"
+msgstr "グローバルスタイル（インラインCSS）の除去"
+
+#: includes/class-pts-classic-definitions.php:190
+msgid "Remove the default bloat of block-based inline CSS"
+msgstr "ブロックベースのテーマがデフォルトで出力する膨大なインラインCSSを削除し、軽量化します。"
+
+#: includes/class-pts-classic-definitions.php:194
+msgid "Cleanup & Optimization"
+msgstr "クリーンアップと最適化"
+
+#: includes/class-pts-classic-definitions.php:196
+msgid "Header Cleanup (Security/Bloat)"
+msgstr "ヘッダーのクリーンアップ"
+
+#: includes/class-pts-classic-definitions.php:196
+msgid "Remove RSD, WLW, and shortlinks from the head"
+msgstr "RSD, WLW, 短縮URLなど、不要なタグをヘッダーから削除します。"
+
+#: includes/class-pts-classic-definitions.php:197
+msgid "Hide version information for better security"
+msgstr "セキュリティ対策として、ソースコード内のWPバージョン情報を隠します。"
+
+#: includes/class-pts-classic-definitions.php:197
+msgid "Remove WordPress Version (Security)"
+msgstr "WordPressバージョンの削除（セキュリティ）"
+
+#: includes/class-pts-classic-definitions.php:198
+msgid "Allow SVG uploads only for administrators and reject unsafe markup."
+msgstr "管理者のみ SVG アップロードを許可し、安全でないマークアップを拒否します。"
+
+#: includes/class-pts-classic-definitions.php:198
+msgid "Enable Admin-only SVG Uploads"
+msgstr "管理者限定 SVG アップロードを有効化"
+
+#: includes/class-pts-classic-definitions.php:199
+msgid "Adjust post excerpt length to 50 words"
+msgstr "記事一覧などで表示される「抜粋」の長さを50語に調整します。"
+
+#: includes/class-pts-classic-definitions.php:199
+msgid "Custom Excerpt Length (50 words)"
+msgstr "抜粋の長さのカスタマイズ（50語）"
+
+#: includes/class-pts-classic-definitions.php:200
+msgid "Disable Emojis (Speed)"
+msgstr "絵文字機能の停止"
+
+#: includes/class-pts-classic-definitions.php:200
+msgid "Remove unnecessary emoji script and styles"
+msgstr "不要な絵文字用スクリプトとスタイルを読み込まないようにして高速化します。"
+
+#: includes/class-pts-classic-definitions.php:201
+msgid "Load Block CSS On Demand"
+msgstr "ブロック CSS のオンデマンド読み込み"
+
+#: includes/class-pts-classic-definitions.php:201
+msgid ""
+"Load only styles for blocks used on the page (WordPress 6.8+). Improves "
+"performance in classic themes."
+msgstr "ページで使われたブロックのスタイルだけを読み込みます（WordPress 6.8 以降）。クラシックテーマのパフォーマンス改善に有効です。"
+
+#: includes/class-pts-classic-definitions.php:202
+msgid "Disable Block Library CSS"
+msgstr "ブロックライブラリCSSの停止"
+
+#: includes/class-pts-classic-definitions.php:202
+msgid "Option to remove the default block styles"
+msgstr "WordPress標準のブロック用スタイル（フロントエンド）を停止します。"
+
+#: includes/class-pts-classic-definitions.php:203
+msgid "Remove jQuery Migrate"
+msgstr "jQuery Migrate の削除"
+
+#: includes/class-pts-classic-definitions.php:203
+msgid "Stop loading the legacy migration script"
+msgstr "古いライブラリとの互換用スクリプト jQuery Migrate の読み込みを停止し、パフォーマンスを改善します。"
+
+#: includes/class-pts-classic-definitions.php:204
+msgid "Disable Heartbeat API"
+msgstr "Heartbeat API の無効化"
+
+#: includes/class-pts-classic-definitions.php:204
+msgid "Reduce server load by limiting background pulses"
+msgstr "管理画面のバックグラウンド通信（Heartbeat）を制限し、サーバー負荷を軽減します。"
+
+#: includes/class-pts-classic-definitions.php:205
+msgid "Lazy Load Settings"
+msgstr "遅延読み込み設定"
+
+#: includes/class-pts-classic-definitions.php:205
+msgid "Optimization settings for native image lazy loading"
+msgstr "WordPress標準の画像の遅延読み込み（Lazy Load）を最適化します。"
+
+#: includes/class-pts-classic-definitions.php:206
+msgid "Allow WebP image uploads and automatic quality adjustment"
+msgstr "WebP形式の画像のアップロードを許可し、自動的に品質調整（最適化）を行います。"
+
+#: includes/class-pts-classic-definitions.php:206
+msgid "Enable WebP Support"
+msgstr "WebPサポートの有効化"
+
+#: includes/class-pts-classic-definitions.php:207
+msgid "Allow WebM video uploads to the media library"
+msgstr "WebM形式の動画をメディアライブラリにアップロードできるようにします。"
+
+#: includes/class-pts-classic-definitions.php:207
+msgid "Enable WebM Support"
+msgstr "WebMサポートの有効化"
+
+#: includes/class-pts-classic-definitions.php:208
+msgid "Limit Post Revisions"
+msgstr "投稿リビジョンの制限"
+
+#: includes/class-pts-classic-definitions.php:208
+msgid "Restrict the number of revisions to keep for each post"
+msgstr "各投稿で保持するリビジョンの数を5件に制限し、データベースをクリーンに保ちます。"
+
+#: includes/class-pts-classic-definitions.php:209
+msgid "Define a standard maximum width for embedded content"
+msgstr "埋め込みコンテンツなどの標準的な最大幅をテーマレベルで定義します（$content_width）。"
+
+#: includes/class-pts-classic-definitions.php:209
+msgid "Global Content Width"
+msgstr "グローバルなコンテンツ幅の設定"
+
+#: includes/class-pts-classic-definitions.php:213
+msgid "Advanced Functions"
+msgstr "高度な独自関数"
+
+#: includes/class-pts-classic-definitions.php:215
+msgid "Add a numeric pagination function for archives"
+msgstr "アーカイブページで利用可能な、公式推奨の数字付きページネーション関数を追加します。"
+
+#: includes/class-pts-classic-definitions.php:215
+msgid "Custom Numeric Pagination"
+msgstr "数字付きページネーション"
+
+#: includes/class-pts-classic-definitions.php:216
+msgid "Breadcrumbs Template"
+msgstr "パンくずリストの雛形"
+
+#: includes/class-pts-classic-definitions.php:216
+msgid "Include a foundation for breadcrumb navigation"
+msgstr "SEOに有効なパンくずリストを表示するための関数を追加します。"
+
+#: includes/class-pts-classic-definitions.php:217
+msgid "Automatically load scripts for reply-to functionality"
+msgstr "返信機能（コメントの階層化）に必要なスクリプトを自動的に読み込みます。"
+
+#: includes/class-pts-classic-definitions.php:217
+msgid "Threaded Comments Support"
+msgstr "スレッドコメントのサポート"
+
+#: includes/class-pts-classic-definitions.php:218
+msgid ""
+"Editable SCSS partials mirroring style.css, plus a package.json with sass "
+"build scripts"
+msgstr ""
+"style.css と同内容の編集可能な SCSS パーシャルと、sass ビルドスクリプト付きの package.json を生成します。"
+
+#: includes/class-pts-classic-definitions.php:218
+msgid "SCSS Sources (assets/scss)"
+msgstr "SCSS ソース（assets/scss）"
+
+#: includes/class-pts-classic-definitions.php:222
+msgid "Automatic Updates & Security"
+msgstr "自動更新とセキュリティ"
+
+#: includes/class-pts-classic-definitions.php:224
+msgid "Automatically apply minor security releases"
+msgstr "セキュリティ修正を含むマイナーアップデートを自動で適用します。"
+
+#: includes/class-pts-classic-definitions.php:224
+msgid "Enable Minor Core Auto-updates"
+msgstr "マイナーアップデートの自動更新を有効化"
+
+#: includes/class-pts-classic-definitions.php:225
+msgid "Enable Major Core Auto-updates"
+msgstr "メジャーアップデートの自動更新を有効化"
+
+#: includes/class-pts-classic-definitions.php:225
+msgid "Opt-in for major version auto-updates"
+msgstr "メジャーバージョンアップを自動で適用するように設定します。"
+
+#: includes/class-pts-classic-definitions.php:226
+msgid "Enable Plugin Auto-updates"
+msgstr "プラグインの自動更新を有効化"
+
+#: includes/class-pts-classic-definitions.php:226
+msgid "Keep all plugins updated automatically"
+msgstr "インストールされているすべてのプラグインを自動更新します。"
+
+#: includes/class-pts-classic-definitions.php:227
+msgid "Enable Theme Auto-updates"
+msgstr "テーマの自動更新を有効化"
+
+#: includes/class-pts-classic-definitions.php:227
+msgid "Keep all themes updated automatically"
+msgstr "すべてのテーマを自動更新するように設定します。"
+
+#: includes/class-pts-classic-definitions.php:228
+msgid "Disable XML-RPC (Security)"
+msgstr "XML-RPCを無効化（セキュリティ）"
+
+#: includes/class-pts-classic-definitions.php:228
+msgid "Disable XML-RPC to prevent brute force attacks"
+msgstr "悪意のあるアクセスを防ぐため、古いAPIであるXML-RPCを無効化します。"
+
+#: includes/class-pts-classic-definitions.php:229
+msgid "Hide public user-list endpoints without blocking the broader REST API."
+msgstr "REST API 全体をブロックせず、公開ユーザー一覧エンドポイントを非表示にします。"
+
+#: includes/class-pts-classic-definitions.php:229
+msgid "Limit public REST user endpoints"
+msgstr "公開 REST ユーザーエンドポイントを制限"
+
+#: includes/class-pts-classic-definitions.php:230
+msgid "Disable Theme/Plugin File Editor"
+msgstr "テーマ/プラグインエディターを無効化"
+
+#: includes/class-pts-classic-definitions.php:230
+msgid "Disable the dashboard file editor for security"
+msgstr "管理画面からのファイル直接編集機能を停止し、セキュリティを高めます。"
+
+#: includes/class-pts-classic-definitions.php:234
+msgid "Admin Customization"
+msgstr "管理画面のカスタマイズ"
+
+#: includes/class-pts-classic-definitions.php:236
+msgid "Custom Login Page Credits"
+msgstr "ログインページのクレジット変更"
+
+#: includes/class-pts-classic-definitions.php:236
+msgid "Link the login logo to your site and change its title"
+msgstr "ログイン画面のロゴのリンク先を自サイトのトップページに変更し、タイトルも自サイト名にします。"
+
+#: includes/class-pts-classic-definitions.php:237
+msgid "Disable the admin bar for non-administrator users"
+msgstr "管理者権限を持たないユーザーに対して、フロントエンドでの管理バーの表示を無効化します。"
+
+#: includes/class-pts-classic-definitions.php:237
+msgid "Hide Admin Bar for Customers"
+msgstr "管理者以外への管理バーの非表示"
+
+#: includes/class-pts-classic-definitions.php:238
+msgid "Add your custom brand text to the admin footer area"
+msgstr "管理画面の最下部（フッター）に独自のブランドテキストやリンクを表示します。"
+
+#: includes/class-pts-classic-definitions.php:238
+msgid "Admin Footer Branding"
+msgstr "管理画面フッターのブランディング"
+
+#: includes/class-pts-classic-definitions.php:239
+msgid "Branding for the WordPress login screen"
+msgstr "ログイン画面のデザインをテーマに合わせてカスタマイズします。"
+
+#: includes/class-pts-classic-definitions.php:239
+msgid "Custom Login Style"
+msgstr "カスタムログインスタイル"
+
+#: includes/class-pts-classic-definitions.php:240
+msgid "Dashboard Cleanup"
+msgstr "ダッシュボードのクリーンアップ"
+
+#: includes/class-pts-classic-definitions.php:240
+msgid "Remove unused dashboard widgets for a cleaner UI"
+msgstr "不要なダッシュボードウィジェットを非表示にし、管理画面をスッキリさせます。"
+
+#: includes/class-pts-classic-definitions.php:241
+msgid "Control the number of results per search page"
+msgstr "検索結果ページに表示する投稿の件数を独自に制限します。"
+
+#: includes/class-pts-classic-definitions.php:241
+msgid "Search Results Limit"
+msgstr "検索結果の件数制限"
+
+#. translators: 1: filename, 2: required note
+#: includes/class-pts-classic-definitions.php:261
+msgid "%1$s — %2$s"
+msgstr "%1$s — %2$s"
+
+#. translators: 1: minimum WordPress version, 2: detected version string
+#: picot-theme-seeder.php:82
+msgid ""
+"Picot Theme Seeder requires WordPress %1$s or later. This site is running "
+"%2$s."
+msgstr "Picot Theme Seeder は WordPress %1$s 以降が必要です。このサイトは %2$s を実行しています。"

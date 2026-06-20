@@ -1,0 +1,369 @@
+/* Picot Theme Seeder — type selection */
+.pts-intro {
+    margin-bottom: 1.5em;
+    color: #50575e;
+}
+
+.pts-step-type {
+    max-width: 900px;
+    margin: 0 auto 2em;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.pts-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.pts-type-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 24px;
+    text-align: left;
+    border: 2px solid #dcdcde;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.pts-type-card .dashicons {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: #2271b1;
+}
+
+.pts-type-card strong {
+    font-size: 1.15em;
+}
+
+.pts-type-card span:last-child {
+    color: #646970;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.pts-type-card:hover,
+.pts-type-card.is-selected {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    box-shadow: 0 2px 8px rgba(34, 113, 177, 0.12);
+}
+
+.pts-type-actions {
+    margin-top: 1em;
+}
+
+.pts-type-hint {
+    color: #d63638;
+}
+
+.pts-wizard-panel .pts-wizard-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.pts-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pts-badge-block {
+    background: #e7f5ff;
+    color: #135e96;
+}
+
+.pts-badge-classic {
+    background: #f0f0f1;
+    color: #1d2327;
+}
+
+/* Block wizard (from Block Theme Starter) */
+.bts-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.bts-app-container {
+    display: flex;
+    gap: 30px;
+}
+
+.bts-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    border-right: 1px solid #eee;
+    padding-right: 20px;
+}
+
+.bts-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bts-steps li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.bts-steps li.active {
+    background: #f0f6fc;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.bts-content {
+    flex-grow: 1;
+}
+
+.bts-step-content {
+    display: none;
+}
+
+.bts-step-content.active {
+    display: block;
+}
+
+.bts-actions {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.bts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.bts-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fff;
+}
+
+.bts-card:hover {
+    border-color: #2271b1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bts-badge {
+    display: inline-block;
+    background: #f0f6fc;
+    color: #2271b1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.bts-card.selected {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.bts-wrap h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.bts-filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.bts-filter-btn.active {
+    background: #2271b1;
+    color: #fff;
+    border-color: #2271b1;
+}
+
+/* Classic wizard (from Classic Theme Starter) */
+.cts-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.cts-app-container {
+    display: flex;
+    gap: 30px;
+}
+
+.cts-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    border-right: 1px solid #eee;
+    padding-right: 20px;
+}
+
+.cts-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cts-steps li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.cts-steps li.active {
+    background: #f0f6fc;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.cts-content {
+    flex-grow: 1;
+}
+
+.cts-step-content {
+    display: none;
+}
+
+.cts-step-content.active {
+    display: block;
+}
+
+.cts-actions {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.cts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cts-desc {
+    color: #888;
+    font-weight: normal;
+}
+
+.cts-checkbox-group label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.cts-preset-item.is-selected,
+.cts-preset-item[style*="background"] {
+    border-color: #2271b1 !important;
+}
+
+.cts-preview-list {
+    columns: 2;
+    column-gap: 2em;
+}
+
+.pts-section-intro,
+.pts-patterns-intro {
+    margin: 0 0 12px;
+    max-width: 720px;
+}
+
+.pts-desc-list,
+.pts-patterns-list {
+    margin-top: 4px;
+}
+
+.pts-checkbox-row {
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.pts-desc-list .pts-checkbox-row:last-child,
+.pts-patterns-list .pts-checkbox-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.pts-checkbox-row .pts-checkbox-label {
+    display: block;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.pts-checkbox-row .pts-item-desc {
+    margin: 4px 0 0 26px;
+    color: #646970;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 640px;
+}
+
+.form-table .pts-field-desc {
+    margin: 6px 0 0;
+    max-width: 640px;
+}
+
+.pts-root-layout {
+    margin: 20px 0;
+    padding: 12px 0 0;
+    border-top: 1px solid #dcdcde;
+    max-width: 720px;
+}
+
+.pts-root-layout h3 {
+    margin-top: 0;
+}
+
+.pts-root-layout-table th {
+    width: 200px;
+}
+
+.cts-checkbox-section {
+    margin-bottom: 20px;
+}
+
+.cts-group-title {
+    margin: 0 0 8px;
+}
+
+.cts-group-items {
+    margin-left: 0;
+}
