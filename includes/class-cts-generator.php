@@ -1474,6 +1474,19 @@ class CTS_Generator
     font-weight: 600;
 }
 
+#pts-sidebar-offcanvas .sidebar-navigation .sub-menu {
+    display: block;
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding-left: 1rem;
+    margin: 0;
+    list-style: none;
+}
+
 .site-header .navbar-toggler {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.25rem 0.5rem;
