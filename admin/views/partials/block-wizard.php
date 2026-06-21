@@ -257,7 +257,7 @@ if (!defined('ABSPATH')) {
                 <!-- Step 6: Output -->
                 <div class="bts-step-content" data-step="6">
                     <h2><?php esc_html_e('Output', 'picot-theme-seeder'); ?></h2>
-                    <p><?php esc_html_e('Generate your starter theme.', 'picot-theme-seeder'); ?></p>
+                    <p><?php esc_html_e('Generate your ready-to-use WordPress theme.', 'picot-theme-seeder'); ?></p>
                     <p>
                         <label><input type="radio" name="outputMode" value="direct" checked> <?php esc_html_e('Write to themes directory', 'picot-theme-seeder'); ?></label><br>
                         <label><input type="radio" name="outputMode" value="zip"> <?php esc_html_e('Download ZIP', 'picot-theme-seeder'); ?></label>

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picot Theme Seeder 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/tsubu/picot-theme-seeder/issues\n"
-"POT-Creation-Date: 2026-06-21 20:45+0900\n"
+"POT-Creation-Date: 2026-06-21 21:55+0900\n"
 "PO-Revision-Date: 2026-06-20 22:26+0900\n"
 "Last-Translator: PICOT\n"
 "Language-Team: Japanese\n"
@@ -23,8 +23,8 @@ msgid ""
 "Create complete, ready-to-use Block (FSE) or Classic WordPress themes from a "
 "visual admin wizard."
 msgstr ""
-"ビジュアル管理画面から、すぐ使える Block（FSE）または Classic WordPress "
-"テーマを作成できます。"
+"ビジュアル管理画面から、すぐ使える Block（FSE）または Classic WordPress テー"
+"マを作成できます。"
 
 #: admin/views/main.php
 msgid "Choose Theme Type"
@@ -535,8 +535,8 @@ msgid "Next: Output"
 msgstr "次へ: 出力"
 
 #: admin/views/partials/block-wizard.php
-msgid "Generate your starter theme."
-msgstr "テーマの骨格を生成します。"
+msgid "Generate your ready-to-use WordPress theme."
+msgstr "すぐ使える WordPress テーマを生成します。"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -2772,6 +2772,9 @@ msgid ""
 msgstr ""
 "Picot Theme Seeder は WordPress %1$s 以降が必要です。このサイトは %2$s を実行"
 "しています。"
+
+#~ msgid "Generate your starter theme."
+#~ msgstr "テーマの骨格を生成します。"
 
 #~ msgid "Create a Block (FSE) or Classic theme skeleton in minutes."
 #~ msgstr "Block（FSE）または Classic テーマの骨組みを数分で作成できます。"
