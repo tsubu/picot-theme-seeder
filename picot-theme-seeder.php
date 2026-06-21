@@ -5,7 +5,7 @@
  * Description: Generate Block (FSE) or Classic WordPress theme skeletons from a single admin wizard.
  * Version: 1.0.0
  * Requires at least: 7.0
- * Requires PHP: 7.4
+ * Requires PHP: 8.3
  * Author: PICOT
  * Author URI: https://picot.tokyo/aio/
  * Text Domain: picot-theme-seeder
@@ -87,19 +87,6 @@ function pts_admin_notice_wp_version()
     );
     echo '</p></div>';
 }
-
-/**
- * Load plugin translations (English source + bundled locales such as ja).
- */
-function pts_load_textdomain()
-{
-    load_plugin_textdomain(
-        'picot-theme-seeder',
-        false,
-        dirname(plugin_basename(__FILE__)) . '/languages'
-    );
-}
-add_action('init', 'pts_load_textdomain', 0);
 
 /**
  * Initialize the plugin.

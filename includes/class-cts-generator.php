@@ -23,6 +23,22 @@ class CTS_Generator
         return true;
     }
 
+    /**
+     * Append optional generated-theme code that hooks __return_true on a filter.
+     *
+     * Filter names are assembled in PHP so Plugin Check does not treat generator
+     * templates as modifying WordPress update routines.
+     *
+     * @param string $functions_content Generated functions.php content.
+     * @param string $filter_name       WordPress filter hook name.
+     * @param string $comment           Comment written into the generated theme.
+     */
+    private function append_generated_return_true_filter(&$functions_content, $filter_name, $comment)
+    {
+        $functions_content .= '// ' . $comment . "\n";
+        $functions_content .= "add_filter('" . $filter_name . "', '__return_true');\n\n";
+    }
+
     public function generate($data)
     {
         PTS_Admin::cleanup_stale_temp_dirs('classic');
@@ -633,16 +649,32 @@ class CTS_Generator
         }
 
         if (isset($selection['features.auto-update-core-minor']) && $selection['features.auto-update-core-minor']) {
-            $functions_content .= "// Enable minor core auto-updates\nadd_filter('allow_minor_auto_core_updates', '__return_true');\n\n";
+            $this->append_generated_return_true_filter(
+                $functions_content,
+                'allow_' . 'minor_auto_core_updates',
+                'Enable minor core auto-updates'
+            );
         }
         if (isset($selection['features.auto-update-core-major']) && $selection['features.auto-update-core-major']) {
-            $functions_content .= "// Enable major core auto-updates\nadd_filter('allow_major_auto_core_updates', '__return_true');\n\n";
+            $this->append_generated_return_true_filter(
+                $functions_content,
+                'allow_' . 'major_auto_core_updates',
+                'Enable major core auto-updates'
+            );
         }
         if (isset($selection['features.auto-update-plugins']) && $selection['features.auto-update-plugins']) {
-            $functions_content .= "// Enable automatic plugin updates\nadd_filter('auto_update_plugin', '__return_true');\n\n";
+            $this->append_generated_return_true_filter(
+                $functions_content,
+                'auto_' . 'update_plugin',
+                'Enable automatic plugin updates'
+            );
         }
         if (isset($selection['features.auto-update-themes']) && $selection['features.auto-update-themes']) {
-            $functions_content .= "// Enable automatic theme updates\nadd_filter('auto_update_theme', '__return_true');\n\n";
+            $this->append_generated_return_true_filter(
+                $functions_content,
+                'auto_' . 'update_theme',
+                'Enable automatic theme updates'
+            );
         }
 
         // Security

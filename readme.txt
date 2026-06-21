@@ -4,12 +4,12 @@ Donate link: https://github.com/tsubu/picot-theme-seeder
 Tags: theme, block theme, classic theme, fse, generator
 Requires at least: 7.0
 Tested up to: 7.0
-Requires PHP: 7.4
+Requires PHP: 8.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Generate Block (FSE) or Classic WordPress theme skeletons from a single admin wizard. Requires WordPress 7.0 or later.
+Generate Block (FSE) or Classic WordPress theme skeletons from a single admin wizard. Requires WordPress 7.0 or later and PHP 8.3 or later.
 
 == Description ==
 
@@ -50,7 +50,7 @@ This plugin does not connect to external APIs or third-party services. All files
 
 == Installation ==
 
-1. Use WordPress 7.0 or later.
+1. Use WordPress 7.0 or later and PHP 8.3 or later.
 2. Upload the picot-theme-seeder folder to the /wp-content/plugins/ directory, or install the plugin through the WordPress plugins screen.
 3. Activate the plugin through the Plugins menu in WordPress.
 4. Open Theme Seeder in the admin menu (dashicon: art).
@@ -64,6 +64,10 @@ The generated theme folder appears under wp-content/themes/{your-theme-slug}/. A
 = What WordPress version is required? =
 
 WordPress 7.0 or later. The plugin does not load on older versions and shows an admin notice instead.
+
+= What PHP version is required? =
+
+PHP 8.3 or later.
 
 = Who can generate themes? =
 
