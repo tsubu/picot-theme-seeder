@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Picot Theme Seeder
- * Description: Generate Block (FSE) or Classic WordPress theme skeletons from a single admin wizard.
+ * Description: Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard.
  * Version: 1.0.0
  * Requires at least: 7.0
  * Requires PHP: 8.3

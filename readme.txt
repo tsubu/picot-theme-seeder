@@ -9,13 +9,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Generate Block (FSE) or Classic WordPress theme skeletons from a single admin wizard. Requires WordPress 7.0 or later and PHP 8.3 or later.
+Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard. Requires WordPress 7.0 or later and PHP 8.3 or later.
 
 == Description ==
 
-Picot Theme Seeder is a WordPress plugin developed by Toshifumi Tsuburaya (PICOT) that helps developers and site builders create production-ready theme skeletons in minutes without copying boilerplate by hand.
-
-Choose your theme type once, configure templates and features step by step, then write the theme directly to wp-content/themes/ or download a ZIP archive.
+Picot Theme Seeder is a visual WordPress theme generator developed by Toshifumi Tsuburaya (PICOT).
+It allows site owners and administrators to create complete, ready-to-use Block (FSE) or Classic WordPress themes through a step-by-step admin interface, without writing or modifying code.
+Users can configure theme information, presets, templates, patterns, theme.json settings, colors, typography, and layout options, then generate a working theme directly under wp-content/themes/ or download it as a ZIP archive.
 
 = Key Features =
 
@@ -69,6 +69,12 @@ WordPress 7.0 or later. The plugin does not load on older versions and shows an 
 
 PHP 8.3 or later.
 
+= Is this a theme boilerplate, framework, or library? =
+
+No.
+Picot Theme Seeder is not a framework, library, or code-only boilerplate. It provides a graphical administration interface that generates complete WordPress themes.
+Users do not need to edit the plugin code or write theme files manually. The generated theme can be activated and used immediately as a functional WordPress theme.
+
 = Who can generate themes? =
 
 Only users with the manage_options capability (typically Administrators) can access the wizard and generate themes.
@@ -100,6 +106,7 @@ No. If a folder with the same slug already exists under wp-content/themes/, gene
 3. Classic theme wizard: basic information with per-field help text.
 4. Classic theme wizard: template and features selection.
 5. Output step: write to themes directory or download ZIP.
+6. A generated theme running on a WordPress site.
 
 == Changelog ==
 

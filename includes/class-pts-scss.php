@@ -63,7 +63,7 @@ class PTS_Scss
     /**
      * SCSS sources for a block (FSE) theme.
      *
-     * theme.json stays the design source of truth; the SCSS skeleton is for
+     * theme.json stays the design source of truth; the optional SCSS sources are for
      * CSS that theme.json cannot express.
      *
      * @param string                $style_header style.css header comment.

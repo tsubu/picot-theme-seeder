@@ -6,7 +6,7 @@ if (! defined('ABSPATH')) {
 ?>
 <div class="wrap pts-wrap">
     <h1><?php esc_html_e('Picot Theme Seeder', 'picot-theme-seeder'); ?></h1>
-    <p class="pts-intro"><?php esc_html_e('Create a Block (FSE) or Classic theme skeleton in minutes.', 'picot-theme-seeder'); ?></p>
+    <p class="pts-intro"><?php esc_html_e('Create complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard.', 'picot-theme-seeder'); ?></p>
 
     <div id="pts-step-type" class="pts-step-type">
         <h2><?php esc_html_e('Choose Theme Type', 'picot-theme-seeder'); ?></h2>
