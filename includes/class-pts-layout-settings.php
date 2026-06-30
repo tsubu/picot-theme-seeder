@@ -58,6 +58,34 @@ class PTS_Layout_Settings
     }
 
     /**
+     * Default block theme column layout for generated templates.
+     *
+     * @return string one-column|two-column
+     */
+    public static function get_default_layout_mode()
+    {
+        return 'one-column';
+    }
+
+    /**
+     * Parse block theme default column layout from REST / form payload.
+     *
+     * @param array<string, mixed> $data Request body.
+     * @return string one-column|two-column
+     */
+    public static function parse_layout_mode($data)
+    {
+        $params = isset($data['params']) && is_array($data['params']) ? $data['params'] : array();
+        $mode   = isset($params['layoutMode']) ? sanitize_key($params['layoutMode']) : self::get_default_layout_mode();
+
+        if (! in_array($mode, array('one-column', 'two-column'), true)) {
+            return self::get_default_layout_mode();
+        }
+
+        return $mode;
+    }
+
+    /**
      * @param array<string, mixed> $raw Raw layout fields.
      * @return array<string, string>
      */

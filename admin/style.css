@@ -304,6 +304,26 @@
     max-width: 720px;
 }
 
+.pts-layout-mode {
+    margin: 0 0 24px;
+    padding: 16px 18px;
+    max-width: 720px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.pts-layout-mode legend {
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+.pts-layout-mode label {
+    display: inline-block;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
 .pts-desc-list,
 .pts-patterns-list {
     margin-top: 4px;

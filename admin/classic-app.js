@@ -68,6 +68,36 @@ window.ptsInitClassic = function () {
         renderGroupedList($('#cts-templates-panel'), data.templateGroups);
         renderGroupedList($('#cts-features-panel'), data.featureGroups);
 
+        setupLayoutMode();
+
+        function setupLayoutMode() {
+            $form.on('change', '.bts-layout-mode-radio', function () {
+                syncSidebarFromLayoutMode();
+                updatePreview();
+            });
+
+            $form.on('change', 'input[name="selection[templates.sidebar]"]', function () {
+                syncLayoutModeFromSidebar();
+                updatePreview();
+            });
+        }
+
+        function syncSidebarFromLayoutMode() {
+            const mode = $form.find('input[name="params[layoutMode]"]:checked').val() || 'one-column';
+            const $sidebar = $form.find('input[name="selection[templates.sidebar]"]');
+            if ($sidebar.length) {
+                $sidebar.prop('checked', mode === 'two-column');
+            }
+        }
+
+        function syncLayoutModeFromSidebar() {
+            const $sidebar = $form.find('input[name="selection[templates.sidebar]"]');
+            const mode = $sidebar.length && $sidebar.is(':checked') ? 'two-column' : 'one-column';
+            $form.find(`input[name="params[layoutMode]"][value="${mode}"]`).prop('checked', true);
+        }
+
+        syncLayoutModeFromSidebar();
+
         $wrap.find('.next-step').on('click', function () {
             const $currentStep = $wrap.find('.cts-step-content.active');
             const stepNum = parseInt($currentStep.data('step'), 10);
@@ -152,11 +182,19 @@ window.ptsInitClassic = function () {
             }
 
             $form.find('input[name="selection[templates.index]"]').prop('checked', true);
+            syncLayoutModeFromSidebar();
         }
 
         function updatePreview() {
             $fileList.empty();
             $('#cts-feature-list').empty();
+
+            const layoutMode = $form.find('input[name="params[layoutMode]"]:checked').val() || 'one-column';
+            const layoutLabel =
+                layoutMode === 'two-column'
+                    ? (data.strings && data.strings.layoutTwoColumn) || 'Default layout: 2 columns'
+                    : (data.strings && data.strings.layoutOneColumn) || 'Default layout: 1 column';
+            $fileList.append($('<li></li>').text(layoutLabel));
 
             const files = ['style.css', 'index.php', 'functions.php'];
 
@@ -194,14 +232,18 @@ window.ptsInitClassic = function () {
                 themeAuthorUri: $('#cts-themeAuthorUri').val(),
                 themeDescription: $('#cts-themeDescription').val(),
                 outputMode: $form.find('input[name="outputMode"]:checked').val(),
-                params: { rootLayout: {} },
+                params: { rootLayout: {}, layoutMode: 'one-column' },
                 selection: {},
             };
 
             $form.serializeArray().forEach((field) => {
-                const match = field.name.match(/^params\[rootLayout\]\[(.*?)\]$/);
-                if (match) {
-                    payload.params.rootLayout[match[1]] = field.value;
+                const rootMatch = field.name.match(/^params\[rootLayout\]\[(.*?)\]$/);
+                if (rootMatch) {
+                    payload.params.rootLayout[rootMatch[1]] = field.value;
+                    return;
+                }
+                if (field.name === 'params[layoutMode]') {
+                    payload.params.layoutMode = field.value;
                 }
             });
 

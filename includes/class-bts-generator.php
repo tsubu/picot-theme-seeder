@@ -9,6 +9,9 @@ class BTS_Generator
     /** @var array<string, mixed> */
     private $generation_selection = array();
 
+    /** @var string one-column|two-column */
+    private $layout_mode = 'one-column';
+
     /**
      * @param string $path
      * @param string $content
@@ -38,6 +41,12 @@ class BTS_Generator
         $selection = isset($data['selection']) ? $data['selection'] : array();
         $params = isset($data['params']) ? $data['params'] : array();
         $layout    = PTS_Layout_Settings::parse($data);
+        $this->layout_mode = PTS_Layout_Settings::parse_layout_mode($data);
+
+        // Backward compatibility when layoutMode is omitted but Sidebar is checked.
+        if ('one-column' === $this->layout_mode && ! empty($selection['parts.sidebar'])) {
+            $this->layout_mode = 'two-column';
+        }
 
         // "Basic Template Parts Set": one key that enables every recommended part.
         if (! empty($selection['parts.basicSet'])) {
@@ -74,12 +83,14 @@ class BTS_Generator
             }
         }
 
-        $this->generation_selection = $selection;
-
         // Without single.html, singular views fall back to index.html (excerpt list only).
         if (! empty($selection['features.generateTemplates'])) {
             $selection['templates.single'] = 1;
         }
+
+        $this->ensure_block_layout_assets($selection);
+
+        $this->generation_selection = $selection;
 
         // 2. Setup Temp Directory
         $upload_dir = wp_upload_dir();
@@ -753,21 +764,48 @@ class BTS_Generator
     }
 
     /**
+     * Ensure sidebar infrastructure exists for post-generation layout changes.
+     *
+     * @param array<string, mixed> $selection Wizard selection flags (by reference).
+     */
+    private function ensure_block_layout_assets(&$selection)
+    {
+        if (empty($selection['features.generateTemplates'])) {
+            return;
+        }
+
+        if (! empty($selection['templates.single'])) {
+            $selection['templates.singleWithSidebar'] = 1;
+        }
+
+        if (! empty($selection['templates.page'])) {
+            $selection['templates.pageWithSidebar'] = 1;
+        }
+    }
+
+    /**
      * Whether sidebar.html should be generated.
      *
      * @param array<string, mixed> $selection Wizard selection flags.
      */
     private function should_generate_sidebar_part($selection)
     {
-        return ! empty($selection['parts.sidebar'])
+        if (empty($selection['features.generateParts'])) {
+            return false;
+        }
+
+        return 'two-column' === $this->layout_mode
+            || ! empty($selection['parts.sidebar'])
             || ! empty($selection['templates.singleWithSidebar'])
-            || ! empty($selection['templates.pageWithSidebar']);
+            || ! empty($selection['templates.pageWithSidebar'])
+            || ! empty($selection['templates.single'])
+            || ! empty($selection['templates.page']);
     }
 
     /**
      * Whether a template uses the 2-column main + sidebar layout.
      *
-     * Site-wide when the Sidebar part is explicitly selected; otherwise only the
+     * Site-wide when the default layout is two-column; otherwise only the
      * optional single-with-sidebar / page-with-sidebar templates use two columns.
      *
      * @param array<string, mixed>      $selection     Wizard selection flags.
@@ -775,7 +813,7 @@ class BTS_Generator
      */
     private function uses_two_column_layout($selection, $template_file = null)
     {
-        if (! empty($selection['parts.sidebar'])) {
+        if ('two-column' === $this->layout_mode) {
             return true;
         }
 
@@ -1960,7 +1998,14 @@ JS;
 
         $template_parts = array();
         foreach ($meta as $key => $part) {
-            if (! empty($selection[$key])) {
+            if ('parts.sidebar' === $key) {
+                if ($this->should_generate_sidebar_part($selection)) {
+                    $template_parts[] = $part;
+                }
+                continue;
+            }
+
+            if (! empty($selection[ $key ])) {
                 $template_parts[] = $part;
             }
         }
@@ -2231,7 +2276,7 @@ JS;
     {
         switch ($file) {
             case 'header.html':
-                if (! empty($this->generation_selection['parts.sidebar'])) {
+                if ($this->uses_two_column_layout($this->generation_selection)) {
                     return $this->get_site_title_only_header_markup();
                 }
 

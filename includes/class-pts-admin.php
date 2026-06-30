@@ -225,6 +225,8 @@ class PTS_Admin
                 'success'       => __('Theme generated successfully.', 'picot-theme-seeder'),
                 'error'         => __('Error: ', 'picot-theme-seeder'),
                 'unknownError'  => __('Unknown error', 'picot-theme-seeder'),
+                'layoutOneColumn' => __('Default layout: 1 column', 'picot-theme-seeder'),
+                'layoutTwoColumn' => __('Default layout: 2 columns', 'picot-theme-seeder'),
             ),
         );
     }
@@ -285,7 +287,7 @@ class PTS_Admin
                 'id'          => 'templates.singleWithSidebar',
                 'file'        => 'single-with-sidebar.html',
                 'name'        => __('Single (With Sidebar)', 'picot-theme-seeder'),
-                'description' => __('Two-column single post with the sidebar part on the right. Selectable per post as a custom template.', 'picot-theme-seeder'),
+                'description' => __('Two-column single post with the sidebar part on the right. Included automatically when Single is enabled; selectable per post as a custom template.', 'picot-theme-seeder'),
                 'checked'     => false,
             ),
             array(
@@ -298,7 +300,7 @@ class PTS_Admin
                 'id'          => 'templates.pageWithSidebar',
                 'file'        => 'page-with-sidebar.html',
                 'name'        => __('Page (With Sidebar)', 'picot-theme-seeder'),
-                'description' => __('Two-column page with the sidebar part on the right. Selectable per page as a custom template.', 'picot-theme-seeder'),
+                'description' => __('Two-column page with the sidebar part on the right. Included automatically when Page is enabled; selectable per page as a custom template.', 'picot-theme-seeder'),
                 'checked'     => false,
             ),
             array(
@@ -378,7 +380,7 @@ class PTS_Admin
                 'id'          => 'parts.sidebar',
                 'file'        => 'sidebar.html',
                 'name'        => __('Sidebar', 'picot-theme-seeder'),
-                'description' => __('Optional sidebar column for widgets or secondary content.', 'picot-theme-seeder'),
+                'description' => __('Optional sidebar column for widgets or secondary content. Synced with the default column layout above; always generated when post/page templates are enabled so you can switch layouts later.', 'picot-theme-seeder'),
                 'checked'     => false,
                 'basicSet'    => false,
             ),
@@ -1392,6 +1394,8 @@ class PTS_Admin
                 'generating'    => __('Generating...', 'picot-theme-seeder'),
                 'generateBtn'   => __('Generate Theme', 'picot-theme-seeder'),
                 'select'        => __('Select', 'picot-theme-seeder'),
+                'layoutOneColumn' => __('Default layout: 1 column', 'picot-theme-seeder'),
+                'layoutTwoColumn' => __('Default layout: 2 columns', 'picot-theme-seeder'),
             ),
         );
     }
@@ -1423,9 +1427,19 @@ class PTS_Admin
 
         set_transient('pts_zip_' . $token, $data, 15 * MINUTE_IN_SECONDS);
 
-        return wp_nonce_url(
-            admin_url('admin-post.php?action=pts_download_zip&token=' . rawurlencode($token)),
-            'pts_download_zip_' . $token
+        // Raw ampersands for JavaScript redirects (wp_nonce_url HTML-encodes & as &amp;).
+        $url = add_query_arg(
+            array(
+                'action' => 'pts_download_zip',
+                'token'  => $token,
+            ),
+            admin_url('admin-post.php')
+        );
+
+        return add_query_arg(
+            '_wpnonce',
+            wp_create_nonce('pts_download_zip_' . $token),
+            $url
         );
     }
 
@@ -1437,10 +1451,6 @@ class PTS_Admin
         if (! current_user_can('manage_options')) {
             wp_die(esc_html__('You are not allowed to download this file.', 'picot-theme-seeder'), 403);
         }
-
-        require_once ABSPATH . 'wp-admin/includes/file.php';
-        WP_Filesystem();
-        global $wp_filesystem;
 
         $token = isset($_GET['token']) ? sanitize_text_field(wp_unslash($_GET['token'])) : '';
         if ('' === $token) {
@@ -1457,9 +1467,8 @@ class PTS_Admin
         $zip_file   = $data['zip_file'];
         $theme_slug = ! empty($data['theme_slug']) ? sanitize_title($data['theme_slug']) : 'theme';
 
-        delete_transient('pts_zip_' . $token);
-
         if (! file_exists($zip_file) || ! is_readable($zip_file)) {
+            delete_transient('pts_zip_' . $token);
             wp_die(esc_html__('The generated ZIP file is no longer available.', 'picot-theme-seeder'), 410);
         }
 
@@ -1469,8 +1478,17 @@ class PTS_Admin
         header('Content-Length: ' . (string) filesize($zip_file));
         header('X-Content-Type-Options: nosniff');
 
-        echo $wp_filesystem->get_contents($zip_file); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Binary ZIP download response.
+        $handle = fopen($zip_file, 'rb');
+        if (false === $handle) {
+            wp_die(esc_html__('Could not read the generated ZIP file.', 'picot-theme-seeder'), 500);
+        }
 
+        while (! feof($handle)) {
+            echo fread($handle, 8192); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Binary ZIP download response.
+        }
+        fclose($handle);
+
+        delete_transient('pts_zip_' . $token);
         self::delete_tree(dirname($zip_file));
         exit;
     }

@@ -62,6 +62,8 @@ if (!defined('ABSPATH')) {
                             <label><input type="checkbox" class="bts-selection-cb" name="selection[features.generateStyleVariations]" value="1" checked> <?php esc_html_e('Generate Style Variations (styles/ — Dark, Natural, Vivid)', 'picot-theme-seeder'); ?></label><br>
                         </div>
 
+                        <?php include PTS_PLUGIN_DIR . 'admin/views/partials/block-layout-mode-fields.php'; ?>
+
                         <h3><?php esc_html_e('Templates', 'picot-theme-seeder'); ?></h3>
                         <p class="description pts-section-intro"><?php esc_html_e('HTML templates in the templates/ folder. WordPress picks the most specific file for each view (template hierarchy).', 'picot-theme-seeder'); ?></p>
                         <div id="bts-templates-list" class="pts-desc-list">

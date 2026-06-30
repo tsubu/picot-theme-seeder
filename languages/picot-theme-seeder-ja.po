@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picot Theme Seeder 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/tsubu/picot-theme-seeder/issues\n"
-"POT-Creation-Date: 2026-06-21 21:55+0900\n"
+"POT-Creation-Date: 2026-07-01 05:35+0900\n"
 "PO-Revision-Date: 2026-06-20 22:26+0900\n"
 "Last-Translator: PICOT\n"
 "Language-Team: Japanese\n"
@@ -65,6 +65,26 @@ msgstr "テーマ種別を変更"
 #: admin/views/main.php
 msgid "Block Theme"
 msgstr "Block テーマ"
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "Default column layout"
+msgstr "デフォルトのカラムレイアウト"
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid ""
+"Sets the initial layout for generated templates. Sidebar files and per-page "
+"layout templates are still included so you can switch layouts later."
+msgstr ""
+"生成テンプレートの初期レイアウトを設定します。サイドバー関連ファイルとページ"
+"単位のレイアウトテンプレートも含まれるため、生成後に切り替えられます。"
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "1 column (main content only)"
+msgstr "1カラム（メインコンテンツのみ）"
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "2 columns (main content + sidebar)"
+msgstr "2カラム（メインコンテンツ + サイドバー）"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -796,6 +816,14 @@ msgid "Unknown error"
 msgstr "不明なエラー"
 
 #: includes/class-pts-admin.php
+msgid "Default layout: 1 column"
+msgstr "デフォルトレイアウト: 1カラム"
+
+#: includes/class-pts-admin.php
+msgid "Default layout: 2 columns"
+msgstr "デフォルトレイアウト: 2カラム"
+
+#: includes/class-pts-admin.php
 msgid "Index"
 msgstr "インデックス"
 
@@ -841,11 +869,12 @@ msgstr "投稿（サイドバー付き）"
 
 #: includes/class-pts-admin.php
 msgid ""
-"Two-column single post with the sidebar part on the right. Selectable per "
-"post as a custom template."
+"Two-column single post with the sidebar part on the right. Included "
+"automatically when Single is enabled; selectable per post as a custom "
+"template."
 msgstr ""
-"右にサイドバーパーツを配置した2カラムの投稿テンプレート。投稿ごとにカスタムテ"
-"ンプレートとして選択できます。"
+"右にサイドバーパーツを配置した2カラムの投稿テンプレート。Single を有効にする"
+"と自動で含まれ、投稿ごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-admin.php
 msgid "Page"
@@ -861,11 +890,11 @@ msgstr "固定ページ（サイドバー付き）"
 
 #: includes/class-pts-admin.php
 msgid ""
-"Two-column page with the sidebar part on the right. Selectable per page as a "
-"custom template."
+"Two-column page with the sidebar part on the right. Included automatically "
+"when Page is enabled; selectable per page as a custom template."
 msgstr ""
-"右にサイドバーパーツを配置した2カラムの固定ページテンプレート。ページごとにカ"
-"スタムテンプレートとして選択できます。"
+"右にサイドバーパーツを配置した2カラムの固定ページテンプレート。Page を有効に"
+"すると自動で含まれ、ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-admin.php
 msgid "LP Page (Blank Canvas)"
@@ -968,8 +997,14 @@ msgid "Sidebar"
 msgstr "サイドバー"
 
 #: includes/class-pts-admin.php
-msgid "Optional sidebar column for widgets or secondary content."
-msgstr "ウィジェットや補足コンテンツ用のサイドバー。"
+msgid ""
+"Optional sidebar column for widgets or secondary content. Synced with the "
+"default column layout above; always generated when post/page templates are "
+"enabled so you can switch layouts later."
+msgstr ""
+"ウィジェットや補足コンテンツ用のサイドバー。上のデフォルトカラムレイアウトと"
+"連動します。投稿/固定ページテンプレートを有効にした場合は常に生成され、生成後"
+"もレイアウト切り替えが可能です。"
 
 #: includes/class-pts-admin.php
 msgid "Comments"
@@ -1950,6 +1985,10 @@ msgstr "このダウンロードリンクは期限切れです。"
 msgid "The generated ZIP file is no longer available."
 msgstr "生成された ZIP ファイルは利用できなくなりました。"
 
+#: includes/class-pts-admin.php
+msgid "Could not read the generated ZIP file."
+msgstr ""
+
 #: includes/class-pts-classic-definitions.php
 msgid "Theme Name"
 msgstr "テーマ名"
@@ -2025,8 +2064,14 @@ msgid "Site footer and script loading"
 msgstr "サイトのフッターとスクリプトの読み込み"
 
 #: includes/class-pts-classic-definitions.php
-msgid "Widget area for the sidebar"
-msgstr "サイドバーのウィジェットエリア"
+msgid ""
+"Widget area for the sidebar. Synced with the default column layout above; "
+"always generated when menus, widgets, or page templates are enabled so you "
+"can switch layouts later."
+msgstr ""
+"サイドバー用ウィジェットエリア。上のデフォルトカラムレイアウトと連動しま"
+"す。メニュー・ウィジェット・固定ページテンプレートを有効にした場合は常に生"
+"成され、生成後もレイアウト切り替えが可能です。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Template for displaying comments"
@@ -2081,12 +2126,20 @@ msgid "Custom Page Templates"
 msgstr "カスタムページテンプレート"
 
 #: includes/class-pts-classic-definitions.php
-msgid "Full-width layout without sidebars"
-msgstr "サイドバーなしの全幅レイアウト"
+msgid ""
+"Full-width layout without sidebars. Included automatically when Page is "
+"enabled; selectable per page as a custom template."
+msgstr ""
+"サイドバーなしの全幅レイアウト。Page を有効にすると自動で含まれ、固定ページ"
+"ごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-classic-definitions.php
-msgid "Content-only layout without sidebars"
-msgstr "サイドバーなしのコンテンツのみのレイアウト"
+msgid ""
+"Content-only layout without sidebars. Included automatically when Page is "
+"enabled; selectable per page as a custom template."
+msgstr ""
+"サイドバーなしのコンテンツ専用レイアウト。Page を有効にすると自動で含まれ、"
+"固定ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Archive Templates"
@@ -2765,6 +2818,14 @@ msgstr "検索結果ページに表示する投稿の件数を独自に制限し
 msgid "%1$s — %2$s"
 msgstr "%1$s — %2$s"
 
+#: includes/class-pts-vendor-assets.php
+msgid "Bundled vendor file is missing: %s"
+msgstr ""
+
+#: includes/class-pts-vendor-assets.php
+msgid "Could not copy vendor file: %s"
+msgstr ""
+
 #: picot-theme-seeder.php
 msgid ""
 "Picot Theme Seeder requires WordPress %1$s or later. This site is running "
@@ -2772,6 +2833,41 @@ msgid ""
 msgstr ""
 "Picot Theme Seeder は WordPress %1$s 以降が必要です。このサイトは %2$s を実行"
 "しています。"
+
+#~ msgid ""
+#~ "Sets the initial layout for generated templates. Sidebar parts and per-"
+#~ "post “With Sidebar” templates are still included so you can switch "
+#~ "layouts later in the Site Editor or per post/page."
+#~ msgstr ""
+#~ "生成テンプレートの初期レイアウトを設定します。サイドバーパーツと投稿・固定"
+#~ "ページごとの「サイドバー付き」テンプレートも含まれるため、生成後にサイトエ"
+#~ "ディターや投稿/固定ページ単位でレイアウトを切り替えられます。"
+
+#~ msgid "Widget area for the sidebar"
+#~ msgstr "サイドバーのウィジェットエリア"
+
+#~ msgid "Full-width layout without sidebars"
+#~ msgstr "サイドバーなしの全幅レイアウト"
+
+#~ msgid "Content-only layout without sidebars"
+#~ msgstr "サイドバーなしのコンテンツのみのレイアウト"
+
+#~ msgid ""
+#~ "Two-column single post with the sidebar part on the right. Selectable per "
+#~ "post as a custom template."
+#~ msgstr ""
+#~ "右にサイドバーパーツを配置した2カラムの投稿テンプレート。投稿ごとにカスタ"
+#~ "ムテンプレートとして選択できます。"
+
+#~ msgid ""
+#~ "Two-column page with the sidebar part on the right. Selectable per page "
+#~ "as a custom template."
+#~ msgstr ""
+#~ "右にサイドバーパーツを配置した2カラムの固定ページテンプレート。ページごと"
+#~ "にカスタムテンプレートとして選択できます。"
+
+#~ msgid "Optional sidebar column for widgets or secondary content."
+#~ msgstr "ウィジェットや補足コンテンツ用のサイドバー。"
 
 #~ msgid "Generate your starter theme."
 #~ msgstr "テーマの骨格を生成します。"

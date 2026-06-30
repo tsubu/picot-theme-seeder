@@ -8,6 +8,9 @@ if (! defined('ABSPATH')) {
  */
 class CTS_Generator
 {
+    /** @var string one-column|two-column */
+    private $layout_mode = 'one-column';
+
     /**
      * @param string $path
      * @param string $content
@@ -52,11 +55,14 @@ class CTS_Generator
 
         $selection = isset($data['selection']) ? $data['selection'] : array();
         $layout    = PTS_Layout_Settings::parse($data);
+        $this->layout_mode = PTS_Layout_Settings::parse_layout_mode($data);
 
-        // 2-column layout is the default when menus or widgets are enabled.
-        if (! empty($selection['features.menus']) || ! empty($selection['features.widgets'])) {
-            $selection['templates.sidebar'] = 1;
+        // Backward compatibility when layoutMode is omitted but Sidebar is checked.
+        if ('one-column' === $this->layout_mode && ! empty($selection['templates.sidebar'])) {
+            $this->layout_mode = 'two-column';
         }
+
+        $this->ensure_classic_layout_assets($selection);
 
         // 2. Setup Temp Directory
         $upload_dir = wp_upload_dir();
@@ -789,13 +795,42 @@ class CTS_Generator
     }
 
     /**
+     * Ensure sidebar and per-page layout templates exist for post-generation changes.
+     *
+     * @param array<string, mixed> $selection Wizard selection flags (by reference).
+     */
+    private function ensure_classic_layout_assets(&$selection)
+    {
+        if (! empty($selection['templates.page'])) {
+            $selection['templates.template-no-sidebar'] = 1;
+            $selection['templates.template-full-width']  = 1;
+        }
+
+        if ($this->should_generate_sidebar_files($selection)) {
+            $selection['templates.sidebar'] = 1;
+        }
+    }
+
+    /**
+     * Whether sidebar.php and related template parts should be generated.
+     *
+     * @param array<string, mixed> $selection Wizard selection flags.
+     */
+    private function should_generate_sidebar_files($selection)
+    {
+        return 'two-column' === $this->layout_mode
+            || ! empty($selection['templates.single'])
+            || ! empty($selection['templates.page'])
+            || ! empty($selection['features.menus'])
+            || ! empty($selection['features.widgets']);
+    }
+
+    /**
      * @param array<string, mixed> $selection Wizard selection flags.
      */
     private function has_sidebar($selection)
     {
-        return ! empty($selection['templates.sidebar'])
-            || ! empty($selection['features.menus'])
-            || ! empty($selection['features.widgets']);
+        return 'two-column' === $this->layout_mode;
     }
 
     /**

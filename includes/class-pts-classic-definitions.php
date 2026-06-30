@@ -73,7 +73,7 @@ class PTS_Classic_Definitions
                     self::tpl('templates.index', 'index.php', __('The main template file (Required)', 'picot-theme-seeder'), true, true),
                     self::tpl('templates.header', 'header.php', __('Document head and navigation area', 'picot-theme-seeder')),
                     self::tpl('templates.footer', 'footer.php', __('Site footer and script loading', 'picot-theme-seeder')),
-                    self::tpl('templates.sidebar', 'sidebar.php', __('Widget area for the sidebar', 'picot-theme-seeder')),
+                    self::tpl('templates.sidebar', 'sidebar.php', __('Widget area for the sidebar. Synced with the default column layout above; always generated when menus, widgets, or page templates are enabled so you can switch layouts later.', 'picot-theme-seeder'), false, false, false),
                     self::tpl('templates.comments', 'comments.php', __('Template for displaying comments', 'picot-theme-seeder')),
                     self::tpl('templates.searchform', 'searchform.php', __('Custom search form template', 'picot-theme-seeder')),
                     self::tpl('templates.embed', 'embed.php', __('Custom display for embedded posts', 'picot-theme-seeder')),
@@ -95,8 +95,8 @@ class PTS_Classic_Definitions
             array(
                 'title' => __('Custom Page Templates', 'picot-theme-seeder'),
                 'items' => array(
-                    self::tpl('templates.template-full-width', 'template-full-width.php', __('Full-width layout without sidebars', 'picot-theme-seeder')),
-                    self::tpl('templates.template-no-sidebar', 'template-no-sidebar.php', __('Content-only layout without sidebars', 'picot-theme-seeder')),
+                    self::tpl('templates.template-full-width', 'template-full-width.php', __('Full-width layout without sidebars. Included automatically when Page is enabled; selectable per page as a custom template.', 'picot-theme-seeder'), false, false, false),
+                    self::tpl('templates.template-no-sidebar', 'template-no-sidebar.php', __('Content-only layout without sidebars. Included automatically when Page is enabled; selectable per page as a custom template.', 'picot-theme-seeder'), false, false, false),
                 ),
             ),
             array(

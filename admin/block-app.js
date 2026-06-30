@@ -45,25 +45,87 @@ window.ptsInitBlock = function () {
 
         const $form = $('#bts-form');
 
+        const partsSets = [
+            { checkbox: '#bts-parts-set-basic', list: '#bts-parts-list', id: 'parts.basicSet' },
+            { checkbox: '#bts-parts-set-extended', list: '#bts-parts-extended-list', id: 'parts.extendedSet' },
+            { checkbox: '#bts-parts-set-jplp', list: '#bts-parts-jplp-list', id: 'parts.jpLpSet' },
+            { checkbox: '#bts-parts-set-productlp', list: '#bts-parts-productlp-list', id: 'parts.productLpSet' },
+            { checkbox: '#bts-parts-set-layoutkit', list: '#bts-parts-layoutkit-list', id: 'parts.layoutKitSet' },
+        ];
+
+        function getPartsSetMembers(set) {
+            const $inputs = $(set.list + ' input.bts-selection-cb');
+            if (set.id === 'parts.basicSet') {
+                return $inputs.filter(function () {
+                    return $(this).data('basicSetMember') !== 0;
+                });
+            }
+            return $inputs;
+        }
+
+        function applyPartsSetMembers(set, checked) {
+            getPartsSetMembers(set).prop('checked', checked);
+        }
+
+        function syncPartsSetMasterFromMembers(set) {
+            const $setCb = $(set.checkbox);
+            if (!$setCb.length) {
+                return;
+            }
+            const $members = getPartsSetMembers(set);
+            const allChecked = $members.length > 0 && $members.filter(':not(:checked)').length === 0;
+            $setCb.prop('checked', allChecked);
+        }
+
+        function syncAllPartsSetsFromMasters() {
+            partsSets.forEach((set) => {
+                const $setCb = $(set.checkbox);
+                if ($setCb.length && $setCb.is(':checked')) {
+                    applyPartsSetMembers(set, true);
+                }
+            });
+        }
+
         function init() {
             loadPresets();
             setupNavigation();
             setupFilters();
             setupForm();
+            setupLayoutMode();
             renderCheckboxes();
             setupPartsSet();
+            syncAllPartsSetsFromMasters();
+            syncLayoutModeFromSidebar();
+        }
+
+        function setupLayoutMode() {
+            $form.on('change', '.bts-layout-mode-radio', function () {
+                syncSidebarFromLayoutMode();
+                updatePreview();
+            });
+
+            $form.on('change', 'input[name="selection[parts.sidebar]"]', function () {
+                syncLayoutModeFromSidebar();
+                updatePreview();
+            });
+        }
+
+        function syncSidebarFromLayoutMode() {
+            const mode = $form.find('input[name="params[layoutMode]"]:checked').val() || 'one-column';
+            const $sidebar = $form.find('input[name="selection[parts.sidebar]"]');
+            if ($sidebar.length) {
+                $sidebar.prop('checked', mode === 'two-column');
+            }
+        }
+
+        function syncLayoutModeFromSidebar() {
+            const $sidebar = $form.find('input[name="selection[parts.sidebar]"]');
+            const mode = $sidebar.length && $sidebar.is(':checked') ? 'two-column' : 'one-column';
+            $form.find(`input[name="params[layoutMode]"][value="${mode}"]`).prop('checked', true);
         }
 
         function setupPartsSet() {
-            const sets = [
-                { checkbox: '#bts-parts-set-basic', list: '#bts-parts-list', id: 'parts.basicSet' },
-                { checkbox: '#bts-parts-set-extended', list: '#bts-parts-extended-list', id: 'parts.extendedSet' },
-                { checkbox: '#bts-parts-set-jplp', list: '#bts-parts-jplp-list', id: 'parts.jpLpSet' },
-                { checkbox: '#bts-parts-set-productlp', list: '#bts-parts-productlp-list', id: 'parts.productLpSet' },
-                { checkbox: '#bts-parts-set-layoutkit', list: '#bts-parts-layoutkit-list', id: 'parts.layoutKitSet' },
-            ];
-
-            sets.forEach((set) => {
+            partsSets.forEach((set) => {
                 const $setCb = $(set.checkbox);
                 if (!$setCb.length) {
                     return;
@@ -72,25 +134,14 @@ window.ptsInitBlock = function () {
 
                 // Checking the set checks every part in its list; unchecking clears them.
                 $setCb.on('change', function () {
-                    const checked = this.checked;
-                    $(set.list + ' input.bts-selection-cb').each(function () {
-                        if (set.id === 'parts.basicSet' && $(this).data('basicSetMember') === 0) {
-                            return;
-                        }
-                        $(this).prop('checked', checked);
-                    });
+                    applyPartsSetMembers(set, this.checked);
+                    updatePreview();
                 });
 
                 // Keep the set checkbox in sync with the individual part checkboxes.
                 $form.on('change', set.list + ' input.bts-selection-cb', function () {
-                    const $members =
-                        set.id === 'parts.basicSet'
-                            ? $(set.list + ' input.bts-selection-cb').filter(function () {
-                                  return $(this).data('basicSetMember') !== 0;
-                              })
-                            : $(set.list + ' input.bts-selection-cb');
-                    const allChecked = $members.filter(':not(:checked)').length === 0;
-                    $setCb.prop('checked', allChecked);
+                    syncPartsSetMasterFromMembers(set);
+                    updatePreview();
                 });
             });
         }
@@ -194,6 +245,10 @@ window.ptsInitBlock = function () {
                     }
                 }
             }
+
+            // Presets often enable *.Set flags only; expand them to every child checkbox.
+            syncAllPartsSetsFromMasters();
+            syncLayoutModeFromSidebar();
 
             $form.find('.bts-themejson-cb').prop('checked', true);
             $form.find('input[name="selection[templates.index]"]').prop('checked', true);
@@ -328,6 +383,14 @@ window.ptsInitBlock = function () {
         function updatePreview() {
             const list = $('#bts-file-list');
             list.empty();
+
+            const layoutMode = $form.find('input[name="params[layoutMode]"]:checked').val() || 'one-column';
+            const layoutLabel =
+                layoutMode === 'two-column'
+                    ? (btsData.strings && btsData.strings.layoutTwoColumn) || 'Default layout: 2 columns'
+                    : (btsData.strings && btsData.strings.layoutOneColumn) || 'Default layout: 1 column';
+            list.append($('<li></li>').text(layoutLabel));
+
             $form.find('input[type="checkbox"]:checked').each(function () {
                 const name = $(this).attr('name');
                 const match = name && name.match(/selection\[(.*?)\]/);

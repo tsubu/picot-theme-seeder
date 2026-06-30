@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picot Theme Seeder 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/tsubu/picot-theme-seeder/issues\n"
-"POT-Creation-Date: 2026-06-21 21:55+0900\n"
-"PO-Revision-Date: 2026-06-21 21:55+0900\n"
+"POT-Creation-Date: 2026-07-01 05:35+0900\n"
+"PO-Revision-Date: 2026-07-01 05:35+0900\n"
 "Last-Translator: PICOT\n"
 "Language-Team: PICOT\n"
 "MIME-Version: 1.0\n"
@@ -62,6 +62,25 @@ msgstr ""
 
 #: admin/views/main.php
 msgid "Block Theme"
+msgstr ""
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "Default column layout"
+msgstr ""
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid ""
+"Sets the initial layout for generated templates. Sidebar files and per"
+"-page layout templates are still included so you can switch layouts la"
+"ter."
+msgstr ""
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "1 column (main content only)"
+msgstr ""
+
+#: admin/views/partials/block-layout-mode-fields.php
+msgid "2 columns (main content + sidebar)"
 msgstr ""
 
 #: admin/views/partials/block-wizard.php
@@ -758,6 +777,14 @@ msgid "Unknown error"
 msgstr ""
 
 #: includes/class-pts-admin.php
+msgid "Default layout: 1 column"
+msgstr ""
+
+#: includes/class-pts-admin.php
+msgid "Default layout: 2 columns"
+msgstr ""
+
+#: includes/class-pts-admin.php
 msgid "Index"
 msgstr ""
 
@@ -802,8 +829,9 @@ msgstr ""
 
 #: includes/class-pts-admin.php
 msgid ""
-"Two-column single post with the sidebar part on the right. Selectable "
-"per post as a custom template."
+"Two-column single post with the sidebar part on the right. Included au"
+"tomatically when Single is enabled; selectable per post as a custom te"
+"mplate."
 msgstr ""
 
 #: includes/class-pts-admin.php
@@ -820,8 +848,8 @@ msgstr ""
 
 #: includes/class-pts-admin.php
 msgid ""
-"Two-column page with the sidebar part on the right. Selectable per pag"
-"e as a custom template."
+"Two-column page with the sidebar part on the right. Included automatic"
+"ally when Page is enabled; selectable per page as a custom template."
 msgstr ""
 
 #: includes/class-pts-admin.php
@@ -917,7 +945,10 @@ msgid "Sidebar"
 msgstr ""
 
 #: includes/class-pts-admin.php
-msgid "Optional sidebar column for widgets or secondary content."
+msgid ""
+"Optional sidebar column for widgets or secondary content. Synced with "
+"the default column layout above; always generated when post/page templ"
+"ates are enabled so you can switch layouts later."
 msgstr ""
 
 #: includes/class-pts-admin.php
@@ -1874,6 +1905,10 @@ msgstr ""
 msgid "The generated ZIP file is no longer available."
 msgstr ""
 
+#: includes/class-pts-admin.php
+msgid "Could not read the generated ZIP file."
+msgstr ""
+
 #: includes/class-pts-classic-definitions.php
 msgid "Theme Name"
 msgstr ""
@@ -1945,7 +1980,10 @@ msgid "Site footer and script loading"
 msgstr ""
 
 #: includes/class-pts-classic-definitions.php
-msgid "Widget area for the sidebar"
+msgid ""
+"Widget area for the sidebar. Synced with the default column layout abo"
+"ve; always generated when menus, widgets, or page templates are enable"
+"d so you can switch layouts later."
 msgstr ""
 
 #: includes/class-pts-classic-definitions.php
@@ -2001,11 +2039,15 @@ msgid "Custom Page Templates"
 msgstr ""
 
 #: includes/class-pts-classic-definitions.php
-msgid "Full-width layout without sidebars"
+msgid ""
+"Full-width layout without sidebars. Included automatically when Page i"
+"s enabled; selectable per page as a custom template."
 msgstr ""
 
 #: includes/class-pts-classic-definitions.php
-msgid "Content-only layout without sidebars"
+msgid ""
+"Content-only layout without sidebars. Included automatically when Page"
+" is enabled; selectable per page as a custom template."
 msgstr ""
 
 #: includes/class-pts-classic-definitions.php
@@ -2638,6 +2680,14 @@ msgstr ""
 
 #: includes/class-pts-classic-definitions.php
 msgid "%1$s — %2$s"
+msgstr ""
+
+#: includes/class-pts-vendor-assets.php
+msgid "Bundled vendor file is missing: %s"
+msgstr ""
+
+#: includes/class-pts-vendor-assets.php
+msgid "Could not copy vendor file: %s"
 msgstr ""
 
 #: picot-theme-seeder.php
