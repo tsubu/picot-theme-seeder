@@ -18,5 +18,5 @@ Optional banners/icons: `banner-772x250.png`, `banner-1544x500.png`, `icon-128x1
 
 ## Do not
 
-- Add this `screenshot/` folder to the plugin submission ZIP (see `.distignore` and `bin/build-release-zip.sh`).
+- Add this `screenshot/` folder to the plugin submission ZIP (see `.distignore` and `scripts/picot-theme-seeder/build-release-zip.sh` outside the plugin).
 - Email these images as attachments unless the review team explicitly asks.
