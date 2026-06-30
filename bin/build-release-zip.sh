@@ -27,16 +27,23 @@ rm -f "$OUT_ZIP"
 (
 	cd "$BUILD_DIR"
 	zip -r -9 "$OUT_ZIP" "$PLUGIN_SLUG" \
-		-x "*.DS_Store" "*/._*" "*/screenshot/*" "*/assets/*"
+		-x "*.DS_Store" "*/._*" "*/screenshot/*"
 )
 
 echo "Built: $OUT_ZIP"
 ls -lh "$OUT_ZIP"
-unzip -l "$OUT_ZIP" | tail -3
+ZIP_LISTING="$(unzip -l "$OUT_ZIP")"
+echo "$ZIP_LISTING" | tail -3
 
-if unzip -l "$OUT_ZIP" | grep -qE 'screenshot/|\.git/|/bin/|\.pot$|\.po$|messages\.mo'; then
+if echo "$ZIP_LISTING" | grep -qE 'screenshot/|\.git/|/bin/|\.pot$|\.po$|messages\.mo'; then
 	echo "ERROR: forbidden paths found in zip" >&2
 	exit 1
 fi
 
+if ! echo "$ZIP_LISTING" | grep -Fq 'assets/vendor/bootstrap/bootstrap.min.css'; then
+	echo "ERROR: bundled vendor assets missing from zip" >&2
+	exit 1
+fi
+
 echo "OK: no screenshot/, .git/, bin/, .po, .pot, or messages.mo in zip"
+echo "OK: bundled vendor assets present"

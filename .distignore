@@ -6,10 +6,12 @@
 .distignore
 README.md
 screenshot/
-assets/
+assets/banner*
+assets/icon*
+assets/screenshot*
 bin/
 node_modules/
-vendor/
+/vendor/
 tests/
 *.zip
 *.log

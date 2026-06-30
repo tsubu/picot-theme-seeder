@@ -11,28 +11,29 @@ class PTS_Animejs
 {
     const VERSION = '4.4.1';
 
-    const CDN_URL = 'https://cdn.jsdelivr.net/npm/animejs@4.4.1/dist/bundles/anime.umd.min.js';
-
     /**
-     * wp_enqueue_script() line for the Anime.js UMD bundle (global: anime).
+     * @deprecated Use PTS_Vendor_Assets::get_enqueue_php().
      *
+     * @param string $theme_slug Theme slug.
      * @return string
      */
-    public static function get_enqueue_script_line()
+    public static function get_enqueue_script_line($theme_slug = 'theme')
     {
-        return "    wp_enqueue_script('animejs', '" . self::CDN_URL . "', array(), '" . self::VERSION . "', true);\n";
+        return PTS_Vendor_Assets::get_enqueue_php($theme_slug);
     }
 
     /**
-     * wp_enqueue_script() line for the theme's animate-init.js helper.
+     * @deprecated Use PTS_Vendor_Assets::get_enqueue_php().
      *
-     * @param string $theme_slug    Theme slug.
-     * @param string $version_expr  PHP expression for the script version (without quotes).
+     * @param string $theme_slug     Theme slug.
+     * @param string $version_expr   Unused. Kept for backward compatibility.
      * @return string
      */
     public static function get_enqueue_init_line($theme_slug, $version_expr = "wp_get_theme()->get('Version')")
     {
-        return "    wp_enqueue_script('{$theme_slug}-animate-init', get_template_directory_uri() . '/assets/js/animate-init.js', array('animejs'), {$version_expr}, true);\n";
+        unset($version_expr);
+
+        return '';
     }
 
     /**

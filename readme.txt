@@ -5,7 +5,7 @@ Tags: theme, block theme, classic theme, fse, generator
 Requires at least: 7.0
 Tested up to: 7.0
 Requires PHP: 8.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,7 +89,7 @@ For both block and classic themes, Front Page is checked by default. Home (blog 
 
 = Does the generated classic theme include Bootstrap? =
 
-Yes. Generated classic themes load Bootstrap 5.3.8 from a CDN in functions.php. Templates use Bootstrap layout classes such as .container, .row, .col-*, navbar, and cards. Optional SCSS sources under assets/scss/ mirror style.css for local builds (npm run build:css).
+Yes. Generated classic themes bundle Bootstrap 5.3.8 under assets/vendor/ in the theme folder. Templates use Bootstrap layout classes such as .container, .row, .col-*, navbar, and cards. Optional SCSS sources under assets/scss/ mirror style.css for local builds (npm run build:css).
 
 = Are the block patterns translated? =
 
@@ -110,6 +110,11 @@ No. If a folder with the same slug already exists under wp-content/themes/, gene
 
 == Changelog ==
 
+= 1.0.1 =
+* Bundle Bootstrap and Anime.js locally in generated themes instead of loading from a CDN.
+* Use wp_add_inline_style() for generated login screen styling.
+* Prefix generated script and style handles with the theme slug.
+
 = 1.0.0 =
 * Initial release: Block and Classic theme generators in one plugin (WordPress 7.0 or later).
 * Block themes: presets, templates, parts, patterns, and theme.json generation (including border radius presets and form element styles).
@@ -118,6 +123,9 @@ No. If a folder with the same slug already exists under wp-content/themes/, gene
 * Japanese translation for the admin interface.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Fixes WordPress.org review items: local vendor assets, prefixed handles, and proper enqueue APIs.
 
 = 1.0.0 =
 Initial release.

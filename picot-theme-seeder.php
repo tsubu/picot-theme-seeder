@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Picot Theme Seeder
  * Description: Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 7.0
  * Requires PHP: 8.3
  * Author: PICOT
@@ -18,7 +18,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('PTS_VERSION', '1.0.0');
+define('PTS_VERSION', '1.0.1');
 define('PTS_MIN_WP_VERSION', '7.0');
 define('PTS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('PTS_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -36,6 +36,7 @@ require_once PTS_PLUGIN_DIR . 'includes/class-pts-layout-settings.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-editor-styles.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-scss.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-screenshot.php';
+require_once PTS_PLUGIN_DIR . 'includes/class-pts-vendor-assets.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-animejs.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-classic-definitions.php';
 require_once PTS_PLUGIN_DIR . 'includes/class-pts-admin.php';

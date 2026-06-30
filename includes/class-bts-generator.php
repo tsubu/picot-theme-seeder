@@ -104,7 +104,7 @@ class BTS_Generator
         $style_header .= "*/\n";
 
         $style_content = $style_header . "\n";
-        $style_content .= "/* Layout, spacing and typography are defined in theme.json. Bootstrap is loaded from functions.php. */\n";
+        $style_content .= "/* Layout, spacing and typography are defined in theme.json. Bootstrap is bundled under assets/vendor/. */\n";
         $style_content .= ":root {\n";
         $style_content .= "    --pts-root-padding-inline: {$layout['paddingInline']};\n";
         $style_content .= "    --pts-section-gap: calc(var(--wp--style--block-gap, var(--pts-block-gap, 3rem)) * 1.8);\n";
@@ -529,6 +529,10 @@ class BTS_Generator
         }
 
         wp_mkdir_p($theme_dir . '/assets/js');
+        $vendor_result = PTS_Vendor_Assets::copy_to_theme($theme_dir);
+        if (is_wp_error($vendor_result)) {
+            return $vendor_result;
+        }
         $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', PTS_Animejs::get_init_js());
         if (is_wp_error($result)) {
             return $result;
@@ -1323,13 +1327,9 @@ class BTS_Generator
         $func_prefix = str_replace('-', '_', sanitize_title($theme_slug));
         $sections    = array();
 
-        $bootstrap_php  = "/**\n * Load Bootstrap so generated parts and templates can use the same utility\n * and component classes out of the box.\n */\n";
+        $bootstrap_php  = "/**\n * Load bundled Bootstrap and Anime.js from the theme directory.\n */\n";
         $bootstrap_php .= "function {$func_prefix}_enqueue_assets() {\n";
-        $bootstrap_php .= "    wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css', array(), '5.3.8');\n";
-        $bootstrap_php .= "    wp_enqueue_style('{$theme_slug}-style', get_stylesheet_uri(), array('bootstrap'), wp_get_theme()->get('Version'));\n";
-        $bootstrap_php .= "    wp_enqueue_script('bootstrap-bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js', array(), '5.3.8', true);\n";
-        $bootstrap_php .= PTS_Animejs::get_enqueue_script_line();
-        $bootstrap_php .= PTS_Animejs::get_enqueue_init_line($theme_slug);
+        $bootstrap_php .= PTS_Vendor_Assets::get_enqueue_php($theme_slug, "wp_get_theme()->get('Version')", "wp_get_theme()->get('Version')");
         if (! empty($selection['parts.heroCrossfade'])) {
             $bootstrap_php .= "    wp_enqueue_script('{$theme_slug}-hero-crossfade', get_template_directory_uri() . '/assets/js/pts-hero-crossfade.js', array(), wp_get_theme()->get('Version'), true);\n";
         }

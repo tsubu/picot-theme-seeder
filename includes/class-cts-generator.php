@@ -90,6 +90,10 @@ class CTS_Generator
         }
 
         wp_mkdir_p($theme_dir . '/assets/js');
+        $vendor_result = PTS_Vendor_Assets::copy_to_theme($theme_dir);
+        if (is_wp_error($vendor_result)) {
+            return $vendor_result;
+        }
         $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', PTS_Animejs::get_init_js());
         if (is_wp_error($result)) {
             return $result;
@@ -444,11 +448,7 @@ class CTS_Generator
         // Enqueue Scripts
         $functions_content .= "/**\n * Enqueue scripts and styles\n */\n";
         $functions_content .= "function {$func_prefix}_scripts() {\n";
-        $functions_content .= "    wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css', array(), '5.3.8');\n";
-        $functions_content .= "    wp_enqueue_style('{$theme_slug}-style', get_stylesheet_uri(), array('bootstrap'), '1.0.0');\n";
-        $functions_content .= "    wp_enqueue_script('bootstrap-bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js', array(), '5.3.8', true);\n";
-        $functions_content .= PTS_Animejs::get_enqueue_script_line();
-        $functions_content .= PTS_Animejs::get_enqueue_init_line($theme_slug, "'1.0.0'");
+        $functions_content .= PTS_Vendor_Assets::get_enqueue_php($theme_slug, "'1.0.0'", "'1.0.0'");
         if (isset($selection['features.threaded-comments']) && $selection['features.threaded-comments']) {
             $functions_content .= "    if (is_singular() && comments_open() && get_option('thread_comments')) {\n";
             $functions_content .= "        wp_enqueue_script('comment-reply');\n";
@@ -686,7 +686,7 @@ class CTS_Generator
         }
 
         if (isset($selection['features.custom-login-style']) && $selection['features.custom-login-style']) {
-            $functions_content .= "// Custom Login Style\nadd_action('login_enqueue_scripts', function() {\n    echo '<style type=\"text/css\">#login h1 a { background-image: none !important; text-indent: 0 !important; width: auto !important; height: auto !important; }</style>';\n});\n\n";
+            $functions_content .= PTS_Vendor_Assets::get_login_inline_style_php($func_prefix, $theme_slug);
         }
 
         if (isset($selection['features.dashboard-cleanup']) && $selection['features.dashboard-cleanup']) {
