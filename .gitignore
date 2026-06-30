@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+._*
+Thumbs.db
+
+# Local dev / i18n artifacts (never commit or ship)
+messages.mo
+*.po~
+*.mo.bak
+
+# Release archives
+*.zip
+
+# Editor
+.idea/
+.vscode/
