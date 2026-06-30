@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard. Requires WordPress 7.0 or later and PHP 8.3 or later.
+Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a visual admin wizard.
 
 == Description ==
 
