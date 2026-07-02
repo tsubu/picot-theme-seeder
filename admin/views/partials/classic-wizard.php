@@ -24,8 +24,8 @@ if (!defined('ABSPATH')) {
                 <div class="cts-step-content active" data-step="1">
                     <h2><?php esc_html_e('Basic Information', 'picot-theme-seeder'); ?></h2>
                     <?php
-                    $pts_basic_info_prefix  = 'cts';
-                    $pts_basic_info_variant = 'classic';
+                    $picotse_basic_info_prefix  = 'cts';
+                    $picotse_basic_info_variant = 'classic';
                     include PICOTSE_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
                     ?>
                     <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/root-layout-fields.php'; ?>

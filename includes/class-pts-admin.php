@@ -1467,26 +1467,28 @@ class Picotse_Admin
         $zip_file   = $data['zip_file'];
         $theme_slug = ! empty($data['theme_slug']) ? sanitize_title($data['theme_slug']) : 'theme';
 
-        if (! file_exists($zip_file) || ! is_readable($zip_file)) {
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        WP_Filesystem();
+        global $wp_filesystem;
+
+        if (! $wp_filesystem || ! $wp_filesystem->exists($zip_file) || ! $wp_filesystem->is_readable($zip_file)) {
             delete_transient('picotse_zip_' . $token);
             wp_die(esc_html__('The generated ZIP file is no longer available.', 'picot-theme-seeder'), 410);
+        }
+
+        $zip_contents = $wp_filesystem->get_contents($zip_file);
+        if (false === $zip_contents) {
+            wp_die(esc_html__('Could not read the generated ZIP file.', 'picot-theme-seeder'), 500);
         }
 
         nocache_headers();
         header('Content-Type: application/zip');
         header('Content-Disposition: attachment; filename="' . $theme_slug . '.zip"');
-        header('Content-Length: ' . (string) filesize($zip_file));
+        header('Content-Length: ' . (string) strlen($zip_contents));
         header('X-Content-Type-Options: nosniff');
 
-        $handle = fopen($zip_file, 'rb');
-        if (false === $handle) {
-            wp_die(esc_html__('Could not read the generated ZIP file.', 'picot-theme-seeder'), 500);
-        }
-
-        while (! feof($handle)) {
-            echo fread($handle, 8192); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Binary ZIP download response.
-        }
-        fclose($handle);
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Binary ZIP download response.
+        echo $zip_contents;
 
         delete_transient('picotse_zip_' . $token);
         self::delete_tree(dirname($zip_file));

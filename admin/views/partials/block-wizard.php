@@ -24,8 +24,8 @@ if (!defined('ABSPATH')) {
                 <div class="bts-step-content active" data-step="1">
                     <h2><?php esc_html_e('Basic Information', 'picot-theme-seeder'); ?></h2>
                     <?php
-                    $pts_basic_info_prefix  = 'bts';
-                    $pts_basic_info_variant = 'block';
+                    $picotse_basic_info_prefix  = 'bts';
+                    $picotse_basic_info_variant = 'block';
                     include PICOTSE_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
                     ?>
                     <button type="button" class="button button-primary next-step"><?php esc_html_e('Next: Presets', 'picot-theme-seeder'); ?></button>
