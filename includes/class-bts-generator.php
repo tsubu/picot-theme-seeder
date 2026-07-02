@@ -4,13 +4,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Core Generator Logic
  */
-class BTS_Generator
+class Picotse_Block_Generator
 {
     /** @var array<string, mixed> */
     private $generation_selection = array();
 
     /** @var string one-column|two-column */
     private $layout_mode = 'one-column';
+
+    /** @var string Underscore theme function prefix for the current generation run. */
+    private $func_prefix = 'picotse_theme';
 
     /**
      * @param string $path
@@ -29,19 +32,20 @@ class BTS_Generator
 
     public function generate($data)
     {
-        PTS_Admin::cleanup_stale_temp_dirs('block');
+        Picotse_Admin::cleanup_stale_temp_dirs('block');
 
         // 1. Prepare Data
         $theme_name = isset($data['themeName']) ? sanitize_text_field($data['themeName']) : 'My Theme';
         $theme_slug = isset($data['themeSlug']) ? sanitize_title($data['themeSlug']) : 'my-theme';
+        $this->func_prefix = str_replace('-', '_', $theme_slug);
         $author = isset($data['themeAuthor']) ? sanitize_text_field($data['themeAuthor']) : '';
         $author_uri = isset($data['themeAuthorUri']) ? esc_url_raw($data['themeAuthorUri']) : '';
         $description = isset($data['themeDescription']) ? sanitize_textarea_field($data['themeDescription']) : '';
 
         $selection = isset($data['selection']) ? $data['selection'] : array();
         $params = isset($data['params']) ? $data['params'] : array();
-        $layout    = PTS_Layout_Settings::parse($data);
-        $this->layout_mode = PTS_Layout_Settings::parse_layout_mode($data);
+        $layout    = Picotse_Layout_Settings::parse($data);
+        $this->layout_mode = Picotse_Layout_Settings::parse_layout_mode($data);
 
         // Backward compatibility when layoutMode is omitted but Sidebar is checked.
         if ('one-column' === $this->layout_mode && ! empty($selection['parts.sidebar'])) {
@@ -94,7 +98,7 @@ class BTS_Generator
 
         // 2. Setup Temp Directory
         $upload_dir = wp_upload_dir();
-        $base_dir = $upload_dir['basedir'] . '/pts_temp/block/' . uniqid();
+        $base_dir = $upload_dir['basedir'] . '/picotse_temp/block/' . uniqid();
         $theme_dir = $base_dir . '/' . $theme_slug;
 
         if (! wp_mkdir_p($theme_dir)) {
@@ -533,25 +537,25 @@ class BTS_Generator
         $style_content .= "        transition: none;\n";
         $style_content .= "    }\n";
         $style_content .= "}\n";
-        $style_content .= PTS_Animejs::get_stylesheet_css();
+        $style_content .= Picotse_Animejs::get_stylesheet_css();
         $result = $this->write_file($theme_dir . '/style.css', $style_content);
         if (is_wp_error($result)) {
             return $result;
         }
 
         wp_mkdir_p($theme_dir . '/assets/js');
-        $vendor_result = PTS_Vendor_Assets::copy_to_theme($theme_dir);
+        $vendor_result = Picotse_Vendor_Assets::copy_to_theme($theme_dir);
         if (is_wp_error($vendor_result)) {
             return $vendor_result;
         }
-        $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', PTS_Animejs::get_init_js());
+        $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', Picotse_Animejs::get_init_js());
         if (is_wp_error($result)) {
             return $result;
         }
 
         // 4. Generate theme.json
         if (! empty($selection['features.generateThemeJson'])) {
-            $theme_json_builder = new BTS_Theme_JSON();
+            $theme_json_builder = new Picotse_Block_Theme_JSON();
             $theme_json_data = $theme_json_builder->build($params);
 
             // Register generated parts so the Site Editor shows them in the right areas.
@@ -653,21 +657,21 @@ class BTS_Generator
 
         // 7.4 screenshot.png (uses the brand primary color when provided)
         $brand_primary = isset($params['brandColors']['primary']) ? (string) $params['brandColors']['primary'] : '#0073aa';
-        PTS_Screenshot::create($theme_dir . '/screenshot.png', $theme_name, $brand_primary);
+        Picotse_Screenshot::create($theme_dir . '/screenshot.png', $theme_name, $brand_primary);
 
         // 7.5 Generate SCSS sources (assets/scss) + package.json
         if (! empty($selection['features.generateScss'])) {
             $scss_dir = $theme_dir . '/assets/scss';
             wp_mkdir_p($scss_dir);
 
-            $layout = PTS_Layout_Settings::parse($data);
-            foreach (PTS_Scss::get_block_files($style_header, $layout) as $scss_file => $scss_content) {
+            $layout = Picotse_Layout_Settings::parse($data);
+            foreach (Picotse_Scss::get_block_files($style_header, $layout) as $scss_file => $scss_content) {
                 $result = $this->write_file($scss_dir . '/' . $scss_file, $scss_content);
                 if (is_wp_error($result)) {
                     return $result;
                 }
             }
-            $result = $this->write_file($theme_dir . '/package.json', PTS_Scss::get_package_json($theme_slug));
+            $result = $this->write_file($theme_dir . '/package.json', Picotse_Scss::get_package_json($theme_slug));
             if (is_wp_error($result)) {
                 return $result;
             }
@@ -677,7 +681,7 @@ class BTS_Generator
         $output_mode = isset($data['outputMode']) ? $data['outputMode'] : 'direct';
 
         if ($output_mode === 'direct') {
-            $destination = WP_CONTENT_DIR . '/themes/' . $theme_slug;
+            $destination = trailingslashit(get_theme_root()) . $theme_slug;
             if (file_exists($destination)) {
                 return new WP_Error(
                     'theme_exists',
@@ -706,7 +710,7 @@ class BTS_Generator
         } else {
             // ZIP download output.
             $zip_file = $base_dir . '/' . $theme_slug . '.zip';
-            $zipper = new BTS_Zip();
+            $zipper = new Picotse_Block_Zip();
             $result = $zipper->create_zip($theme_dir, $zip_file);
 
             if (is_wp_error($result)) {
@@ -714,7 +718,7 @@ class BTS_Generator
             }
 
             // Return URL
-            $zip_url = PTS_Admin::create_temp_download_url($zip_file, $theme_slug);
+            $zip_url = Picotse_Admin::create_temp_download_url($zip_file, $theme_slug);
             if (is_wp_error($zip_url)) {
                 return $zip_url;
             }
@@ -1367,7 +1371,7 @@ class BTS_Generator
 
         $bootstrap_php  = "/**\n * Load bundled Bootstrap and Anime.js from the theme directory.\n */\n";
         $bootstrap_php .= "function {$func_prefix}_enqueue_assets() {\n";
-        $bootstrap_php .= PTS_Vendor_Assets::get_enqueue_php($theme_slug, "wp_get_theme()->get('Version')", "wp_get_theme()->get('Version')");
+        $bootstrap_php .= Picotse_Vendor_Assets::get_enqueue_php($theme_slug, "wp_get_theme()->get('Version')", "wp_get_theme()->get('Version')");
         if (! empty($selection['parts.heroCrossfade'])) {
             $bootstrap_php .= "    wp_enqueue_script('{$theme_slug}-hero-crossfade', get_template_directory_uri() . '/assets/js/pts-hero-crossfade.js', array(), wp_get_theme()->get('Version'), true);\n";
         }
@@ -1483,7 +1487,7 @@ class BTS_Generator
         $php .= "        \$site_name\n";
         $php .= "    );\n";
         $php .= "}\n";
-        $php .= "add_shortcode('pts_copyright', '{$func_prefix}_copyright_shortcode');\n";
+        $php .= "add_shortcode('{$func_prefix}_copyright', '{$func_prefix}_copyright_shortcode');\n";
 
         return $php;
     }
@@ -1496,11 +1500,12 @@ class BTS_Generator
      */
     private function get_footer_copyright_markup($align = '')
     {
+        $tag = $this->func_prefix . '_copyright';
         if ($align !== '') {
-            return "<!-- wp:shortcode {\"align\":\"{$align}\"} -->\n[pts_copyright]\n<!-- /wp:shortcode -->";
+            return "<!-- wp:shortcode {\"align\":\"{$align}\"} -->\n[{$tag}]\n<!-- /wp:shortcode -->";
         }
 
-        return "<!-- wp:shortcode -->\n[pts_copyright]\n<!-- /wp:shortcode -->";
+        return "<!-- wp:shortcode -->\n[{$tag}]\n<!-- /wp:shortcode -->";
     }
 
     /**
@@ -1682,7 +1687,7 @@ class BTS_Generator
         $php .= "    if (strpos(\$content, 'page-list') !== false) {\n";
         $php .= "        return true;\n";
         $php .= "    }\n";
-        $php .= "    if (get_theme_mod('pts_header_navigation_version') !== {$func_prefix}_HEADER_NAV_VERSION) {\n";
+        $php .= "    if (get_theme_mod('{$func_prefix}_header_navigation_version') !== {$func_prefix}_HEADER_NAV_VERSION) {\n";
         $php .= "        return true;\n";
         $php .= "    }\n\n";
         $php .= "    \$blocks = array_values(array_filter(parse_blocks(\$content), static function (\$block) {\n";
@@ -1697,7 +1702,7 @@ class BTS_Generator
         $php .= "        return;\n";
         $php .= "    }\n\n";
         $php .= "    \$content = serialize_blocks(\$blocks);\n";
-        $php .= "    \$nav_id  = (int) get_theme_mod('pts_header_navigation_id');\n\n";
+        $php .= "    \$nav_id  = (int) get_theme_mod('{$func_prefix}_header_navigation_id');\n\n";
         $php .= "    if (! \$force && \$nav_id) {\n";
         $php .= "        \$post = get_post(\$nav_id);\n";
         $php .= "        if (\$post && 'wp_navigation' === \$post->post_type\n";
@@ -1712,7 +1717,7 @@ class BTS_Generator
         $php .= "                'ID'           => \$nav_id,\n";
         $php .= "                'post_content' => \$content,\n";
         $php .= "            ));\n";
-        $php .= "            set_theme_mod('pts_header_navigation_version', {$func_prefix}_HEADER_NAV_VERSION);\n";
+        $php .= "            set_theme_mod('{$func_prefix}_header_navigation_version', {$func_prefix}_HEADER_NAV_VERSION);\n";
         $php .= "            return;\n";
         $php .= "        }\n";
         $php .= "    }\n\n";
@@ -1741,12 +1746,12 @@ class BTS_Generator
         $php .= "            return;\n";
         $php .= "        }\n";
         $php .= "    }\n\n";
-        $php .= "    set_theme_mod('pts_header_navigation_id', (int) \$nav_id);\n";
-        $php .= "    set_theme_mod('pts_header_navigation_version', {$func_prefix}_HEADER_NAV_VERSION);\n";
+        $php .= "    set_theme_mod('{$func_prefix}_header_navigation_id', (int) \$nav_id);\n";
+        $php .= "    set_theme_mod('{$func_prefix}_header_navigation_version', {$func_prefix}_HEADER_NAV_VERSION);\n";
         $php .= "}\n\n";
 
         $php .= "function {$func_prefix}_reset_grouped_header_navigation() {\n";
-        $php .= "    remove_theme_mod('pts_header_navigation_version');\n";
+        $php .= "    remove_theme_mod('{$func_prefix}_header_navigation_version');\n";
         $php .= "    {$func_prefix}_setup_grouped_header_navigation(true);\n";
         $php .= "}\n";
         $php .= "add_action('after_switch_theme', '{$func_prefix}_reset_grouped_header_navigation');\n";
@@ -1787,7 +1792,7 @@ class BTS_Generator
         $php .= "    if (! in_array(\$template->slug, array('header', 'header-centered', 'header-with-button'), true)) {\n";
         $php .= "        return \$template;\n";
         $php .= "    }\n\n";
-        $php .= "    \$nav_id = (int) get_theme_mod('pts_header_navigation_id');\n";
+        $php .= "    \$nav_id = (int) get_theme_mod('{$func_prefix}_header_navigation_id');\n";
         $php .= "    if (! \$nav_id) {\n";
         $php .= "        return \$template;\n";
         $php .= "    }\n\n";
@@ -5132,7 +5137,7 @@ JS;
 
         foreach ($map as $key => $file) {
             if (! empty($selection[$key])) {
-                $source = BTS_PLUGIN_DIR . 'patterns/' . $file;
+                $source = PICOTSE_PLUGIN_DIR . 'patterns/' . $file;
                 if (file_exists($source)) {
                     // Rewrite the placeholder slug prefix / category to the
                     // theme slug so patterns are namespaced per theme and the

@@ -7,7 +7,7 @@ if (! defined('ABSPATH')) {
 /**
  * Root layout widths and spacing for generated themes.
  */
-class PTS_Layout_Settings
+class Picotse_Layout_Settings
 {
 
     /**
@@ -216,7 +216,7 @@ class PTS_Layout_Settings
 }
 
 ';
-        $css .= PTS_Editor_Styles::get_content_stylesheet($layout);
+        $css .= Picotse_Editor_Styles::get_content_stylesheet($layout);
 
         return $css;
     }

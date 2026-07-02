@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    const data = window.ptsData || {};
+    const data = window.picotseData || {};
     let selectedType = null;
     let blockInited = false;
     let classicInited = false;
@@ -38,15 +38,15 @@ jQuery(function ($) {
         if (type === 'block') {
             $panelBlock.prop('hidden', false);
             $panelClassic.prop('hidden', true);
-            if (!blockInited && typeof window.ptsInitBlock === 'function') {
-                window.ptsInitBlock();
+            if (!blockInited && typeof window.picotseInitBlock === 'function') {
+                window.picotseInitBlock();
                 blockInited = true;
             }
         } else {
             $panelClassic.prop('hidden', false);
             $panelBlock.prop('hidden', true);
-            if (!classicInited && typeof window.ptsInitClassic === 'function') {
-                window.ptsInitClassic();
+            if (!classicInited && typeof window.picotseInitClassic === 'function') {
+                window.picotseInitClassic();
                 classicInited = true;
             }
         }

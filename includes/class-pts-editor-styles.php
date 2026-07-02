@@ -9,7 +9,7 @@ if (! defined('ABSPATH')) {
  *
  * @see wp-includes/css/dist/block-editor/default-editor-styles.css
  */
-class PTS_Editor_Styles
+class Picotse_Editor_Styles
 {
 
     /**

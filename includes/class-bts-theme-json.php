@@ -3,7 +3,7 @@
 /**
  * Theme JSON Builder
  */
-class BTS_Theme_JSON
+class Picotse_Block_Theme_JSON
 {
     public function build($params)
     {
@@ -24,19 +24,19 @@ class BTS_Theme_JSON
             $theme_json['settings'] = array_merge($theme_json['settings'], $processed_settings);
         }
 
-        $pts = array();
-        if (isset($params['themeJson']['pts']) && is_array($params['themeJson']['pts'])) {
-            $pts = $this->process_pts_flags($params['themeJson']['pts']);
+        $picotse = array();
+        if (isset($params['themeJson']['picotse']) && is_array($params['themeJson']['picotse'])) {
+            $picotse = $this->process_picotse_flags($params['themeJson']['picotse']);
         }
 
-        if (! empty($pts['borderRadiusPresets'])) {
+        if (! empty($picotse['borderRadiusPresets'])) {
             if (! isset($theme_json['settings']['border']) || ! is_array($theme_json['settings']['border'])) {
                 $theme_json['settings']['border'] = array();
             }
             $theme_json['settings']['border']['radiusSizes'] = $this->get_default_border_radius_sizes();
         }
 
-        if (! empty($pts['formElementStyles'])) {
+        if (! empty($picotse['formElementStyles'])) {
             $form_elements = $this->get_default_form_element_styles();
             if (! isset($theme_json['styles']['elements']) || ! is_array($theme_json['styles']['elements'])) {
                 $theme_json['styles']['elements'] = array();
@@ -47,10 +47,10 @@ class BTS_Theme_JSON
             );
         }
 
-        $layout = PTS_Layout_Settings::parse(array('params' => $params));
+        $layout = Picotse_Layout_Settings::parse(array('params' => $params));
 
         $theme_json['settings'] = array_replace_recursive(
-            PTS_Editor_Styles::get_theme_json_typography_settings(),
+            Picotse_Editor_Styles::get_theme_json_typography_settings(),
             $theme_json['settings']
         );
 
@@ -67,7 +67,7 @@ class BTS_Theme_JSON
         );
 
         $theme_json['styles'] = array_replace_recursive(
-            PTS_Editor_Styles::get_theme_json_typography_styles($layout),
+            Picotse_Editor_Styles::get_theme_json_typography_styles($layout),
             $theme_json['styles']
         );
 
@@ -216,13 +216,13 @@ class BTS_Theme_JSON
     }
 
     /**
-     * @param array<string, mixed> $pts Raw pts flags from the wizard.
+     * @param array<string, mixed> $picotse Raw picotse flags from the wizard.
      * @return array<string, bool>
      */
-    private function process_pts_flags($pts)
+    private function process_picotse_flags($picotse)
     {
         $clean = array();
-        foreach ($pts as $key => $value) {
+        foreach ($picotse as $key => $value) {
             $clean[ $key ] = ( $value === '1' || $value === true );
         }
         return $clean;

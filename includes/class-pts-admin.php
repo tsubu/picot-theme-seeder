@@ -7,7 +7,7 @@ if (! defined('ABSPATH')) {
 /**
  * Unified admin for Picot Theme Seeder.
  */
-class PTS_Admin
+class Picotse_Admin
 {
 
     public function init()
@@ -15,13 +15,13 @@ class PTS_Admin
         add_action('admin_menu', array($this, 'add_menu_page'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_assets'));
         add_action('rest_api_init', array($this, 'register_routes'));
-        add_action('admin_post_pts_download_zip', array(__CLASS__, 'handle_zip_download'));
+        add_action('admin_post_picotse_download_zip', array(__CLASS__, 'handle_zip_download'));
     }
 
     public function register_routes()
     {
         register_rest_route(
-            'pts/v1',
+            'picotse/v1',
             '/generate',
             array(
                 'methods'             => 'POST',
@@ -48,9 +48,9 @@ class PTS_Admin
 
         ob_start();
         if ($theme_type === 'classic') {
-            $generator = new CTS_Generator();
+            $generator = new Picotse_Classic_Generator();
         } else {
-            $generator = new BTS_Generator();
+            $generator = new Picotse_Block_Generator();
         }
         $result = $generator->generate($data);
         ob_get_clean();
@@ -82,38 +82,38 @@ class PTS_Admin
         }
 
         wp_enqueue_style(
-            'pts-admin-style',
-            PTS_PLUGIN_URL . 'admin/style.css',
+            'picotse-admin-style',
+            PICOTSE_PLUGIN_URL . 'admin/style.css',
             array(),
-            PTS_VERSION
+            PICOTSE_VERSION
         );
         wp_enqueue_script(
-            'pts-block-app',
-            PTS_PLUGIN_URL . 'admin/block-app.js',
+            'picotse-block-app',
+            PICOTSE_PLUGIN_URL . 'admin/block-app.js',
             array('jquery'),
-            PTS_VERSION,
+            PICOTSE_VERSION,
             true
         );
         wp_enqueue_script(
-            'pts-classic-app',
-            PTS_PLUGIN_URL . 'admin/classic-app.js',
+            'picotse-classic-app',
+            PICOTSE_PLUGIN_URL . 'admin/classic-app.js',
             array('jquery'),
-            PTS_VERSION,
+            PICOTSE_VERSION,
             true
         );
         wp_enqueue_script(
-            'pts-admin-app',
-            PTS_PLUGIN_URL . 'admin/app.js',
-            array('jquery', 'pts-block-app', 'pts-classic-app'),
-            PTS_VERSION,
+            'picotse-admin-app',
+            PICOTSE_PLUGIN_URL . 'admin/app.js',
+            array('jquery', 'picotse-block-app', 'picotse-classic-app'),
+            PICOTSE_VERSION,
             true
         );
 
         wp_localize_script(
-            'pts-admin-app',
-            'ptsData',
+            'picotse-admin-app',
+            'picotseData',
             array(
-                'restUrl'   => rest_url('pts/v1/generate'),
+                'restUrl'   => rest_url('picotse/v1/generate'),
                 'restNonce' => wp_create_nonce('wp_rest'),
                 'block'     => $this->get_block_localize_data(),
                 'classic'   => $this->get_classic_localize_data(),
@@ -179,7 +179,7 @@ class PTS_Admin
 
     private function get_block_localize_data()
     {
-        $presets_file   = PTS_PLUGIN_DIR . 'includes/presets.json';
+        $presets_file   = PICOTSE_PLUGIN_DIR . 'includes/presets.json';
         $presets_data   = array();
         $decoded        = array();
         $preset_strings = $this->get_block_preset_strings();
@@ -1383,8 +1383,8 @@ class PTS_Admin
         return array(
             'presets'         => $presets_data,
             'categoryLabels'  => array('C1' => __('Classic', 'picot-theme-seeder')),
-            'templateGroups'  => PTS_Classic_Definitions::get_template_groups(),
-            'featureGroups'   => PTS_Classic_Definitions::get_feature_groups(),
+            'templateGroups'  => Picotse_Classic_Definitions::get_template_groups(),
+            'featureGroups'   => Picotse_Classic_Definitions::get_feature_groups(),
             'strings'         => array(
                 'noPresets'     => __('No presets found.', 'picot-theme-seeder'),
                 'fillRequired'  => __('Please fill in Theme Name and Slug.', 'picot-theme-seeder'),
@@ -1402,7 +1402,7 @@ class PTS_Admin
 
     public function render_page()
     {
-        include PTS_PLUGIN_DIR . 'admin/views/main.php';
+        include PICOTSE_PLUGIN_DIR . 'admin/views/main.php';
     }
 
     /**
@@ -1425,12 +1425,12 @@ class PTS_Admin
             'created_at' => time(),
         );
 
-        set_transient('pts_zip_' . $token, $data, 15 * MINUTE_IN_SECONDS);
+        set_transient('picotse_zip_' . $token, $data, 15 * MINUTE_IN_SECONDS);
 
         // Raw ampersands for JavaScript redirects (wp_nonce_url HTML-encodes & as &amp;).
         $url = add_query_arg(
             array(
-                'action' => 'pts_download_zip',
+                'action' => 'picotse_download_zip',
                 'token'  => $token,
             ),
             admin_url('admin-post.php')
@@ -1438,7 +1438,7 @@ class PTS_Admin
 
         return add_query_arg(
             '_wpnonce',
-            wp_create_nonce('pts_download_zip_' . $token),
+            wp_create_nonce('picotse_download_zip_' . $token),
             $url
         );
     }
@@ -1457,9 +1457,9 @@ class PTS_Admin
             wp_die(esc_html__('Missing download token.', 'picot-theme-seeder'), 400);
         }
 
-        check_admin_referer('pts_download_zip_' . $token);
+        check_admin_referer('picotse_download_zip_' . $token);
 
-        $data = get_transient('pts_zip_' . $token);
+        $data = get_transient('picotse_zip_' . $token);
         if (! is_array($data) || empty($data['zip_file'])) {
             wp_die(esc_html__('This download link has expired.', 'picot-theme-seeder'), 410);
         }
@@ -1468,7 +1468,7 @@ class PTS_Admin
         $theme_slug = ! empty($data['theme_slug']) ? sanitize_title($data['theme_slug']) : 'theme';
 
         if (! file_exists($zip_file) || ! is_readable($zip_file)) {
-            delete_transient('pts_zip_' . $token);
+            delete_transient('picotse_zip_' . $token);
             wp_die(esc_html__('The generated ZIP file is no longer available.', 'picot-theme-seeder'), 410);
         }
 
@@ -1488,7 +1488,7 @@ class PTS_Admin
         }
         fclose($handle);
 
-        delete_transient('pts_zip_' . $token);
+        delete_transient('picotse_zip_' . $token);
         self::delete_tree(dirname($zip_file));
         exit;
     }
@@ -1502,7 +1502,7 @@ class PTS_Admin
     public static function cleanup_stale_temp_dirs($type)
     {
         $type = ('classic' === $type) ? 'classic' : 'block';
-        $base = trailingslashit(wp_upload_dir()['basedir']) . 'pts_temp/' . $type;
+        $base = trailingslashit(wp_upload_dir()['basedir']) . 'picotse_temp/' . $type;
 
         if (! is_dir($base)) {
             return;

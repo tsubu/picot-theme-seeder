@@ -38,7 +38,7 @@ if (! defined('ABSPATH')) {
             <button type="button" class="button pts-change-type"><?php esc_html_e('Change theme type', 'picot-theme-seeder'); ?></button>
             <span class="pts-badge pts-badge-block"><?php esc_html_e('Block Theme', 'picot-theme-seeder'); ?></span>
         </p>
-        <?php include PTS_PLUGIN_DIR . 'admin/views/partials/block-wizard.php'; ?>
+        <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/block-wizard.php'; ?>
     </div>
 
     <div id="pts-wizard-classic" class="pts-wizard-panel" hidden>
@@ -46,6 +46,6 @@ if (! defined('ABSPATH')) {
             <button type="button" class="button pts-change-type"><?php esc_html_e('Change theme type', 'picot-theme-seeder'); ?></button>
             <span class="pts-badge pts-badge-classic"><?php esc_html_e('Classic Theme', 'picot-theme-seeder'); ?></span>
         </p>
-        <?php include PTS_PLUGIN_DIR . 'admin/views/partials/classic-wizard.php'; ?>
+        <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/classic-wizard.php'; ?>
     </div>
 </div>

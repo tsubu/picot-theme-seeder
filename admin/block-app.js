@@ -1,4 +1,4 @@
-window.ptsInitBlock = function () {
+window.picotseInitBlock = function () {
     jQuery(function ($) {
         const $wrap = $('#bts-app');
         if (!$wrap.length || $wrap.data('pts-inited')) {
@@ -6,7 +6,7 @@ window.ptsInitBlock = function () {
         }
         $wrap.data('pts-inited', true);
 
-        const rootData = window.ptsData || {};
+        const rootData = window.picotseData || {};
         const btsData = Object.assign(
             {
                 restUrl: rootData.restUrl,

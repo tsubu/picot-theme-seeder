@@ -3,7 +3,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-$pts_layout_defaults = PTS_Layout_Settings::get_defaults();
+$pts_layout_defaults = Picotse_Layout_Settings::get_defaults();
 $pts_layout_prefix   = isset($pts_layout_prefix) ? $pts_layout_prefix : 'params[rootLayout]';
 ?>
 <div class="pts-root-layout">

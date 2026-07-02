@@ -7,7 +7,7 @@ $pts_basic_info_prefix  = isset($pts_basic_info_prefix) ? $pts_basic_info_prefix
 $pts_basic_info_variant = isset($pts_basic_info_variant) ? $pts_basic_info_variant : 'classic';
 ?>
 <table class="form-table">
-    <?php foreach (PTS_Classic_Definitions::get_basic_info_fields($pts_basic_info_variant) as $name => $field) : ?>
+    <?php foreach (Picotse_Classic_Definitions::get_basic_info_fields($pts_basic_info_variant) as $name => $field) : ?>
         <?php
         $input_id = $pts_basic_info_prefix . '-' . $name;
         $type     = $field['type'] ?? 'text';

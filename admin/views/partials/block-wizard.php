@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
                     <?php
                     $pts_basic_info_prefix  = 'bts';
                     $pts_basic_info_variant = 'block';
-                    include PTS_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
+                    include PICOTSE_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
                     ?>
                     <button type="button" class="button button-primary next-step"><?php esc_html_e('Next: Presets', 'picot-theme-seeder'); ?></button>
                 </div>
@@ -62,7 +62,7 @@ if (!defined('ABSPATH')) {
                             <label><input type="checkbox" class="bts-selection-cb" name="selection[features.generateStyleVariations]" value="1" checked> <?php esc_html_e('Generate Style Variations (styles/ — Dark, Natural, Vivid)', 'picot-theme-seeder'); ?></label><br>
                         </div>
 
-                        <?php include PTS_PLUGIN_DIR . 'admin/views/partials/block-layout-mode-fields.php'; ?>
+                        <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/block-layout-mode-fields.php'; ?>
 
                         <h3><?php esc_html_e('Templates', 'picot-theme-seeder'); ?></h3>
                         <p class="description pts-section-intro"><?php esc_html_e('HTML templates in the templates/ folder. WordPress picks the most specific file for each view (template hierarchy).', 'picot-theme-seeder'); ?></p>
@@ -196,9 +196,9 @@ if (!defined('ABSPATH')) {
 
                         <h3><?php esc_html_e('WordPress 7.0+ (theme.json)', 'picot-theme-seeder'); ?></h3>
                         <div>
-                            <label><input type="checkbox" class="bts-themejson-cb" name="params[themeJson][pts][borderRadiusPresets]" value="1" checked> <?php esc_html_e('Border radius presets (radiusSizes)', 'picot-theme-seeder'); ?></label><br>
+                            <label><input type="checkbox" class="bts-themejson-cb" name="params[themeJson][picotse][borderRadiusPresets]" value="1" checked> <?php esc_html_e('Border radius presets (radiusSizes)', 'picot-theme-seeder'); ?></label><br>
                             <p class="description"><?php esc_html_e('Predefined border radius values in the editor (WordPress 6.9+).', 'picot-theme-seeder'); ?></p>
-                            <label><input type="checkbox" class="bts-themejson-cb" name="params[themeJson][pts][formElementStyles]" value="1" checked> <?php esc_html_e('Form element styles (select & textInput)', 'picot-theme-seeder'); ?></label><br>
+                            <label><input type="checkbox" class="bts-themejson-cb" name="params[themeJson][picotse][formElementStyles]" value="1" checked> <?php esc_html_e('Form element styles (select & textInput)', 'picot-theme-seeder'); ?></label><br>
                             <p class="description"><?php esc_html_e('Default styles for select and text inputs via styles.elements (WordPress 6.9+).', 'picot-theme-seeder'); ?></p>
                         </div>
 
@@ -235,7 +235,7 @@ if (!defined('ABSPATH')) {
                             </tr>
                         </table>
 
-                        <?php include PTS_PLUGIN_DIR . 'admin/views/partials/root-layout-fields.php'; ?>
+                        <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/root-layout-fields.php'; ?>
                     </div>
                     <div class="bts-actions">
                         <button type="button" class="button prev-step"><?php esc_html_e('Back', 'picot-theme-seeder'); ?></button>

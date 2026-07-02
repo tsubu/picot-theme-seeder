@@ -7,23 +7,23 @@ if (! defined('ABSPATH')) {
 /**
  * Shared Anime.js (https://animejs.com/) helpers for generated themes.
  */
-class PTS_Animejs
+class Picotse_Animejs
 {
     const VERSION = '4.4.1';
 
     /**
-     * @deprecated Use PTS_Vendor_Assets::get_enqueue_php().
+     * @deprecated Use Picotse_Vendor_Assets::get_enqueue_php().
      *
      * @param string $theme_slug Theme slug.
      * @return string
      */
     public static function get_enqueue_script_line($theme_slug = 'theme')
     {
-        return PTS_Vendor_Assets::get_enqueue_php($theme_slug);
+        return Picotse_Vendor_Assets::get_enqueue_php($theme_slug);
     }
 
     /**
-     * @deprecated Use PTS_Vendor_Assets::get_enqueue_php().
+     * @deprecated Use Picotse_Vendor_Assets::get_enqueue_php().
      *
      * @param string $theme_slug     Theme slug.
      * @param string $version_expr   Unused. Kept for backward compatibility.

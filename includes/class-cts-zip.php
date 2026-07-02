@@ -3,7 +3,7 @@
 /**
  * ZIP Archive Helper
  */
-class CTS_Zip
+class Picotse_Classic_Zip
 {
 
     public function create_zip($source_dir, $zip_file)

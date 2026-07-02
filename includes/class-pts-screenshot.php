@@ -9,7 +9,7 @@ if (! defined('ABSPATH')) {
  * themes so the Appearance > Themes card is not blank. Requires GD; silently
  * skipped when GD is unavailable.
  */
-class PTS_Screenshot
+class Picotse_Screenshot
 {
 
     /**

@@ -26,9 +26,9 @@ if (!defined('ABSPATH')) {
                     <?php
                     $pts_basic_info_prefix  = 'cts';
                     $pts_basic_info_variant = 'classic';
-                    include PTS_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
+                    include PICOTSE_PLUGIN_DIR . 'admin/views/partials/basic-info-fields.php';
                     ?>
-                    <?php include PTS_PLUGIN_DIR . 'admin/views/partials/root-layout-fields.php'; ?>
+                    <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/root-layout-fields.php'; ?>
                     <button type="button" class="button button-primary next-step"><?php esc_html_e('Next: Presets', 'picot-theme-seeder'); ?></button>
                 </div>
 
@@ -47,7 +47,7 @@ if (!defined('ABSPATH')) {
                 <!-- Step 3: Templates -->
                 <div class="cts-step-content" data-step="3">
                     <h2><?php esc_html_e('Select Templates', 'picot-theme-seeder'); ?></h2>
-                    <?php include PTS_PLUGIN_DIR . 'admin/views/partials/block-layout-mode-fields.php'; ?>
+                    <?php include PICOTSE_PLUGIN_DIR . 'admin/views/partials/block-layout-mode-fields.php'; ?>
                     <p class="description pts-section-intro"><?php esc_html_e('PHP template files in your theme folder. WordPress uses the template hierarchy to pick the best match for each view.', 'picot-theme-seeder'); ?></p>
                     <div id="cts-templates-panel" class="pts-desc-list"></div>
                     <div class="cts-actions">

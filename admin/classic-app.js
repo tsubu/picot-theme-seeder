@@ -1,4 +1,4 @@
-window.ptsInitClassic = function () {
+window.picotseInitClassic = function () {
     jQuery(function ($) {
         const $wrap = $('#cts-app');
         if (!$wrap.length || $wrap.data('pts-inited')) {
@@ -6,7 +6,7 @@ window.ptsInitClassic = function () {
         }
         $wrap.data('pts-inited', true);
 
-        const rootData = window.ptsData || {};
+        const rootData = window.picotseData || {};
         const data = Object.assign(
             {
                 restUrl: rootData.restUrl,

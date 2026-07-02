@@ -7,7 +7,7 @@ if (! defined('ABSPATH')) {
 /**
  * Classic theme wizard labels and descriptions for the admin UI.
  */
-class PTS_Classic_Definitions
+class Picotse_Classic_Definitions
 {
 
     /**

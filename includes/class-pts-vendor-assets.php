@@ -7,7 +7,7 @@ if (! defined('ABSPATH')) {
 /**
  * Bundled third-party assets copied into generated themes (no remote CDN).
  */
-class PTS_Vendor_Assets
+class Picotse_Vendor_Assets
 {
     const BOOTSTRAP_VERSION = '5.3.8';
 
@@ -18,7 +18,7 @@ class PTS_Vendor_Assets
      */
     public static function get_source_dir()
     {
-        return PTS_PLUGIN_DIR . 'assets/vendor/';
+        return PICOTSE_PLUGIN_DIR . 'assets/vendor/';
     }
 
     /**

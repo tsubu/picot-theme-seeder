@@ -3,7 +3,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-$pts_layout_mode = isset($pts_layout_mode) ? $pts_layout_mode : PTS_Layout_Settings::get_default_layout_mode();
+$pts_layout_mode = isset($pts_layout_mode) ? $pts_layout_mode : Picotse_Layout_Settings::get_default_layout_mode();
 ?>
 <fieldset class="pts-layout-mode">
     <legend><?php esc_html_e('Default column layout', 'picot-theme-seeder'); ?></legend>

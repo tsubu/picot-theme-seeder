@@ -6,7 +6,7 @@ if (! defined('ABSPATH')) {
 /**
  * Core Generator Logic for Classic Themes
  */
-class CTS_Generator
+class Picotse_Classic_Generator
 {
     /** @var string one-column|two-column */
     private $layout_mode = 'one-column';
@@ -44,7 +44,7 @@ class CTS_Generator
 
     public function generate($data)
     {
-        PTS_Admin::cleanup_stale_temp_dirs('classic');
+        Picotse_Admin::cleanup_stale_temp_dirs('classic');
 
         // 1. Prepare Data
         $theme_name = isset($data['themeName']) ? sanitize_text_field($data['themeName']) : 'My Classic Theme';
@@ -54,8 +54,8 @@ class CTS_Generator
         $description = isset($data['themeDescription']) ? sanitize_textarea_field($data['themeDescription']) : '';
 
         $selection = isset($data['selection']) ? $data['selection'] : array();
-        $layout    = PTS_Layout_Settings::parse($data);
-        $this->layout_mode = PTS_Layout_Settings::parse_layout_mode($data);
+        $layout    = Picotse_Layout_Settings::parse($data);
+        $this->layout_mode = Picotse_Layout_Settings::parse_layout_mode($data);
 
         // Backward compatibility when layoutMode is omitted but Sidebar is checked.
         if ('one-column' === $this->layout_mode && ! empty($selection['templates.sidebar'])) {
@@ -66,7 +66,7 @@ class CTS_Generator
 
         // 2. Setup Temp Directory
         $upload_dir = wp_upload_dir();
-        $base_dir = $upload_dir['basedir'] . '/pts_temp/classic/' . uniqid();
+        $base_dir = $upload_dir['basedir'] . '/picotse_temp/classic/' . uniqid();
         $theme_dir = $base_dir . '/' . $theme_slug;
 
         if (! wp_mkdir_p($theme_dir)) {
@@ -88,7 +88,7 @@ class CTS_Generator
         $style_header .= "*/\n";
 
         $style_content = $style_header . "\n";
-        $style_content .= PTS_Layout_Settings::get_root_stylesheet($layout);
+        $style_content .= Picotse_Layout_Settings::get_root_stylesheet($layout);
         $style_content .= $this->get_base_styles();
         $result = $this->write_file($theme_dir . '/style.css', $style_content);
         if (is_wp_error($result)) {
@@ -96,11 +96,11 @@ class CTS_Generator
         }
 
         wp_mkdir_p($theme_dir . '/assets/js');
-        $vendor_result = PTS_Vendor_Assets::copy_to_theme($theme_dir);
+        $vendor_result = Picotse_Vendor_Assets::copy_to_theme($theme_dir);
         if (is_wp_error($vendor_result)) {
             return $vendor_result;
         }
-        $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', PTS_Animejs::get_init_js());
+        $result = $this->write_file($theme_dir . '/assets/js/animate-init.js', Picotse_Animejs::get_init_js());
         if (is_wp_error($result)) {
             return $result;
         }
@@ -260,7 +260,7 @@ class CTS_Generator
             $functions_content .= "    add_editor_style('style-editor.css');\n";
             
             $editor_style = "/* Editor Styles (aligned with frontend) */\n";
-            $editor_style .= PTS_Editor_Styles::get_editor_stylesheet($layout);
+            $editor_style .= Picotse_Editor_Styles::get_editor_stylesheet($layout);
             $result = $this->write_file($theme_dir . '/style-editor.css', $editor_style);
             if (is_wp_error($result)) {
                 return $result;
@@ -454,7 +454,7 @@ class CTS_Generator
         // Enqueue Scripts
         $functions_content .= "/**\n * Enqueue scripts and styles\n */\n";
         $functions_content .= "function {$func_prefix}_scripts() {\n";
-        $functions_content .= PTS_Vendor_Assets::get_enqueue_php($theme_slug, "'1.0.0'", "'1.0.0'");
+        $functions_content .= Picotse_Vendor_Assets::get_enqueue_php($theme_slug, "'1.0.0'", "'1.0.0'");
         if (isset($selection['features.threaded-comments']) && $selection['features.threaded-comments']) {
             $functions_content .= "    if (is_singular() && comments_open() && get_option('thread_comments')) {\n";
             $functions_content .= "        wp_enqueue_script('comment-reply');\n";
@@ -692,7 +692,7 @@ class CTS_Generator
         }
 
         if (isset($selection['features.custom-login-style']) && $selection['features.custom-login-style']) {
-            $functions_content .= PTS_Vendor_Assets::get_login_inline_style_php($func_prefix, $theme_slug);
+            $functions_content .= Picotse_Vendor_Assets::get_login_inline_style_php($func_prefix, $theme_slug);
         }
 
         if (isset($selection['features.dashboard-cleanup']) && $selection['features.dashboard-cleanup']) {
@@ -746,25 +746,25 @@ class CTS_Generator
             wp_mkdir_p($scss_dir);
 
             $include_editor = isset($selection['features.editor-styles']) && $selection['features.editor-styles'];
-            foreach (PTS_Scss::get_classic_files($style_header, $layout, $include_editor) as $scss_file => $scss_content) {
+            foreach (Picotse_Scss::get_classic_files($style_header, $layout, $include_editor) as $scss_file => $scss_content) {
                 $result = $this->write_file($scss_dir . '/' . $scss_file, $scss_content);
                 if (is_wp_error($result)) {
                     return $result;
                 }
             }
-            $result = $this->write_file($theme_dir . '/package.json', PTS_Scss::get_package_json($theme_slug));
+            $result = $this->write_file($theme_dir . '/package.json', Picotse_Scss::get_package_json($theme_slug));
             if (is_wp_error($result)) {
                 return $result;
             }
         }
 
         // screenshot.png so the Appearance > Themes card is not blank
-        PTS_Screenshot::create($theme_dir . '/screenshot.png', $theme_name);
+        Picotse_Screenshot::create($theme_dir . '/screenshot.png', $theme_name);
 
         // Output Handling
         $output_mode = isset($data['outputMode']) ? $data['outputMode'] : 'direct';
         if ($output_mode === 'direct') {
-            $destination = WP_CONTENT_DIR . '/themes/' . $theme_slug;
+            $destination = trailingslashit(get_theme_root()) . $theme_slug;
             if (file_exists($destination)) {
                 return new WP_Error('theme_exists', __('Theme directory already exists.', 'picot-theme-seeder'));
             }
@@ -783,10 +783,10 @@ class CTS_Generator
             }
         } else {
             $zip_file = $base_dir . '/' . $theme_slug . '.zip';
-            $zipper = new CTS_Zip();
+            $zipper = new Picotse_Classic_Zip();
             $result = $zipper->create_zip($theme_dir, $zip_file);
             if (is_wp_error($result)) return $result;
-            $zip_url = PTS_Admin::create_temp_download_url($zip_file, $theme_slug);
+            $zip_url = Picotse_Admin::create_temp_download_url($zip_file, $theme_slug);
             if (is_wp_error($zip_url)) {
                 return $zip_url;
             }
@@ -1652,6 +1652,6 @@ class CTS_Generator
 .page-content > *:first-child {
     margin-top: 0;
 }
-' . PTS_Animejs::get_stylesheet_css();
+' . Picotse_Animejs::get_stylesheet_css();
     }
 }

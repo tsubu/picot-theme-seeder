@@ -14,10 +14,10 @@ if (! defined('ABSPATH')) {
  *   npm install && npm run build:css
  *
  * NOTE: the classic partials mirror the CSS emitted by
- * PTS_Layout_Settings::get_root_stylesheet(), PTS_Editor_Styles and
- * CTS_Generator::get_base_styles(). Keep them in sync when editing either side.
+ * Picotse_Layout_Settings::get_root_stylesheet(), Picotse_Editor_Styles and
+ * Picotse_Classic_Generator::get_base_styles(). Keep them in sync when editing either side.
  */
-class PTS_Scss
+class Picotse_Scss
 {
 
     /**
@@ -155,7 +155,7 @@ class PTS_Scss
      */
     private static function get_classic_variables($layout)
     {
-        $font = PTS_Editor_Styles::FONT_FAMILY;
+        $font = Picotse_Editor_Styles::FONT_FAMILY;
 
         return '// Layout tokens — edit here, then recompile (npm run build:css).
 $site-max-width: ' . $layout['siteMaxWidth'] . ';
@@ -183,7 +183,7 @@ $color-description: #757575;
     }
 
     /**
-     * Site shell — mirrors PTS_Layout_Settings::get_root_stylesheet().
+     * Site shell — mirrors Picotse_Layout_Settings::get_root_stylesheet().
      *
      * @return string
      */
@@ -272,7 +272,7 @@ $color-description: #757575;
     }
 
     /**
-     * Content typography — mirrors PTS_Editor_Styles::get_content_stylesheet().
+     * Content typography — mirrors Picotse_Editor_Styles::get_content_stylesheet().
      *
      * @return string
      */
@@ -407,7 +407,7 @@ h6.wp-block-heading {
     }
 
     /**
-     * Components — mirrors CTS_Generator::get_base_styles().
+     * Components — mirrors Picotse_Classic_Generator::get_base_styles().
      *
      * @return string
      */

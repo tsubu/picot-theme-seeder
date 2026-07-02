@@ -3,7 +3,7 @@
 /**
  * ZIP Archive Helper
  */
-class BTS_Zip
+class Picotse_Block_Zip
 {
 
     public function create_zip($source_dir, $zip_file)
