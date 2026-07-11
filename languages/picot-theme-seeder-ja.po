@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Picot Theme Seeder 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/tsubu/picot-theme-seeder/issues\n"
 "POT-Creation-Date: 2026-07-01 05:35+0900\n"
-"PO-Revision-Date: 2026-06-20 22:26+0900\n"
+"PO-Revision-Date: 2026-07-11 12:47+0000\n"
 "Last-Translator: PICOT\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12,19 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Picot Theme Seeder i18n sync\n"
+"X-Generator: picot-theme-seeder ja build\n"
 
 #: admin/views/main.php includes/class-pts-admin.php
 msgid "Picot Theme Seeder"
-msgstr "Picot テーマシーダー"
+msgstr "Picot Theme Seeder"
 
 #: admin/views/main.php
 msgid ""
-"Create complete, ready-to-use Block (FSE) or Classic WordPress themes from a "
-"visual admin wizard."
-msgstr ""
-"ビジュアル管理画面から、すぐ使える Block（FSE）または Classic WordPress テー"
-"マを作成できます。"
+"Create complete, ready-to-use Block (FSE) or Classic WordPress themes from a"
+" visual admin wizard."
+msgstr "視覚的な管理ウィザードから、すぐに使えるブロックテーマ (FSE) またはクラシックテーマを作成できます。"
 
 #: admin/views/main.php
 msgid "Choose Theme Type"
@@ -34,13 +32,11 @@ msgstr "テーマの種類を選択"
 msgid ""
 "Select the kind of theme you want to generate. You can change this later "
 "before generating files."
-msgstr ""
-"生成するテーマの種類を選んでください。ファイル生成前であれば、あとから変更で"
-"きます。"
+msgstr "生成するテーマの種類を選んでください。ファイル生成前であれば、あとから変更できます。"
 
 #: admin/views/main.php includes/class-pts-admin.php
 msgid "Block Theme (FSE)"
-msgstr "Block テーマ（FSE）"
+msgstr "ブロックテーマ (FSE)"
 
 #: admin/views/main.php
 msgid "theme.json, HTML templates, template parts, block patterns"
@@ -48,7 +44,7 @@ msgstr "theme.json、HTML テンプレート、テンプレートパーツ、ブ
 
 #: admin/views/main.php includes/class-pts-admin.php
 msgid "Classic Theme"
-msgstr "Classic テーマ"
+msgstr "クラシックテーマ"
 
 #: admin/views/main.php
 msgid "PHP templates, functions.php, style.css, sidebars"
@@ -64,7 +60,7 @@ msgstr "テーマ種別を変更"
 
 #: admin/views/main.php
 msgid "Block Theme"
-msgstr "Block テーマ"
+msgstr "ブロックテーマ"
 
 #: admin/views/partials/block-layout-mode-fields.php
 msgid "Default column layout"
@@ -75,16 +71,15 @@ msgid ""
 "Sets the initial layout for generated templates. Sidebar files and per-page "
 "layout templates are still included so you can switch layouts later."
 msgstr ""
-"生成テンプレートの初期レイアウトを設定します。サイドバー関連ファイルとページ"
-"単位のレイアウトテンプレートも含まれるため、生成後に切り替えられます。"
+"生成テンプレートの初期レイアウトを設定します。サイドバー関連ファイルとページ単位のレイアウトテンプレートも含まれるため、生成後に切り替えられます。"
 
 #: admin/views/partials/block-layout-mode-fields.php
 msgid "1 column (main content only)"
-msgstr "1カラム（メインコンテンツのみ）"
+msgstr "1カラム (メインコンテンツのみ)"
 
 #: admin/views/partials/block-layout-mode-fields.php
 msgid "2 columns (main content + sidebar)"
-msgstr "2カラム（メインコンテンツ + サイドバー）"
+msgstr "2カラム (メインコンテンツ + サイドバー)"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -103,7 +98,7 @@ msgstr "機能"
 
 #: admin/views/partials/block-wizard.php
 msgid "Theme JSON"
-msgstr "Theme JSON"
+msgstr "theme.json"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -170,11 +165,11 @@ msgstr "パーツを生成"
 
 #: admin/views/partials/block-wizard.php
 msgid "Generate SCSS sources (assets/scss + package.json)"
-msgstr "SCSS ソースを生成（assets/scss + package.json）"
+msgstr "SCSS ソースを生成 (assets/scss + package.json)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Generate Style Variations (styles/ — Dark, Natural, Vivid)"
-msgstr "スタイルバリエーションを生成（styles/ — ダーク・ナチュラル・ビビッド）"
+msgstr "スタイルバリエーションを生成 (styles/ — ダーク・ナチュラル・ビビッド)"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -186,8 +181,8 @@ msgid ""
 "HTML templates in the templates/ folder. WordPress picks the most specific "
 "file for each view (template hierarchy)."
 msgstr ""
-"templates/ フォルダの HTML テンプレートです。表示内容に応じて WordPress が最"
-"も適したファイルを選びます（テンプレート階層）。"
+"templates/ フォルダの HTML テンプレートです。表示内容に応じて WordPress が最も適したファイルを選びます "
+"(テンプレート階層)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Parts"
@@ -198,8 +193,7 @@ msgid ""
 "Reusable regions in the parts/ folder (header, footer, etc.). Referenced "
 "from templates with the template-part block."
 msgstr ""
-"parts/ フォルダの共通領域（ヘッダー・フッターなど）です。各テンプレートから "
-"template-part ブロックで読み込みます。"
+"parts/ フォルダの共通領域 (ヘッダー・フッターなど) です。各テンプレートから template-part ブロックで読み込みます。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Basic Template Parts Set"
@@ -209,9 +203,7 @@ msgstr "基本テンプレートパーツセット"
 msgid ""
 "Select all recommended parts at once. Unchecking a part below turns the set "
 "off."
-msgstr ""
-"おすすめパーツをまとめて選択します。下の個別パーツを外すとセットは解除されま"
-"す。"
+msgstr "おすすめパーツをまとめて選択します。下の個別パーツを外すとセットは解除されます。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Extended Layout Parts Set"
@@ -221,26 +213,24 @@ msgstr "拡張レイアウトパーツセット"
 msgid ""
 "Common site layout variations: more headers and footers, sidebars, post "
 "grids, author box, and more."
-msgstr ""
-"よく使われるサイトレイアウト集。ヘッダー・フッターの各種バリエーション、サイ"
-"ドバー、投稿グリッド、著者ボックスなどをまとめて追加できます。"
+msgstr "よく使われるサイトレイアウト集。ヘッダー・フッターの各種バリエーション、サイドバー、投稿グリッド、著者ボックスなどをまとめて追加できます。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Japanese LP Parts Set"
-msgstr "LPパーツセット（日本向け）"
+msgstr "LP パーツセット (日本向け)"
 
 #: admin/views/partials/block-wizard.php
 msgid ""
 "Landing page sections common on Japanese sites: first view, problems "
-"checklist, reasons, customer voices, pricing, FAQ, conversion area, and more "
-"(Japanese placeholder text)."
+"checklist, reasons, customer voices, pricing, FAQ, conversion area, and more"
+" (Japanese placeholder text)."
 msgstr ""
-"日本のサイトで定番のLP構成セクション。ファーストビュー・お悩みチェック・選ば"
-"れる理由・お客様の声・料金・FAQ・CVエリアなど（日本語のダミーテキスト入り）。"
+"日本のサイトで定番の LP 構成セクション。ファーストビュー・お悩みチェック・選ばれる理由・お客様の声・料金・FAQ ・CV エリアなど "
+"(日本語のダミーテキスト入り)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Product LP Parts Set"
-msgstr "商品LPパーツセット（EC向け）"
+msgstr "商品 LP パーツセット (EC 向け)"
 
 #: admin/views/partials/block-wizard.php
 msgid ""
@@ -248,9 +238,8 @@ msgid ""
 "sale banner, coupon, double pricing, reviews, specs, gift wrapping, "
 "shipping, and more (Japanese placeholder text)."
 msgstr ""
-"楽天などの日本のECサイトで定番の商品紹介LPセクション。セール帯・クーポン・二"
-"重価格・レビュー・商品仕様・ギフト対応・配送案内など（日本語のダミーテキスト"
-"入り）。"
+"楽天などの日本の EC サイトで定番の商品紹介 LP セクション。セール帯・クーポン・二重価格・レビュー・商品仕様・ギフト対応・配送案内など "
+"(日本語のダミーテキスト入り)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Common Layout Kit"
@@ -262,9 +251,8 @@ msgid ""
 "stats, steps, table, accordion, and more (Japanese placeholder text and "
 "empty image placeholders)."
 msgstr ""
-"よく使う定番ページレイアウト集。テキスト＋画像・カードグリッド・ギャラリー・"
-"沿革・チーム紹介・数値・ステップ・表組み・アコーディオンなど（日本語ダミーテ"
-"キストと画像プレースホルダー入り）。"
+"よく使う定番ページレイアウト集。テキスト＋画像・カードグリッド・ギャラリー・沿革・チーム紹介・数値・ステップ・表組み・アコーディオンなど "
+"(日本語ダミーテキストと画像プレースホルダー入り)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Patterns"
@@ -274,17 +262,15 @@ msgstr "パターン"
 msgid ""
 "Reusable block sections for the Site Editor or post editor. Selected files "
 "are copied into your theme’s patterns/ folder."
-msgstr ""
-"サイトエディター／投稿エディターから挿入できるブロックの部品です。選んだファ"
-"イルはテーマの patterns/ フォルダにコピーされます。"
+msgstr "サイトエディター／投稿エディターから挿入できるブロックの部品です。選んだファイルはテーマの patterns/ フォルダにコピーされます。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Next: Theme JSON"
-msgstr "次へ: Theme JSON"
+msgstr "次へ: theme.json"
 
 #: admin/views/partials/block-wizard.php
 msgid "Theme JSON Settings"
-msgstr "Theme JSON 設定"
+msgstr "theme.json 設定"
 
 #: admin/views/partials/block-wizard.php
 msgid "Configure basic settings for your theme.json."
@@ -413,15 +399,15 @@ msgstr "カスタムデュオトーン"
 
 #: admin/views/partials/block-wizard.php
 msgid "Default Palette (Core)"
-msgstr "デフォルトパレット（コア）"
+msgstr "デフォルトパレット (コア)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Default Gradients (Core)"
-msgstr "デフォルトグラデーション（コア）"
+msgstr "デフォルトグラデーション (コア)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Default Duotone (Core)"
-msgstr "デフォルトデュオトーン（コア）"
+msgstr "デフォルトデュオトーン (コア)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Typography"
@@ -473,27 +459,25 @@ msgstr "フルイドタイポグラフィ"
 
 #: admin/views/partials/block-wizard.php
 msgid "WordPress 7.0+ (theme.json)"
-msgstr "WordPress 7.0+（theme.json）"
+msgstr "WordPress 7.0以降 (theme.json)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Border radius presets (radiusSizes)"
-msgstr "角丸プリセット（radiusSizes）"
+msgstr "角丸プリセット (radiusSizes)"
 
 #: admin/views/partials/block-wizard.php
 msgid "Predefined border radius values in the editor (WordPress 6.9+)."
-msgstr "エディターで選べる角丸プリセットを定義します（WordPress 6.9 以降）。"
+msgstr "エディターで選べる角丸プリセットを定義します (WordPress 6.9以降)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Form element styles (select & textInput)"
-msgstr "フォーム要素のスタイル（select と textInput）"
+msgstr "フォーム要素のスタイル (select と textInput)"
 
 #: admin/views/partials/block-wizard.php
 msgid ""
 "Default styles for select and text inputs via styles.elements (WordPress "
 "6.9+)."
-msgstr ""
-"styles.elements で select とテキスト入力のデフォルトスタイルを設定します"
-"（WordPress 6.9 以降）。"
+msgstr "styles.elements で select とテキスト入力のデフォルトスタイルを設定します (WordPress 6.9以降)。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Brand Colors"
@@ -504,8 +488,8 @@ msgid ""
 "Written to theme.json as the color palette. Buttons and links use these "
 "presets, so the whole theme recolors from the Styles panel later."
 msgstr ""
-"theme.json のカラーパレットとして書き出されます。ボタンやリンクがこのプリセッ"
-"トを参照するため、後からスタイルパネルでテーマ全体の配色を一括変更できます。"
+"theme.json "
+"のカラーパレットとして書き出されます。ボタンやリンクがこのプリセットを参照するため、後からスタイルパネルでテーマ全体の配色を一括変更できます。"
 
 #: admin/views/partials/block-wizard.php
 msgid "Primary color"
@@ -561,7 +545,7 @@ msgstr "すぐ使える WordPress テーマを生成します。"
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
 msgid "Write to themes directory"
-msgstr "themesディレクトリに直接作成"
+msgstr "themes ディレクトリに直接作成"
 
 #: admin/views/partials/block-wizard.php
 #: admin/views/partials/classic-wizard.php
@@ -585,9 +569,7 @@ msgstr "テンプレートの選択"
 msgid ""
 "PHP template files in your theme folder. WordPress uses the template "
 "hierarchy to pick the best match for each view."
-msgstr ""
-"テーマフォルダ内の PHP テンプレートです。表示内容に応じて WordPress が最適な"
-"ファイルを選びます（テンプレート階層）。"
+msgstr "テーマフォルダ内の PHP テンプレートです。表示内容に応じて WordPress が最適なファイルを選びます (テンプレート階層)。"
 
 #: admin/views/partials/classic-wizard.php
 msgid "Theme Features (functions.php)"
@@ -597,9 +579,7 @@ msgstr "テーマ機能 (functions.php)"
 msgid ""
 "Optional code added to functions.php (theme support, menus, security, block "
 "editor, etc.)."
-msgstr ""
-"functions.php に追加する任意のコード（テーマサポート、メニュー、セキュリ"
-"ティ、ブロックエディター対応など）。"
+msgstr "functions.php に追加する任意のコード (テーマサポート、メニュー、セキュリティ、ブロックエディター対応など)。"
 
 #: admin/views/partials/classic-wizard.php
 msgid "Enabled Features:"
@@ -607,15 +587,15 @@ msgstr "有効な機能:"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Root layout (:root)"
-msgstr "ルートレイアウト（:root）"
+msgstr "ルートレイアウト (:root)"
 
 #: admin/views/partials/root-layout-fields.php
 msgid ""
 "Width and spacing tokens written to :root CSS variables. Classic themes use "
 "them in style.css; block themes also map content/wide sizes to theme.json."
 msgstr ""
-"幅・余白のトークンを :root の CSS 変数として出力します。Classic は "
-"style.css、Block は theme.json の content / wide 幅にも反映されます。"
+"幅・余白のトークンを :root の CSS 変数として出力します。クラシックテーマは style.css、ブロックテーマは theme.json の "
+"content / wide 幅にも反映されます。"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Site max width"
@@ -632,9 +612,7 @@ msgstr "コンテンツ幅"
 #: admin/views/partials/root-layout-fields.php
 msgid ""
 "Main column width. Block themes: theme.json settings.layout.contentSize."
-msgstr ""
-"メインカラムの幅。Block テーマでは theme.json の settings.layout.contentSize "
-"に対応します。"
+msgstr "メインカラムの幅。ブロックテーマでは theme.json の settings.layout.contentSize に対応します。"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Wide width"
@@ -643,13 +621,11 @@ msgstr "ワイド幅"
 #: admin/views/partials/root-layout-fields.php
 msgid ""
 "Wide alignment width. Block themes: theme.json settings.layout.wideSize."
-msgstr ""
-"ワイド配置用の幅。Block テーマでは theme.json の settings.layout.wideSize に"
-"対応します。"
+msgstr "ワイド配置用の幅。ブロックテーマでは theme.json の settings.layout.wideSize に対応します。"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Root padding (inline)"
-msgstr "ルート余白（左右）"
+msgstr "ルート余白 (左右)"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Horizontal padding applied to the site shell."
@@ -657,7 +633,7 @@ msgstr "サイトシェルに適用する左右のパディングです。"
 
 #: admin/views/partials/root-layout-fields.php
 msgid "Block / column gap"
-msgstr "ブロック／カラム間隔"
+msgstr "ブロック / カラム間隔"
 
 #: admin/views/partials/root-layout-fields.php
 msgid ""
@@ -674,7 +650,7 @@ msgstr "一時ディレクトリを作成できませんでした。"
 
 #: includes/class-bts-generator.php
 msgid "Theme directory already exists: %s"
-msgstr "テーマディレクトリが既に存在します: %s"
+msgstr "テーマディレクトリがすでに存在します: %s"
 
 #: includes/class-bts-generator.php includes/class-cts-generator.php
 #: includes/class-pts-admin.php
@@ -683,8 +659,7 @@ msgstr "テーマを生成しました。"
 
 #: includes/class-bts-generator.php includes/class-cts-generator.php
 msgid "Could not move theme to the themes directory. Check permissions."
-msgstr ""
-"テーマを themes ディレクトリへ移動できませんでした。権限を確認してください。"
+msgstr "テーマを themes ディレクトリへ移動できませんでした。権限を確認してください。"
 
 #: includes/class-bts-zip.php includes/class-cts-zip.php
 msgid "ZipArchive class is missing on this server."
@@ -696,15 +671,15 @@ msgstr "ZIP ファイルを書き込み用に開けませんでした。"
 
 #: includes/class-cts-generator.php
 msgid "Theme directory already exists."
-msgstr "同名のテーマディレクトリが既に存在します。"
+msgstr "同名のテーマディレクトリがすでに存在します。"
 
 #: includes/class-pts-admin.php
 msgid "Invalid theme type. Choose Block or Classic."
-msgstr "テーマの種類が不正です。Block または Classic を選択してください。"
+msgstr "テーマの種類が不正です。ブロックまたはクラシックを選択してください。"
 
 #: includes/class-pts-admin.php
 msgid "Theme Seeder"
-msgstr "テーマシーダー"
+msgstr "Theme Seeder"
 
 #: includes/class-pts-admin.php
 msgid "Please choose a theme type to continue."
@@ -712,16 +687,14 @@ msgstr "続行するにはテーマの種類を選択してください。"
 
 #: includes/class-pts-admin.php
 msgid ""
-"Full Site Editing theme with theme.json, HTML templates, template parts, and "
-"block patterns."
+"Full Site Editing theme with theme.json, HTML templates, template parts, and"
+" block patterns."
 msgstr ""
-"theme.json、HTML テンプレート、テンプレートパーツ、ブロックパターンを備えた "
-"Full Site Editing テーマです。"
+"theme.json、HTML テンプレート、テンプレートパーツ、ブロックパターンを備えた Full Site Editing テーマです。"
 
 #: includes/class-pts-admin.php
 msgid "PHP templates, functions.php, style.css, and optional theme features."
-msgstr ""
-"PHP テンプレート、functions.php、style.css、および任意のテーマ機能です。"
+msgstr "PHP テンプレート、functions.php、style.css、および任意のテーマ機能です。"
 
 #: includes/class-pts-admin.php
 msgid "Bare Minimum"
@@ -731,69 +704,57 @@ msgstr "最小構成"
 msgid ""
 "Just the essentials: theme.json, a base template shell, and the required "
 "header/footer parts."
-msgstr ""
-"最低限の構成: theme.json、基本テンプレートシェル、必須の header/footer パーツ"
-"のみ。"
+msgstr "最低限の構成: theme.json、基本テンプレートシェル、必須の header/footer パーツのみ。"
 
 #: includes/class-pts-admin.php
 msgid "Editorial Blog"
-msgstr "編集ブログ"
+msgstr "エディトリアル ブログ"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A practical publishing setup with post templates, post metadata, comments, "
 "and latest-post patterns."
-msgstr ""
-"投稿テンプレート、投稿メタ、コメント、最新投稿パターンを含む実用的な公開向け"
-"構成です。"
+msgstr "投稿テンプレート、投稿メタ、コメント、最新投稿パターンを含む実用的な公開向け構成です。"
 
 #: includes/class-pts-admin.php
 msgid "Marketing / Landing"
-msgstr "マーケティング・LP"
+msgstr "マーケティング / ランディング"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A conversion-focused business site with landing-page templates, reusable "
 "sections, and style variations."
-msgstr ""
-"ランディングページテンプレート、再利用セクション、スタイルバリエーションを備"
-"えたコンバージョン重視のビジネスサイト向けです。"
+msgstr "ランディングページテンプレート、再利用セクション、スタイルバリエーションを備えたコンバージョン重視のビジネスサイト向けです。"
 
 #: includes/class-pts-admin.php
 msgid "Business / Corporate"
-msgstr "ビジネス・コーポレートサイト"
+msgstr "ビジネス / コーポレート"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A polished company-site starter with page templates, common layout parts, "
 "and trust-building patterns."
-msgstr ""
-"ページテンプレート、一般的なレイアウトパーツ、信頼構築パターンを備えた企業サ"
-"イト向けスターターです。"
+msgstr "ページテンプレート、一般的なレイアウトパーツ、信頼構築パターンを備えた企業サイト向けスターターです。"
 
 #: includes/class-pts-admin.php
 msgid "Design System Starter"
-msgstr "デザインシステム"
+msgstr "デザインシステム スターター"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A strong foundation for custom projects with theme.json, SCSS sources, "
 "layout kits, and multiple style directions."
-msgstr ""
-"theme.json、SCSS ソース、レイアウトキット、複数スタイル方向を備えたカスタムプ"
-"ロジェクト向け基盤です。"
+msgstr "theme.json、SCSS ソース、レイアウトキット、複数スタイル方向を備えたカスタムプロジェクト向け基盤です。"
 
 #: includes/class-pts-admin.php
 msgid "All-in-One"
-msgstr "全て"
+msgstr "オールインワン"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A kitchen-sink starter with nearly every template, part set, pattern, and "
 "optional source file enabled."
-msgstr ""
-"ほぼすべてのテンプレート、パーツセット、パターン、任意ソースファイルを有効に"
-"したフルセット構成です。"
+msgstr "ほぼすべてのテンプレート、パーツセット、パターン、任意ソースファイルを有効にしたフルセット構成です。"
 
 #: includes/class-pts-admin.php
 msgid "No presets found for this category."
@@ -809,7 +770,7 @@ msgstr "生成中..."
 
 #: includes/class-pts-admin.php
 msgid "Error: "
-msgstr "エラー: "
+msgstr "エラー:"
 
 #: includes/class-pts-admin.php
 msgid "Unknown error"
@@ -833,7 +794,7 @@ msgstr "必須"
 
 #: includes/class-pts-admin.php
 msgid "Fallback template for all views when no more specific template exists."
-msgstr "より専用のテンプレートがないときの最終フォールバック（必須）。"
+msgstr "より専用のテンプレートがないときの最終フォールバック (必須)。"
 
 #: includes/class-pts-admin.php
 msgid "Front Page"
@@ -843,9 +804,7 @@ msgstr "フロントページ"
 msgid ""
 "Site front landing page (hero, features, latest posts, CTA). Always wins on "
 "the front page, regardless of Reading settings."
-msgstr ""
-"サイトのトップページ用ランディング（ヒーロー・特徴・最新記事・CTA）。表示設定"
-"に関わらずトップページで最優先されます。"
+msgstr "サイトのトップページ用ランディング (ヒーロー・特徴・最新記事・CTA)。表示設定に関わらずトップページで最優先されます。"
 
 #: includes/class-pts-admin.php
 msgid "Home"
@@ -865,7 +824,7 @@ msgstr "ブログ投稿1件の表示レイアウト。"
 
 #: includes/class-pts-admin.php
 msgid "Single (With Sidebar)"
-msgstr "投稿（サイドバー付き）"
+msgstr "投稿 (サイドバー付き)"
 
 #: includes/class-pts-admin.php
 msgid ""
@@ -873,8 +832,7 @@ msgid ""
 "automatically when Single is enabled; selectable per post as a custom "
 "template."
 msgstr ""
-"右にサイドバーパーツを配置した2カラムの投稿テンプレート。Single を有効にする"
-"と自動で含まれ、投稿ごとにカスタムテンプレートとして選択できます。"
+"右にサイドバーパーツを配置した2カラムの投稿テンプレート。Single を有効にすると自動で含まれ、投稿ごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-admin.php
 msgid "Page"
@@ -886,27 +844,26 @@ msgstr "固定ページの表示レイアウト。"
 
 #: includes/class-pts-admin.php
 msgid "Page (With Sidebar)"
-msgstr "固定ページ（サイドバー付き）"
+msgstr "固定ページ (サイドバー付き)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Two-column page with the sidebar part on the right. Included automatically "
 "when Page is enabled; selectable per page as a custom template."
 msgstr ""
-"右にサイドバーパーツを配置した2カラムの固定ページテンプレート。Page を有効に"
-"すると自動で含まれ、ページごとにカスタムテンプレートとして選択できます。"
+"右にサイドバーパーツを配置した2カラムの固定ページテンプレート。Page "
+"を有効にすると自動で含まれ、ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-admin.php
 msgid "LP Page (Blank Canvas)"
-msgstr "LPページ（ヘッダー・フッターなし）"
+msgstr "LP ページ (ヘッダー・フッターなし)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "No header or footer — a full canvas for landing pages built from the LP "
 "parts. Selectable per page as a custom template."
 msgstr ""
-"ヘッダー・フッターなしの白紙キャンバス。LPパーツを並べてランディングページを"
-"作る用途に。ページごとにカスタムテンプレートとして選択できます。"
+"ヘッダー・フッターなしの白紙キャンバス。LP パーツを並べてランディングページを作る用途に。ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-admin.php
 msgid "Singular"
@@ -950,27 +907,23 @@ msgstr "サイトタイトルとナビ。テンプレートから template-part 
 
 #: includes/class-pts-admin.php
 msgid "Header (Centered)"
-msgstr "ヘッダー（中央揃え）"
+msgstr "ヘッダー (中央揃え)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Alternative header with centered title and menu. Swap via the Replace menu "
 "in the Site Editor."
-msgstr ""
-"タイトルとメニューを中央揃えにした別バージョンのヘッダー。サイトエディターの"
-"「置換」メニューで差し替えできます。"
+msgstr "タイトルとメニューを中央揃えにした別バージョンのヘッダー。サイトエディターの「置換」メニューで差し替えできます。"
 
 #: includes/class-pts-admin.php
 msgid "Header (With Button)"
-msgstr "ヘッダー（ボタン付き）"
+msgstr "ヘッダー (ボタン付き)"
 
 #: includes/class-pts-admin.php
 msgid ""
-"Alternative header with navigation and a call-to-action button. Swap via the "
-"Replace menu in the Site Editor."
-msgstr ""
-"ナビゲーションと CTA ボタンを配置した別バージョンのヘッダー。サイトエディター"
-"の「置換」メニューで差し替えできます。"
+"Alternative header with navigation and a call-to-action button. Swap via the"
+" Replace menu in the Site Editor."
+msgstr "ナビゲーションと CTA ボタンを配置した別バージョンのヘッダー。サイトエディターの「置換」メニューで差し替えできます。"
 
 #: includes/class-pts-admin.php
 msgid "Footer"
@@ -978,19 +931,17 @@ msgstr "フッター"
 
 #: includes/class-pts-admin.php
 msgid "Site footer area, typically copyright and links."
-msgstr "フッター領域（コピーライトやリンクなど）。"
+msgstr "フッター領域 (コピーライトやリンクなど)。"
 
 #: includes/class-pts-admin.php
 msgid "Footer (Columns)"
-msgstr "フッター（3カラム）"
+msgstr "フッター (3カラム)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Alternative three-column footer with links and contact info. Swap via the "
 "Replace menu in the Site Editor."
-msgstr ""
-"リンクと連絡先を配置した3カラムの別バージョンのフッター。サイトエディターの"
-"「置換」メニューで差し替えできます。"
+msgstr "リンクと連絡先を配置した3カラムの別バージョンのフッター。サイトエディターの「置換」メニューで差し替えできます。"
 
 #: includes/class-pts-admin.php
 msgid "Sidebar"
@@ -1002,9 +953,7 @@ msgid ""
 "default column layout above; always generated when post/page templates are "
 "enabled so you can switch layouts later."
 msgstr ""
-"ウィジェットや補足コンテンツ用のサイドバー。上のデフォルトカラムレイアウトと"
-"連動します。投稿/固定ページテンプレートを有効にした場合は常に生成され、生成後"
-"もレイアウト切り替えが可能です。"
+"ウィジェットや補足コンテンツ用のサイドバー。上のデフォルトカラムレイアウトと連動します。投稿/固定ページテンプレートを有効にした場合は常に生成され、生成後もレイアウト切り替えが可能です。"
 
 #: includes/class-pts-admin.php
 msgid "Comments"
@@ -1036,13 +985,11 @@ msgstr "投稿ループ"
 
 #: includes/class-pts-admin.php
 msgid "Reusable post list with pagination, for custom templates and pages."
-msgstr ""
-"ページネーション付きの投稿一覧。カスタムテンプレートや固定ページで再利用でき"
-"ます。"
+msgstr "ページネーション付きの投稿一覧。カスタムテンプレートや固定ページで再利用できます。"
 
 #: includes/class-pts-admin.php
 msgid "Call to Action"
-msgstr "CTA（行動喚起）"
+msgstr "CTA (行動喚起)"
 
 #: includes/class-pts-admin.php
 msgid "Reusable call-to-action band with heading, text, and a button."
@@ -1050,50 +997,44 @@ msgstr "見出し・テキスト・ボタンで構成する再利用可能な CT
 
 #: includes/class-pts-admin.php
 msgid "Hero (Full-width Image)"
-msgstr "ヒーロー（全幅画像）"
+msgstr "ヒーロー (全幅画像)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Full-viewport cover hero with a background image and centered headline, "
 "text, and buttons."
-msgstr ""
-"背景画像付きの全画面 Cover ヒーロー。見出し・テキスト・ボタンは中央配置です。"
+msgstr "背景画像付きの全画面 Cover ヒーロー。見出し・テキスト・ボタンは中央配置です。"
 
 #: includes/class-pts-admin.php
 msgid "Hero (Edge to Edge)"
-msgstr "ヒーロー（エッジ to エッジ）"
+msgstr "ヒーロー (エッジ to エッジ)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Hero section that spans the full viewport width, including background and "
 "wide content."
-msgstr ""
-"背景とワイドコンテンツを含め、ビューポート幅いっぱいに広がるヒーローセクショ"
-"ン。"
+msgstr "背景とワイドコンテンツを含め、ビューポート幅いっぱいに広がるヒーローセクション。"
 
 #: includes/class-pts-admin.php
 msgid "Hero (Crossfade Background)"
-msgstr "ヒーロー（クロスフェード背景）"
+msgstr "ヒーロー (クロスフェード背景)"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Hero with multiple background images that crossfade smoothly using an ease-"
 "in-out transition. Add or remove images in the slides group."
 msgstr ""
-"複数の背景画像が ease-in-out で滑らかに切り替わるヒーロー。slides グループ内"
-"の画像ブロックを追加・削除して調整できます。"
+"複数の背景画像が ease-in-out で滑らかに切り替わるヒーロー。slides グループ内の画像ブロックを追加・削除して調整できます。"
 
 #: includes/class-pts-admin.php
 msgid "Category Featured + 3 Links"
-msgstr "カテゴリー注目 + 3 リンク"
+msgstr "カテゴリー注目 + 3リンク"
 
 #: includes/class-pts-admin.php
 msgid ""
 "Shows one featured latest post from a chosen category, followed by three "
 "compact latest-post links from the same category."
-msgstr ""
-"選択したカテゴリーの最新注目投稿 1 件と、同カテゴリーのコンパクトな最新投稿リ"
-"ンク 3 件を表示します。"
+msgstr "選択したカテゴリーの最新注目投稿1件と、同カテゴリーのコンパクトな最新投稿リンク3件を表示します。"
 
 #: includes/class-pts-admin.php
 msgid "Selected Post + Page"
@@ -1103,12 +1044,11 @@ msgstr "選択した投稿 + 固定ページ"
 msgid ""
 "A two-card section for highlighting one chosen blog post and one chosen "
 "static page with editable links."
-msgstr ""
-"選択したブログ投稿と固定ページを 2 カードで強調表示し、リンクを編集できます。"
+msgstr "選択したブログ投稿と固定ページを2カードで強調表示し、リンクを編集できます。"
 
 #: includes/class-pts-admin.php
 msgid "Header (Minimal)"
-msgstr "ヘッダー（ミニマル）"
+msgstr "ヘッダー (ミニマル)"
 
 #: includes/class-pts-admin.php
 msgid "Slim header with the centered site title only."
@@ -1116,7 +1056,7 @@ msgstr "サイトタイトルのみを中央に配置したスリムなヘッダ
 
 #: includes/class-pts-admin.php
 msgid "Header (With Search)"
-msgstr "ヘッダー（検索付き）"
+msgstr "ヘッダー (検索付き)"
 
 #: includes/class-pts-admin.php
 msgid "Header with navigation and a search box."
@@ -1124,7 +1064,7 @@ msgstr "ナビゲーションと検索ボックスを配置したヘッダー。
 
 #: includes/class-pts-admin.php
 msgid "Header (With Social)"
-msgstr "ヘッダー（SNS付き）"
+msgstr "ヘッダー (SNS付き)"
 
 #: includes/class-pts-admin.php
 msgid "Header with navigation and social media icons."
@@ -1132,7 +1072,7 @@ msgstr "ナビゲーションと SNS アイコンを配置したヘッダー。"
 
 #: includes/class-pts-admin.php
 msgid "Header (With Tagline)"
-msgstr "ヘッダー（キャッチフレーズ付き）"
+msgstr "ヘッダー (キャッチフレーズ付き)"
 
 #: includes/class-pts-admin.php
 msgid "Header showing the site title with tagline next to the navigation."
@@ -1140,7 +1080,7 @@ msgstr "サイトタイトルとキャッチフレーズ、ナビゲーション
 
 #: includes/class-pts-admin.php
 msgid "Header (Split)"
-msgstr "ヘッダー（3分割）"
+msgstr "ヘッダー (3分割)"
 
 #: includes/class-pts-admin.php
 msgid "Three-zone header: navigation, centered site title, and a button."
@@ -1148,7 +1088,7 @@ msgstr "ナビゲーション・中央のサイトタイトル・ボタンの3�
 
 #: includes/class-pts-admin.php
 msgid "Footer (Minimal)"
-msgstr "フッター（ミニマル）"
+msgstr "フッター (ミニマル)"
 
 #: includes/class-pts-admin.php
 msgid "Single centered copyright line."
@@ -1156,7 +1096,7 @@ msgstr "中央揃えのコピーライト1行のみのフッター。"
 
 #: includes/class-pts-admin.php
 msgid "Footer (With Menu)"
-msgstr "フッター（メニュー付き）"
+msgstr "フッター (メニュー付き)"
 
 #: includes/class-pts-admin.php
 msgid "Footer with site title, navigation, and copyright."
@@ -1164,7 +1104,7 @@ msgstr "サイトタイトル・ナビゲーション・コピーライトを配
 
 #: includes/class-pts-admin.php
 msgid "Footer (Social)"
-msgstr "フッター（SNS）"
+msgstr "フッター (SNS)"
 
 #: includes/class-pts-admin.php
 msgid "Centered social media icons above the copyright line."
@@ -1172,7 +1112,7 @@ msgstr "コピーライトの上に SNS アイコンを中央配置したフッ�
 
 #: includes/class-pts-admin.php
 msgid "Footer (Mega)"
-msgstr "フッター（メガ）"
+msgstr "フッター (メガ)"
 
 #: includes/class-pts-admin.php
 msgid "Four-column footer with links, resources, contact, and a bottom bar."
@@ -1180,15 +1120,15 @@ msgstr "リンク・リソース・連絡先の4カラムと下部バーで構�
 
 #: includes/class-pts-admin.php
 msgid "Footer (CTA)"
-msgstr "フッター（CTA）"
+msgstr "フッター (CTA)"
 
 #: includes/class-pts-admin.php
 msgid "Footer leading with a call-to-action, then the copyright line."
-msgstr "CTA（行動喚起）を先頭に置き、コピーライトを続けるフッター。"
+msgstr "CTA (行動喚起) を先頭に置き、コピーライトを続けるフッター。"
 
 #: includes/class-pts-admin.php
 msgid "Sidebar (Blog)"
-msgstr "サイドバー（ブログ）"
+msgstr "サイドバー (ブログ)"
 
 #: includes/class-pts-admin.php
 msgid "Blog sidebar with search, recent posts, categories, and archives."
@@ -1196,7 +1136,7 @@ msgstr "検索・最新記事・カテゴリー・アーカイブを備えたブ
 
 #: includes/class-pts-admin.php
 msgid "Sidebar (CTA)"
-msgstr "サイドバー（CTA）"
+msgstr "サイドバー (CTA)"
 
 #: includes/class-pts-admin.php
 msgid "Sidebar box with a short message and a button."
@@ -1204,7 +1144,7 @@ msgstr "短いメッセージとボタンを配置したサイドバー用ボッ
 
 #: includes/class-pts-admin.php
 msgid "Post Loop (Grid)"
-msgstr "投稿ループ（グリッド）"
+msgstr "投稿ループ (グリッド)"
 
 #: includes/class-pts-admin.php
 msgid "Three-column post grid with featured images and pagination."
@@ -1212,7 +1152,7 @@ msgstr "アイキャッチ付き3カラムの投稿グリッド。ページネ�
 
 #: includes/class-pts-admin.php
 msgid "Post Loop (Compact)"
-msgstr "投稿ループ（コンパクト）"
+msgstr "投稿ループ (コンパクト)"
 
 #: includes/class-pts-admin.php
 msgid "Compact date and title list, ideal for news updates."
@@ -1265,7 +1205,7 @@ msgstr "LP ファーストビュー"
 #: includes/class-pts-admin.php
 msgid ""
 "Catch copy, sub copy, and two CTA buttons for the top of a landing page."
-msgstr "LP冒頭用のキャッチコピー・サブコピー・CTAボタン2つのセット。"
+msgstr "LP 冒頭用のキャッチコピー・サブコピー・CTA ボタン2つのセット。"
 
 #: includes/class-pts-admin.php
 msgid "LP Problems Checklist"
@@ -1273,7 +1213,7 @@ msgstr "LP お悩みチェック"
 
 #: includes/class-pts-admin.php
 msgid "\"Do you have these problems?\" heading with a checklist."
-msgstr "「こんなお悩みはありませんか？」見出しとチェックリスト。"
+msgstr "「こんなお悩みはありませんか ?」見出しとチェックリスト。"
 
 #: includes/class-pts-admin.php
 msgid "LP Empathy"
@@ -1413,7 +1353,7 @@ msgstr "最新投稿を日付＋タイトルで表示するお知らせ一覧。
 
 #: includes/class-pts-admin.php
 msgid "LP Conversion Area"
-msgstr "LP CVエリア"
+msgstr "LP CV エリア"
 
 #: includes/class-pts-admin.php
 msgid "Closing conversion area with phone number, hours, and buttons."
@@ -1421,7 +1361,7 @@ msgstr "電話番号・受付時間・ボタンを備えた締めのコンバー
 
 #: includes/class-pts-admin.php
 msgid "Product Hero"
-msgstr "商品LP ファーストビュー"
+msgstr "商品 LP ファーストビュー"
 
 #: includes/class-pts-admin.php
 msgid "Ranking badge, product name, price, and an add-to-cart button."
@@ -1429,7 +1369,7 @@ msgstr "ランキングバッジ・商品名・価格・カートボタンのセ
 
 #: includes/class-pts-admin.php
 msgid "Product Trust Badges"
-msgstr "商品LP 安心バッジ"
+msgstr "商品 LP 安心バッジ"
 
 #: includes/class-pts-admin.php
 msgid "Free shipping, next-day delivery, domestic production, gift wrapping."
@@ -1437,23 +1377,23 @@ msgstr "送料無料・あす楽・国内生産・ギフト対応の4バッジ�
 
 #: includes/class-pts-admin.php
 msgid "Product Ranking Awards"
-msgstr "商品LP ランキング受賞"
+msgstr "商品 LP ランキング受賞"
 
 #: includes/class-pts-admin.php
 msgid "List of ranking awards with period disclaimers."
-msgstr "受賞実績の一覧（集計期間の注記付き）。"
+msgstr "受賞実績の一覧 (集計期間の注記付き)。"
 
 #: includes/class-pts-admin.php
 msgid "Product Media Mentions"
-msgstr "商品LP メディア掲載"
+msgstr "商品 LP メディア掲載"
 
 #: includes/class-pts-admin.php
 msgid "\"Featured in media and SNS\" section with a logo placeholder."
-msgstr "「メディア・SNSで話題」セクション（ロゴ配置用プレースホルダー付き）。"
+msgstr "「メディア・SNSで話題」セクション (ロゴ配置用プレースホルダー付き)。"
 
 #: includes/class-pts-admin.php
 msgid "Product Time Sale"
-msgstr "商品LP タイムセール"
+msgstr "商品 LP タイムセール"
 
 #: includes/class-pts-admin.php
 msgid "Limited-time sale banner with deadline and buy button."
@@ -1461,7 +1401,7 @@ msgstr "締切と購入ボタン付きの期間限定セール帯。"
 
 #: includes/class-pts-admin.php
 msgid "Product Coupon"
-msgstr "商品LP クーポン"
+msgstr "商品 LP クーポン"
 
 #: includes/class-pts-admin.php
 msgid "Page-limited coupon banner with a claim button."
@@ -1469,7 +1409,7 @@ msgstr "獲得ボタン付きのページ限定クーポン帯。"
 
 #: includes/class-pts-admin.php
 msgid "Product Price Appeal"
-msgstr "商品LP 価格訴求"
+msgstr "商品 LP 価格訴求"
 
 #: includes/class-pts-admin.php
 msgid "Regular price with strikethrough, special price, discount and points."
@@ -1477,23 +1417,23 @@ msgstr "通常価格の打ち消し表示と特別価格・割引率・ポイン
 
 #: includes/class-pts-admin.php
 msgid "Product Selling Points"
-msgstr "商品LP こだわりポイント"
+msgstr "商品 LP こだわりポイント"
 
 #: includes/class-pts-admin.php
 msgid "POINT 01-03 sections highlighting product quality."
-msgstr "商品の品質を伝える POINT 01〜03 のセクション。"
+msgstr "商品の品質を伝える POINT 01〜03のセクション。"
 
 #: includes/class-pts-admin.php
 msgid "Product Usage Steps"
-msgstr "商品LP 使い方ステップ"
+msgstr "商品 LP 使い方ステップ"
 
 #: includes/class-pts-admin.php
 msgid "Easy three-step usage guide in columns."
-msgstr "かんたん3ステップの使い方ガイド（3カラム）。"
+msgstr "かんたん3ステップの使い方ガイド (3カラム)。"
 
 #: includes/class-pts-admin.php
 msgid "Product Recommended For"
-msgstr "商品LP おすすめシーン"
+msgstr "商品 LP おすすめシーン"
 
 #: includes/class-pts-admin.php
 msgid "Checklist of recommended users and gift occasions."
@@ -1501,7 +1441,7 @@ msgstr "おすすめの方・ギフトシーンのチェックリスト。"
 
 #: includes/class-pts-admin.php
 msgid "Product Variations"
-msgstr "商品LP バリエーション"
+msgstr "商品 LP バリエーション"
 
 #: includes/class-pts-admin.php
 msgid "Color and size variation table."
@@ -1509,7 +1449,7 @@ msgstr "カラー・サイズ展開の一覧表。"
 
 #: includes/class-pts-admin.php
 msgid "Product Set Contents"
-msgstr "商品LP セット内容"
+msgstr "商品 LP セット内容"
 
 #: includes/class-pts-admin.php
 msgid "List of everything included in the package."
@@ -1517,7 +1457,7 @@ msgstr "同梱物の一覧リスト。"
 
 #: includes/class-pts-admin.php
 msgid "Product Specs Table"
-msgstr "商品LP 商品仕様"
+msgstr "商品 LP 商品仕様"
 
 #: includes/class-pts-admin.php
 msgid "Specification table: name, size, material, country of origin."
@@ -1525,7 +1465,7 @@ msgstr "品名・サイズ・素材・原産国などの仕様テーブル。"
 
 #: includes/class-pts-admin.php
 msgid "Product Reviews"
-msgstr "商品LP レビュー"
+msgstr "商品 LP レビュー"
 
 #: includes/class-pts-admin.php
 msgid "Star rating, review count, and three customer reviews."
@@ -1533,7 +1473,7 @@ msgstr "星評価・レビュー件数とお客様レビュー3件。"
 
 #: includes/class-pts-admin.php
 msgid "Product Story"
-msgstr "商品LP 開発ストーリー"
+msgstr "商品 LP 開発ストーリー"
 
 #: includes/class-pts-admin.php
 msgid "Development story building trust and attachment."
@@ -1541,7 +1481,7 @@ msgstr "信頼と愛着を生む開発ストーリー。"
 
 #: includes/class-pts-admin.php
 msgid "Product Gift Wrapping"
-msgstr "商品LP ギフト対応"
+msgstr "商品 LP ギフト対応"
 
 #: includes/class-pts-admin.php
 msgid "Wrapping, noshi, and message card support details."
@@ -1549,7 +1489,7 @@ msgstr "ラッピング・のし・メッセージカード対応の案内。"
 
 #: includes/class-pts-admin.php
 msgid "Product Shipping Info"
-msgstr "商品LP 配送・送料"
+msgstr "商品 LP 配送・送料"
 
 #: includes/class-pts-admin.php
 msgid "Shipping fee, carriers, delivery time, and same-day options table."
@@ -1557,7 +1497,7 @@ msgstr "送料・配送方法・お届け目安・あす楽対応のテーブル
 
 #: includes/class-pts-admin.php
 msgid "Product Returns Policy"
-msgstr "商品LP 返品・交換"
+msgstr "商品 LP 返品・交換"
 
 #: includes/class-pts-admin.php
 msgid "Conditions for returns and exchanges."
@@ -1565,7 +1505,7 @@ msgstr "返品・交換の条件案内。"
 
 #: includes/class-pts-admin.php
 msgid "Product Purchase Notes"
-msgstr "商品LP 注意事項"
+msgstr "商品 LP 注意事項"
 
 #: includes/class-pts-admin.php
 msgid "Pre-purchase notes such as color differences on monitors."
@@ -1573,7 +1513,7 @@ msgstr "モニターによる色味の違いなど、ご購入前の注意事項
 
 #: includes/class-pts-admin.php
 msgid "Product Cart Area"
-msgstr "商品LP 購入エリア"
+msgstr "商品 LP 購入エリア"
 
 #: includes/class-pts-admin.php
 msgid "Closing purchase area with price, perks, and cart buttons."
@@ -1605,7 +1545,7 @@ msgstr "左に画像プレースホルダー、右にテキストの定番2カ�
 
 #: includes/class-pts-admin.php
 msgid "Layout: Two Column Text"
-msgstr "レイアウト 2カラム本文"
+msgstr "レイアウト2カラム本文"
 
 #: includes/class-pts-admin.php
 msgid "Two headed text columns side by side."
@@ -1613,7 +1553,7 @@ msgstr "見出し付き本文を左右に並べる2カラム。"
 
 #: includes/class-pts-admin.php
 msgid "Layout: Three Cards"
-msgstr "レイアウト 3カラムカード"
+msgstr "レイアウト3カラムカード"
 
 #: includes/class-pts-admin.php
 msgid "Three cards with image, heading, and text."
@@ -1621,7 +1561,7 @@ msgstr "画像・見出し・本文のカード3枚組。"
 
 #: includes/class-pts-admin.php
 msgid "Layout: Four Cards"
-msgstr "レイアウト 4カラムカード"
+msgstr "レイアウト4カラムカード"
 
 #: includes/class-pts-admin.php
 msgid "Four compact heading and text columns."
@@ -1689,11 +1629,11 @@ msgstr "レイアウト 引用"
 
 #: includes/class-pts-admin.php
 msgid "Large pull quote with attribution."
-msgstr "出典付きの大きな引用（プルクオート）。"
+msgstr "出典付きの大きな引用 (プルクオート)。"
 
 #: includes/class-pts-admin.php
 msgid "Layout: Banner CTA"
-msgstr "レイアウト 帯バナーCTA"
+msgstr "レイアウト 帯バナー CTA"
 
 #: includes/class-pts-admin.php
 msgid "Slim banner with a heading and a button side by side."
@@ -1741,11 +1681,11 @@ msgstr "広いメイン本文と狭い補足カラムの2:1構成。"
 
 #: includes/class-pts-admin.php
 msgid "%1$s (%2$s) — %3$s"
-msgstr "%1$s（%2$s）— %3$s"
+msgstr "%1$s (%2$s) — %3$s"
 
 #: includes/class-pts-admin.php
 msgid "%1$s (%2$s)"
-msgstr "%1$s（%2$s）"
+msgstr "%1$s (%2$s)"
 
 #: includes/class-pts-admin.php
 msgid "Hero Section"
@@ -1765,7 +1705,7 @@ msgstr "料金表"
 
 #: includes/class-pts-admin.php
 msgid "Two-column plan comparison (e.g. Basic / Pro)."
-msgstr "2列の料金プラン比較（例: Basic / Pro）。"
+msgstr "2列の料金プラン比較 (例: Basic / Pro)。"
 
 #: includes/class-pts-admin.php
 msgid "Features List"
@@ -1797,7 +1737,7 @@ msgstr "お客様の声"
 
 #: includes/class-pts-admin.php
 msgid "Customer quotes in a two-column layout."
-msgstr "2列のお客様の声（引用）。"
+msgstr "2列のお客様の声 (引用)。"
 
 #: includes/class-pts-admin.php
 msgid "Team"
@@ -1845,7 +1785,7 @@ msgstr "よくある質問"
 
 #: includes/class-pts-admin.php
 msgid "Question and answer pairs you can duplicate."
-msgstr "質問と回答のペア（複製して増やせます）。"
+msgstr "質問と回答のペア (複製して増やせます)。"
 
 #: includes/class-pts-admin.php
 msgid "Contact"
@@ -1861,73 +1801,61 @@ msgstr "メールマガジン"
 
 #: includes/class-pts-admin.php
 msgid "Email signup call-to-action with subscribe button."
-msgstr "メール登録を促すCTAと登録ボタン。"
+msgstr "メール登録を促すCTA と登録ボタン。"
 
 #: includes/class-pts-admin.php
 msgid "Full Features"
-msgstr "全て選択"
+msgstr "フル機能"
 
 #: includes/class-pts-admin.php
 msgid "Select all available templates and features for a complete theme."
-msgstr ""
-"利用可能なすべてのテンプレートとテーマ機能を選択し、フル装備のテーマを構成し"
-"ます。"
+msgstr "利用可能なすべてのテンプレートとテーマ機能を選択し、フル装備のテーマを構成します。"
 
 #: includes/class-pts-admin.php
 msgid "Starter Classic"
-msgstr "スターター Classic"
+msgstr "スターター クラシック"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A clean baseline with the key structural files, menus, widgets, and modern "
 "HTML support."
-msgstr ""
-"主要な構造ファイル、メニュー、ウィジェット、モダン HTML サポートを備えたク"
-"リーンなベースラインです。"
+msgstr "主要な構造ファイル、メニュー、ウィジェット、モダン HTML サポートを備えたクリーンなベースラインです。"
 
 #: includes/class-pts-admin.php
 msgid "Professional Blog"
-msgstr "本格ブログ構成"
+msgstr "プロフェッショナル ブログ"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A publishing-focused setup with search, comments, archives, pagination, and "
 "content template parts."
-msgstr ""
-"検索、コメント、アーカイブ、ページネーション、コンテンツテンプレートパーツを"
-"備えた公開向け構成です。"
+msgstr "検索、コメント、アーカイブ、ページネーション、コンテンツテンプレートパーツを備えた公開向け構成です。"
 
 #: includes/class-pts-admin.php
 msgid "Core Performance & Security"
-msgstr "高速化・セキュリティ重視"
+msgstr "コア パフォーマンス & セキュリティ"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A lean output preset focused on cleanup, lighter front-end assets, and safe "
 "media defaults."
-msgstr ""
-"クリーンアップ、軽量フロントエンド、安全なメディア既定値に重点を置いた軽量プ"
-"リセットです。"
+msgstr "クリーンアップ、軽量フロントエンド、安全なメディア既定値に重点を置いた軽量プリセットです。"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A company-site preset with front-page support, flexible page templates, "
 "branding, and client-friendly admin touches."
-msgstr ""
-"フロントページ対応、柔軟なページテンプレート、ブランディング、クライアント向"
-"け管理画面調整を備えた企業サイト向けプリセットです。"
+msgstr "フロントページ対応、柔軟なページテンプレート、ブランディング、クライアント向け管理画面調整を備えた企業サイト向けプリセットです。"
 
 #: includes/class-pts-admin.php
 msgid "Modern Block Friendly"
-msgstr "最新ブロックエディタ対応"
+msgstr "最新ブロックエディターーーーーーーーーーーーーー対応"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A classic theme tuned for the block editor with richer design controls, "
 "presets, and editor styling."
-msgstr ""
-"ブロックエディター向けに調整され、デザインコントロール、プリセット、エディ"
-"タースタイルが充実した Classic テーマです。"
+msgstr "ブロックエディター向けに調整され、デザインコントロール、プリセット、エディター用スタイルが充実した クラシックテーマです。"
 
 #: includes/class-pts-admin.php
 msgid "Portfolio / Agency"
@@ -1937,25 +1865,21 @@ msgstr "ポートフォリオ / エージェンシー"
 msgid ""
 "A presentation-oriented preset for studios and freelancers with page "
 "templates, galleries, and branded polish."
-msgstr ""
-"スタジオ・フリーランス向けに、ページテンプレート、ギャラリー、ブランド感のあ"
-"る仕上げを備えたプレゼン重視プリセットです。"
+msgstr "スタジオ・フリーランス向けに、ページテンプレート、ギャラリー、ブランド感のある仕上げを備えたプレゼン重視プリセットです。"
 
 #: includes/class-pts-admin.php
 msgid "E-Commerce Ready"
-msgstr "EC（WooCommerce）対応"
+msgstr "EC (WooCommerce) 対応"
 
 #: includes/class-pts-admin.php
 msgid ""
 "A practical WooCommerce starter with sidebar support, menus, widget areas, "
 "and conservative security defaults."
-msgstr ""
-"サイドバー、メニュー、ウィジェットエリア、保守的なセキュリティ既定値を備えた "
-"WooCommerce 向け実用スターターです。"
+msgstr "サイドバー、メニュー、ウィジェットエリア、保守的なセキュリティ既定値を備えた WooCommerce 向け実用スターターです。"
 
 #: includes/class-pts-admin.php
 msgid "Classic"
-msgstr "Classic"
+msgstr "クラシック"
 
 #: includes/class-pts-admin.php
 msgid "No presets found."
@@ -1987,7 +1911,7 @@ msgstr "生成された ZIP ファイルは利用できなくなりました。"
 
 #: includes/class-pts-admin.php
 msgid "Could not read the generated ZIP file."
-msgstr ""
+msgstr "生成された ZIP ファイルを読み込めませんでした。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Theme Name"
@@ -1996,8 +1920,7 @@ msgstr "テーマ名"
 #: includes/class-pts-classic-definitions.php
 msgid ""
 "The display name in Appearance → Themes. Use your project or brand name."
-msgstr ""
-"外観 → テーマに表示される名前。プロジェクト名やブランド名を入力します。"
+msgstr "外観 → テーマに表示される名前。プロジェクト名やブランド名を入力します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Theme Slug"
@@ -2007,9 +1930,7 @@ msgstr "テーマスラッグ"
 msgid ""
 "Folder name under wp-content/themes/ (lowercase letters, numbers, hyphens "
 "only). Cannot be changed easily later."
-msgstr ""
-"wp-content/themes/ 内のフォルダ名（半角英小文字・数字・ハイフンのみ）。後から"
-"変更しづらいので慎重に。"
+msgstr "wp-content/themes/ 内のフォルダ名 (半角英小文字・数字・ハイフンのみ)。後から変更しづらいので慎重に。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Author"
@@ -2029,7 +1950,7 @@ msgstr "作成者 URL"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Optional link to your website, shown in the theme header metadata."
-msgstr "任意。テーマメタデータに表示するサイトURL。"
+msgstr "任意。テーマメタデータに表示するサイト URL。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Description"
@@ -2039,9 +1960,7 @@ msgstr "説明"
 msgid ""
 "Short summary for the theme list and style.css. Shown in Site Editor theme "
 "details."
-msgstr ""
-"テーマ一覧と style.css 用の短い説明。サイトエディターのテーマ情報にも表示され"
-"ます。"
+msgstr "テーマ一覧と style.css 用の短い説明。サイトエディターのテーマ情報にも表示されます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Short summary of the theme for the theme list and style.css header."
@@ -2053,7 +1972,7 @@ msgstr "基本パーツ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "The main template file (Required)"
-msgstr "メインのテンプレートファイル（必須）"
+msgstr "メインのテンプレートファイル (必須)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Document head and navigation area"
@@ -2069,9 +1988,7 @@ msgid ""
 "always generated when menus, widgets, or page templates are enabled so you "
 "can switch layouts later."
 msgstr ""
-"サイドバー用ウィジェットエリア。上のデフォルトカラムレイアウトと連動しま"
-"す。メニュー・ウィジェット・固定ページテンプレートを有効にした場合は常に生"
-"成され、生成後もレイアウト切り替えが可能です。"
+"サイドバー用ウィジェットエリア。上のデフォルトカラムレイアウトと連動します。メニュー・ウィジェット・固定ページテンプレートを有効にした場合は常に生成され、生成後もレイアウト切り替えが可能です。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Template for displaying comments"
@@ -2129,17 +2046,13 @@ msgstr "カスタムページテンプレート"
 msgid ""
 "Full-width layout without sidebars. Included automatically when Page is "
 "enabled; selectable per page as a custom template."
-msgstr ""
-"サイドバーなしの全幅レイアウト。Page を有効にすると自動で含まれ、固定ページ"
-"ごとにカスタムテンプレートとして選択できます。"
+msgstr "サイドバーなしの全幅レイアウト。Page を有効にすると自動で含まれ、固定ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid ""
 "Content-only layout without sidebars. Included automatically when Page is "
 "enabled; selectable per page as a custom template."
-msgstr ""
-"サイドバーなしのコンテンツ専用レイアウト。Page を有効にすると自動で含まれ、"
-"固定ページごとにカスタムテンプレートとして選択できます。"
+msgstr "サイドバーなしのコンテンツ専用レイアウト。Page を有効にすると自動で含まれ、固定ページごとにカスタムテンプレートとして選択できます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Archive Templates"
@@ -2147,7 +2060,7 @@ msgstr "アーカイブ・一覧ページ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "General archive (categories, tags, dates)"
-msgstr "一般的なアーカイブ（カテゴリー、タグ、日付など）"
+msgstr "一般的なアーカイブ (カテゴリー、タグ、日付など)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Template for category archives"
@@ -2203,7 +2116,7 @@ msgstr "その他"
 
 #: includes/class-pts-classic-definitions.php
 msgid "The site's front page"
-msgstr "サイトのフロントページ（ホームページ）"
+msgstr "サイトのフロントページ (ホームページ)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "The blog posts index page"
@@ -2215,7 +2128,7 @@ msgstr "検索結果ページ用テンプレート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Template for 404 Error pages"
-msgstr "404エラー（ページ未発見）用テンプレート"
+msgstr "404エラー (ページ未発見) 用テンプレート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Core Support"
@@ -2223,27 +2136,27 @@ msgstr "コア機能のサポート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Title Tag (Required for modern SEO)"
-msgstr "Titleタグ（最新のSEOに必須）"
+msgstr "title タグ (最新 SEO 必須)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Optimized title management for better SEO"
-msgstr "WordPress側で<title>タグを自動管理し、SEOを最適化します。"
+msgstr "WordPress 側で <title> タグを自動管理し、SEO を最適化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Featured Images (Post Thumbnails)"
-msgstr "アイキャッチ画像（投稿サムネイル）"
+msgstr "アイキャッチ画像 (投稿サムネイル)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable post thumbnail support for posts and pages"
-msgstr "投稿や固定ページでアイキャッチ画像（サムネイル）を有効にします。"
+msgstr "投稿や固定ページでアイキャッチ画像 (サムネイル) を有効にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "HTML5 Support (Search form, Comment form, etc.)"
-msgstr "HTML5サポート（検索フォーム、コメントフォームなど）"
+msgstr "HTML5 サポート (検索フォーム、コメントフォームなど)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Output semantic HTML5 for forms and lists"
-msgstr "検索フォームやコメント欄などの出力を最新のHTML5形式に変換します。"
+msgstr "検索フォームやコメント欄などの出力を最新の HTML5 形式に変換します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Automatic Feed Links"
@@ -2251,7 +2164,7 @@ msgstr "自動フィードリンク"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Add RSS feed links to the document head"
-msgstr "投稿やコメントのRSSフィード用リンクを自動でヘッダーに追加します。"
+msgstr "投稿やコメントの RSS フィード用リンクを自動でヘッダーに追加します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Logo"
@@ -2291,9 +2204,7 @@ msgstr "スターターコンテンツ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Setup default content for new installations"
-msgstr ""
-"新規インストール時に初期コンテンツ（ページ、メニュー、ウィジェット等）を自動"
-"セットアップします。"
+msgstr "新規インストール時に初期コンテンツ (ページ、メニュー、ウィジェット等) を自動セットアップします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "WooCommerce Support"
@@ -2301,7 +2212,7 @@ msgstr "WooCommerce サポート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Basic compatibility for the WooCommerce plugin"
-msgstr "ECプラグイン「WooCommerce」との基本的な互換性を確保します。"
+msgstr "EC プラグイン「WooCommerce」との基本的な互換性を確保します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Selective Refresh Widgets"
@@ -2309,7 +2220,7 @@ msgstr "ウィジェットの選択的リフレッシュ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable faster widget updating in customizer"
-msgstr "カスタマイザーでのウィジェット更新を高速化（部分更新）します。"
+msgstr "カスタマイザーでのウィジェット更新を高速化 (部分更新) します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Navigation & Menus"
@@ -2329,8 +2240,7 @@ msgstr "複数のメニュー位置"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Register Primary, Footer, Mobile, and Social menus"
-msgstr ""
-"メイン、フッター、モバイル、ソーシャルの4つのメニュー位置を登録します。"
+msgstr "メイン、フッター、モバイル、ソーシャルの4つのメニュー位置を登録します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Widgets / Sidebar"
@@ -2342,13 +2252,11 @@ msgstr "サイドバーなどのウィジェットエリアを登録します。
 
 #: includes/class-pts-classic-definitions.php
 msgid "Block Editor (Gutenberg) Support"
-msgstr "ブロックエディタ対応"
+msgstr "ブロックエディター (Gutenberg) サポート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable comprehensive design controls like link color and borders"
-msgstr ""
-"リンク色、ボーダー、マージン、パディングなどの包括的なデザイン制御を有効化し"
-"ます。"
+msgstr "リンク色、ボーダー、マージン、パディングなどの包括的なデザイン制御を有効化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Wide Alignment Support"
@@ -2356,7 +2264,7 @@ msgstr "幅広・全幅配置のサポート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable wide and full-width block alignments"
-msgstr "ブロックエディタで「幅広」「全幅」の設定を可能にします。"
+msgstr "ブロックエディターで「幅広」「全幅」の設定を可能にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Core Block Styles"
@@ -2364,7 +2272,7 @@ msgstr "コアブロックの標準スタイル"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Include standard WordPress block styles"
-msgstr "WordPress標準のブロック用スタイルをフロントエンドに読み込みます。"
+msgstr "WordPress 標準のブロック用スタイルをフロントエンドに読み込みます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Responsive Embeds"
@@ -2376,11 +2284,11 @@ msgstr "動画などの埋め込みコンテンツを画面幅に合わせて自
 
 #: includes/class-pts-classic-definitions.php
 msgid "Editor Styles"
-msgstr "エディタースタイル"
+msgstr "エディター用スタイル"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Reflect theme styles within the block editor"
-msgstr "管理画面のエディタ上でもテーマと同じスタイルを反映させます。"
+msgstr "管理画面のエディター上でもテーマと同じスタイルを反映させます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Color Palette"
@@ -2388,7 +2296,7 @@ msgstr "カスタムカラーパレット"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Define a specific set of colors for the block editor"
-msgstr "ブロックエディタで選択できる色のセットを独自に定義します。"
+msgstr "ブロックエディターで選択できる色のセットを独自に定義します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Custom Colors"
@@ -2400,7 +2308,7 @@ msgstr "ユーザーがカラーパレット以外の独自の色を選択でき
 
 #: includes/class-pts-classic-definitions.php
 msgid "Editor Gradient Presets"
-msgstr "エディターのグラデーションプリセット"
+msgstr "エディターのグラデーションのプリセット"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Define custom gradients for blocks"
@@ -2412,9 +2320,7 @@ msgstr "カスタムグラデーションの無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Restrict gradients to theme presets only"
-msgstr ""
-"ユーザーが独自のグラデーションを作成できないようにし、テーマ提供のものに制限"
-"します。"
+msgstr "ユーザーが独自のグラデーションを作成できないようにし、テーマ提供のものに制限します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Font Sizes"
@@ -2422,7 +2328,7 @@ msgstr "カスタムフォントサイズ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Register specific font sizes for text-based blocks"
-msgstr "ブロックエディタで使用するフォントサイズの選択肢を登録します。"
+msgstr "ブロックエディターで使用するフォントサイズの選択肢を登録します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Custom Font Sizes"
@@ -2430,9 +2336,7 @@ msgstr "カスタムフォントサイズの無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Restrict font sizes to theme presets only"
-msgstr ""
-"ユーザーがプリセット以外の独自のフォントサイズを入力できないように制限しま"
-"す。"
+msgstr "ユーザーがプリセット以外の独自のフォントサイズを入力できないように制限します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Line Height"
@@ -2440,7 +2344,7 @@ msgstr "カスタム行間設定"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable line height control in the editor"
-msgstr "ブロックエディターでの行間（line-height）制御を有効にします。"
+msgstr "ブロックエディターでの行間 (line-height) 制御を有効にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Spacing Controls"
@@ -2448,8 +2352,7 @@ msgstr "カスタム余白制御"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable margin and padding controls for blocks"
-msgstr ""
-"ブロックの余白（マージン、パディング）をエディターから調整可能にします。"
+msgstr "ブロックの余白 (マージン、パディング) をエディターから調整可能にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Units"
@@ -2457,8 +2360,7 @@ msgstr "カスタム単位設定"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Register specific CSS units for block sizes"
-msgstr ""
-"ブロックのサイズ指定に使用できるCSS単位（rem, em, vh等）を制限・追加します。"
+msgstr "ブロックのサイズ指定に使用できる CSS 単位 (rem, em, vh 等) を制限・追加します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Link Color Control"
@@ -2466,8 +2368,7 @@ msgstr "リンク色の制御"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable link color settings in the block editor (WordPress 6.3+)."
-msgstr ""
-"ブロックエディターでリンク色の設定を有効にします（WordPress 6.3 以降）。"
+msgstr "ブロックエディターでリンク色の設定を有効にします (WordPress 6.3以降)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Border Controls"
@@ -2476,19 +2377,15 @@ msgstr "ボーダー制御"
 #: includes/class-pts-classic-definitions.php
 msgid ""
 "Enable border design tools for blocks in classic themes (WordPress 6.3+)."
-msgstr ""
-"クラシックテーマでブロックのボーダー関連デザインツールを有効にします"
-"（WordPress 6.3 以降）。"
+msgstr "クラシックテーマでブロックのボーダー関連デザインツールを有効にします (WordPress 6.3以降)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Editor Spacing Presets"
-msgstr "エディター用スペーシングプリセット"
+msgstr "エディター余白のプリセット"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Register spacing size presets for the block editor (WordPress 6.6+)."
-msgstr ""
-"ブロックエディター用のスペーシングサイズプリセットを登録します（WordPress "
-"6.6 以降）。"
+msgstr "ブロックエディター用のスペーシングサイズプリセットを登録します (WordPress 6.6以降)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Default Layout Styles"
@@ -2496,9 +2393,7 @@ msgstr "デフォルトのレイアウトスタイルを無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Turn off WordPress default layout block styles (WordPress 6.1+)."
-msgstr ""
-"WordPress 標準のレイアウトブロックスタイルをオフにします（WordPress 6.1 以"
-"降）。"
+msgstr "WordPress 標準のレイアウトブロックスタイルをオフにします (WordPress 6.1以降)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Block Widget Editor"
@@ -2508,19 +2403,15 @@ msgstr "ブロックウィジェットエディター"
 msgid ""
 "Use the blocks-based widget screen instead of the legacy widgets UI "
 "(WordPress 5.8+)."
-msgstr ""
-"従来のウィジェット画面の代わりにブロックベースのウィジェット画面を使います"
-"（WordPress 5.8 以降）。"
+msgstr "従来のウィジェット画面の代わりにブロックベースのウィジェット画面を使います (WordPress 5.8以降)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove Global Styles (Inline CSS)"
-msgstr "グローバルスタイル（インラインCSS）の除去"
+msgstr "グローバルスタイル (インライン CSS) の除去"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove the default bloat of block-based inline CSS"
-msgstr ""
-"ブロックベースのテーマがデフォルトで出力する膨大なインラインCSSを削除し、軽量"
-"化します。"
+msgstr "ブロックベースのテーマがデフォルトで出力する膨大なインライン CSS を削除し、軽量化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Cleanup & Optimization"
@@ -2532,15 +2423,15 @@ msgstr "ヘッダーのクリーンアップ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove RSD, WLW, and shortlinks from the head"
-msgstr "RSD, WLW, 短縮URLなど、不要なタグをヘッダーから削除します。"
+msgstr "RSD, WLW, 短縮 URL など、不要なタグをヘッダーから削除します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove WordPress Version (Security)"
-msgstr "WordPressバージョンの削除（セキュリティ）"
+msgstr "WordPress バージョン表示を削除 (セキュリティ)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Hide version information for better security"
-msgstr "セキュリティ対策として、ソースコード内のWPバージョン情報を隠します。"
+msgstr "セキュリティ対策として、ソースコード内の WP バージョン情報を隠します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable Admin-only SVG Uploads"
@@ -2548,12 +2439,11 @@ msgstr "管理者限定 SVG アップロードを有効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Allow SVG uploads only for administrators and reject unsafe markup."
-msgstr ""
-"管理者のみ SVG アップロードを許可し、安全でないマークアップを拒否します。"
+msgstr "管理者のみ SVG アップロードを許可し、安全でないマークアップを拒否します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Excerpt Length (50 words)"
-msgstr "抜粋の長さのカスタマイズ（50語）"
+msgstr "抜粋の長さのカスタマイズ (50語)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Adjust post excerpt length to 50 words"
@@ -2565,8 +2455,7 @@ msgstr "絵文字機能の停止"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove unnecessary emoji script and styles"
-msgstr ""
-"不要な絵文字用スクリプトとスタイルを読み込まないようにして高速化します。"
+msgstr "不要な絵文字用スクリプトとスタイルを読み込まないようにして高速化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Load Block CSS On Demand"
@@ -2576,37 +2465,31 @@ msgstr "ブロック CSS のオンデマンド読み込み"
 msgid ""
 "Load only styles for blocks used on the page (WordPress 6.8+). Improves "
 "performance in classic themes."
-msgstr ""
-"ページで使われたブロックのスタイルだけを読み込みます（WordPress 6.8 以降）。"
-"クラシックテーマのパフォーマンス改善に有効です。"
+msgstr "ページで使われたブロックのスタイルだけを読み込みます (WordPress 6.8以降)。クラシックテーマのパフォーマンス改善に有効です。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Block Library CSS"
-msgstr "ブロックライブラリCSSの停止"
+msgstr "ブロックライブラリ CSS を停止"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Option to remove the default block styles"
-msgstr "WordPress標準のブロック用スタイル（フロントエンド）を停止します。"
+msgstr "WordPress 標準のブロック用スタイル (フロントエンド) を停止します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove jQuery Migrate"
-msgstr "jQuery Migrate の削除"
+msgstr "jQuery Migrate を削除"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Stop loading the legacy migration script"
-msgstr ""
-"古いライブラリとの互換用スクリプト jQuery Migrate の読み込みを停止し、パ"
-"フォーマンスを改善します。"
+msgstr "古いライブラリとの互換用スクリプト jQuery Migrate の読み込みを停止し、パフォーマンスを改善します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Heartbeat API"
-msgstr "Heartbeat API の無効化"
+msgstr "Heartbeat API を無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Reduce server load by limiting background pulses"
-msgstr ""
-"管理画面のバックグラウンド通信（Heartbeat）を制限し、サーバー負荷を軽減しま"
-"す。"
+msgstr "管理画面のバックグラウンド通信 (Heartbeat) を制限し、サーバー負荷を軽減します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Lazy Load Settings"
@@ -2614,24 +2497,23 @@ msgstr "遅延読み込み設定"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Optimization settings for native image lazy loading"
-msgstr "WordPress標準の画像の遅延読み込み（Lazy Load）を最適化します。"
+msgstr "WordPress 標準の画像の遅延読み込み (Lazy Load) を最適化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable WebP Support"
-msgstr "WebPサポートの有効化"
+msgstr "WebP サポートを有効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Allow WebP image uploads and automatic quality adjustment"
-msgstr ""
-"WebP形式の画像のアップロードを許可し、自動的に品質調整（最適化）を行います。"
+msgstr "WebP 形式の画像のアップロードを許可し、自動的に品質調整 (最適化) を行います。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Enable WebM Support"
-msgstr "WebMサポートの有効化"
+msgstr "WebM サポートを有効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Allow WebM video uploads to the media library"
-msgstr "WebM形式の動画をメディアライブラリにアップロードできるようにします。"
+msgstr "WebM 形式の動画をメディアライブラリにアップロードできるようにします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Limit Post Revisions"
@@ -2639,9 +2521,7 @@ msgstr "投稿リビジョンの制限"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Restrict the number of revisions to keep for each post"
-msgstr ""
-"各投稿で保持するリビジョンの数を5件に制限し、データベースをクリーンに保ちま"
-"す。"
+msgstr "各投稿で保持するリビジョンの数を5件に制限し、データベースをクリーンに保ちます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Global Content Width"
@@ -2649,9 +2529,7 @@ msgstr "グローバルなコンテンツ幅の設定"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Define a standard maximum width for embedded content"
-msgstr ""
-"埋め込みコンテンツなどの標準的な最大幅をテーマレベルで定義します"
-"（$content_width）。"
+msgstr "埋め込みコンテンツなどの標準的な最大幅をテーマレベルで定義します ($content_width)。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Advanced Functions"
@@ -2663,9 +2541,7 @@ msgstr "数字付きページネーション"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Add a numeric pagination function for archives"
-msgstr ""
-"アーカイブページで利用可能な、公式推奨の数字付きページネーション関数を追加し"
-"ます。"
+msgstr "アーカイブページで利用可能な、公式推奨の数字付きページネーション関数を追加します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Breadcrumbs Template"
@@ -2673,7 +2549,7 @@ msgstr "パンくずリストの雛形"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Include a foundation for breadcrumb navigation"
-msgstr "SEOに有効なパンくずリストを表示するための関数を追加します。"
+msgstr "SEO に有効なパンくずリストを表示するための関数を追加します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Threaded Comments Support"
@@ -2681,19 +2557,18 @@ msgstr "スレッドコメントのサポート"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Automatically load scripts for reply-to functionality"
-msgstr "返信機能（コメントの階層化）に必要なスクリプトを自動的に読み込みます。"
+msgstr "返信機能 (コメントの階層化) に必要なスクリプトを自動的に読み込みます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "SCSS Sources (assets/scss)"
-msgstr "SCSS ソース（assets/scss）"
+msgstr "SCSS ソース (assets/scss)"
 
 #: includes/class-pts-classic-definitions.php
 msgid ""
 "Editable SCSS partials mirroring style.css, plus a package.json with sass "
 "build scripts"
 msgstr ""
-"style.css と同内容の編集可能な SCSS パーシャルと、sass ビルドスクリプト付き"
-"の package.json を生成します。"
+"style.css と同内容の編集可能な SCSS パーシャルと、sass ビルドスクリプト付きの package.json を生成します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Automatic Updates & Security"
@@ -2733,11 +2608,11 @@ msgstr "すべてのテーマを自動更新するように設定します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable XML-RPC (Security)"
-msgstr "XML-RPCを無効化（セキュリティ）"
+msgstr "XML-RPC を無効化 (セキュリティ)"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable XML-RPC to prevent brute force attacks"
-msgstr "悪意のあるアクセスを防ぐため、古いAPIであるXML-RPCを無効化します。"
+msgstr "悪意のあるアクセスを防ぐため、旧式の API である XML-RPC を無効化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Limit public REST user endpoints"
@@ -2745,16 +2620,15 @@ msgstr "公開 REST ユーザーエンドポイントを制限"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Hide public user-list endpoints without blocking the broader REST API."
-msgstr ""
-"REST API 全体をブロックせず、公開ユーザー一覧エンドポイントを非表示にします。"
+msgstr "REST API 全体をブロックせず、公開ユーザー一覧エンドポイントを非表示にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable Theme/Plugin File Editor"
-msgstr "テーマ/プラグインエディターを無効化"
+msgstr "テーマ / プラグインファイルエディターを無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable the dashboard file editor for security"
-msgstr "管理画面からのファイル直接編集機能を停止し、セキュリティを高めます。"
+msgstr "セキュリティのためダッシュボードのファイルエディターを無効化"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Admin Customization"
@@ -2766,9 +2640,7 @@ msgstr "ログインページのクレジット変更"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Link the login logo to your site and change its title"
-msgstr ""
-"ログイン画面のロゴのリンク先を自サイトのトップページに変更し、タイトルも自サ"
-"イト名にします。"
+msgstr "ログイン画面のロゴのリンク先を自サイトのトップページに変更し、タイトルも自サイト名にします。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Hide Admin Bar for Customers"
@@ -2776,9 +2648,7 @@ msgstr "管理者以外への管理バーの非表示"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Disable the admin bar for non-administrator users"
-msgstr ""
-"管理者権限を持たないユーザーに対して、フロントエンドでの管理バーの表示を無効"
-"化します。"
+msgstr "管理者権限を持たないユーザーに対して、フロントエンドでの管理バーの表示を無効化します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Admin Footer Branding"
@@ -2786,8 +2656,7 @@ msgstr "管理画面フッターのブランディング"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Add your custom brand text to the admin footer area"
-msgstr ""
-"管理画面の最下部（フッター）に独自のブランドテキストやリンクを表示します。"
+msgstr "管理画面の最下部 (フッター) に独自のブランドテキストやリンクを表示します。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Custom Login Style"
@@ -2803,8 +2672,7 @@ msgstr "ダッシュボードのクリーンアップ"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Remove unused dashboard widgets for a cleaner UI"
-msgstr ""
-"不要なダッシュボードウィジェットを非表示にし、管理画面をスッキリさせます。"
+msgstr "不要なダッシュボードウィジェットを非表示にし、管理画面をスッキリさせます。"
 
 #: includes/class-pts-classic-definitions.php
 msgid "Search Results Limit"
@@ -2820,28 +2688,24 @@ msgstr "%1$s — %2$s"
 
 #: includes/class-pts-vendor-assets.php
 msgid "Bundled vendor file is missing: %s"
-msgstr ""
+msgstr "同梱 vendor ファイルが見つかりません: %s"
 
 #: includes/class-pts-vendor-assets.php
 msgid "Could not copy vendor file: %s"
-msgstr ""
+msgstr "vendor ファイルをコピーできませんでした: %s"
 
 #: picot-theme-seeder.php
 msgid ""
 "Picot Theme Seeder requires WordPress %1$s or later. This site is running "
 "%2$s."
-msgstr ""
-"Picot Theme Seeder は WordPress %1$s 以降が必要です。このサイトは %2$s を実行"
-"しています。"
+msgstr "Picot Theme Seeder は WordPress %1$s 以降が必要です。このサイトは %2$s を実行しています。"
 
 #~ msgid ""
-#~ "Sets the initial layout for generated templates. Sidebar parts and per-"
-#~ "post “With Sidebar” templates are still included so you can switch "
-#~ "layouts later in the Site Editor or per post/page."
+#~ "Sets the initial layout for generated templates. Sidebar parts and per-post "
+#~ "“With Sidebar” templates are still included so you can switch layouts later "
+#~ "in the Site Editor or per post/page."
 #~ msgstr ""
-#~ "生成テンプレートの初期レイアウトを設定します。サイドバーパーツと投稿・固定"
-#~ "ページごとの「サイドバー付き」テンプレートも含まれるため、生成後にサイトエ"
-#~ "ディターや投稿/固定ページ単位でレイアウトを切り替えられます。"
+#~ "生成テンプレートの初期レイアウトを設定します。サイドバーパーツと投稿・固定ページごとの「サイドバー付き」テンプレートも含まれるため、生成後にサイトエディターや投稿/固定ページ単位でレイアウトを切り替えられます。"
 
 #~ msgid "Widget area for the sidebar"
 #~ msgstr "サイドバーのウィジェットエリア"
@@ -2855,16 +2719,12 @@ msgstr ""
 #~ msgid ""
 #~ "Two-column single post with the sidebar part on the right. Selectable per "
 #~ "post as a custom template."
-#~ msgstr ""
-#~ "右にサイドバーパーツを配置した2カラムの投稿テンプレート。投稿ごとにカスタ"
-#~ "ムテンプレートとして選択できます。"
+#~ msgstr "右にサイドバーパーツを配置した2カラムの投稿テンプレート。投稿ごとにカスタムテンプレートとして選択できます。"
 
 #~ msgid ""
-#~ "Two-column page with the sidebar part on the right. Selectable per page "
-#~ "as a custom template."
-#~ msgstr ""
-#~ "右にサイドバーパーツを配置した2カラムの固定ページテンプレート。ページごと"
-#~ "にカスタムテンプレートとして選択できます。"
+#~ "Two-column page with the sidebar part on the right. Selectable per page as a"
+#~ " custom template."
+#~ msgstr "右にサイドバーパーツを配置した2カラムの固定ページテンプレート。ページごとにカスタムテンプレートとして選択できます。"
 
 #~ msgid "Optional sidebar column for widgets or secondary content."
 #~ msgstr "ウィジェットや補足コンテンツ用のサイドバー。"
@@ -2873,4 +2733,4 @@ msgstr ""
 #~ msgstr "テーマの骨格を生成します。"
 
 #~ msgid "Create a Block (FSE) or Classic theme skeleton in minutes."
-#~ msgstr "Block（FSE）または Classic テーマの骨組みを数分で作成できます。"
+#~ msgstr "ブロック (FSE) または クラシックテーマの骨組みを数分で作成できます。"

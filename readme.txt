@@ -13,7 +13,7 @@ Generate complete, ready-to-use Block (FSE) or Classic WordPress themes from a v
 
 == Description ==
 
-Picot Theme Seeder is a visual WordPress theme generator developed by Toshifumi Tsuburaya (PICOT).
+Picot Theme Seeder is a visual WordPress theme generator developed by Tsubu (Picot).
 It allows site owners and administrators to create complete, ready-to-use Block (FSE) or Classic WordPress themes through a step-by-step admin interface, without writing or modifying code.
 Users can configure theme information, presets, templates, patterns, theme.json settings, colors, typography, and layout options, then generate a working theme directly under wp-content/themes/ or download it as a ZIP archive.
 
@@ -106,7 +106,6 @@ No. If a folder with the same slug already exists under wp-content/themes/, gene
 3. Classic theme wizard: basic information with per-field help text.
 4. Classic theme wizard: template and features selection.
 5. Output step: write to themes directory or download ZIP.
-6. A generated theme running on a WordPress site.
 
 == Changelog ==
 
