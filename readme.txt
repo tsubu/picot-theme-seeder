@@ -3,7 +3,7 @@ Contributors: tsubu
 Donate link: https://github.com/tsubu/picot-theme-seeder
 Tags: theme, block theme, classic theme, fse, generator
 Requires at least: 7.0
-Tested up to: 7.0
+Tested up to: 7.2
 Requires PHP: 8.3
 Stable tag: 1.0.0
 License: GPLv2 or later

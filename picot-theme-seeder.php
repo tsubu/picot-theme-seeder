@@ -6,6 +6,7 @@
  * Version: 1.0.0
  * Requires at least: 7.0
  * Requires PHP: 8.3
+ * Tested up to: 7.2
  * Author: PICOT
  * Author URI: https://picot.tokyo/aio/
  * Text Domain: picot-theme-seeder
